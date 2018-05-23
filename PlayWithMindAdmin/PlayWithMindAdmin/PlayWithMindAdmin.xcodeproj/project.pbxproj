@@ -16,6 +16,9 @@
 		CEDC1A9C20B58D8E00F9A9FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A9B20B58D8E00F9A9FC /* GoogleService-Info.plist */; };
 		CEDC1ACD20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1ACB20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift */; };
 		CEDC1ACE20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1ACC20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib */; };
+		CEDC1AD220B5A76A00F9A9FC /* Championat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AD120B5A76A00F9A9FC /* Championat.swift */; };
+		CEDC1AD620B5A97300F9A9FC /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AD520B5A97300F9A9FC /* FirebaseService.swift */; };
+		CEDC1AD920B5AF2800F9A9FC /* next-button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AD820B5AF2700F9A9FC /* next-button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		CEDC1A9B20B58D8E00F9A9FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEDC1ACB20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseChampionatTableViewCell.swift; sourceTree = "<group>"; };
 		CEDC1ACC20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseChampionatTableViewCell.xib; sourceTree = "<group>"; };
+		CEDC1AD120B5A76A00F9A9FC /* Championat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championat.swift; sourceTree = "<group>"; };
+		CEDC1AD520B5A97300F9A9FC /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		CEDC1AD820B5AF2700F9A9FC /* next-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next-button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,9 @@
 		CEDC1A8220B5831500F9A9FC /* PlayWithMindAdmin */ = {
 			isa = PBXGroup;
 			children = (
+				CEDC1AD720B5AF1400F9A9FC /* Recources */,
+				CEDC1AD320B5A93000F9A9FC /* Services */,
+				CEDC1ACF20B5A73100F9A9FC /* Entities */,
 				CEDC1AC720B59C3700F9A9FC /* Classes */,
 				CEDC1A8320B5831500F9A9FC /* AppDelegate.swift */,
 				CEDC1A8720B5831500F9A9FC /* Main.storyboard */,
@@ -127,6 +136,46 @@
 				CEDC1ACC20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib */,
 			);
 			path = ChooseChampionatCell;
+			sourceTree = "<group>";
+		};
+		CEDC1ACF20B5A73100F9A9FC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AD020B5A75100F9A9FC /* Championat */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CEDC1AD020B5A75100F9A9FC /* Championat */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AD120B5A76A00F9A9FC /* Championat.swift */,
+			);
+			path = Championat;
+			sourceTree = "<group>";
+		};
+		CEDC1AD320B5A93000F9A9FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AD420B5A94700F9A9FC /* Firebase Service */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CEDC1AD420B5A94700F9A9FC /* Firebase Service */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AD520B5A97300F9A9FC /* FirebaseService.swift */,
+			);
+			path = "Firebase Service";
+			sourceTree = "<group>";
+		};
+		CEDC1AD720B5AF1400F9A9FC /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AD820B5AF2700F9A9FC /* next-button.png */,
+			);
+			path = Recources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +240,7 @@
 			files = (
 				CEDC1A8E20B5831900F9A9FC /* LaunchScreen.storyboard in Resources */,
 				CEDC1A9C20B58D8E00F9A9FC /* GoogleService-Info.plist in Resources */,
+				CEDC1AD920B5AF2800F9A9FC /* next-button.png in Resources */,
 				CEDC1A8B20B5831900F9A9FC /* Assets.xcassets in Resources */,
 				CEDC1ACE20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib in Resources */,
 				CEDC1A8920B5831500F9A9FC /* Main.storyboard in Resources */,
@@ -248,8 +298,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDC1A8620B5831500F9A9FC /* ChooseChampionatViewController.swift in Sources */,
+				CEDC1AD620B5A97300F9A9FC /* FirebaseService.swift in Sources */,
 				CEDC1ACD20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift in Sources */,
 				CEDC1A8420B5831500F9A9FC /* AppDelegate.swift in Sources */,
+				CEDC1AD220B5A76A00F9A9FC /* Championat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,11 +16,18 @@ class ChooseChampionatViewController: UIViewController, UITableViewDataSource, U
     //constants
     private let cellIdentifier = "ChooseChampionatTableViewCell"
     
+    var champsArray = [Championat]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
-//        let firebase = Database.database().reference().child("table")
-//        firebase.setValue(["keyAdmin": "newValueAdmin"])
+        
+        FirebaseService.sharedInstance.getChampionats { [weak self] (championatArray) in
+            if let championatArray = championatArray {
+                self?.champsArray = championatArray
+                self?.chooseChampionatTableView.reloadData()
+            }
+        }
     }
     
     private func setupTableView() {
@@ -30,12 +37,12 @@ class ChooseChampionatViewController: UIViewController, UITableViewDataSource, U
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.champsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.chooseChampionatTableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ChooseChampionatTableViewCell
-        
+        cell.championatNameLabel.text = self.champsArray[indexPath.row].championatName
         return cell
     }
 }

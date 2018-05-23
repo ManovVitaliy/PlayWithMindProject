@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,8 +20,47 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6UG-Sn-8lG">
+                        <rect key="frame" x="10" y="2.5" width="39" height="39"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="6UG-Sn-8lG" secondAttribute="height" multiplier="44:44" id="gfj-WH-7Gw"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="next-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="BFf-mg-G8R">
+                        <rect key="frame" x="295" y="14.5" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="Ifn-ha-jMe"/>
+                            <constraint firstAttribute="height" constant="15" id="eSy-g1-0ur"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpS-uz-Wvd">
+                        <rect key="frame" x="59" y="12" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.95024382149999997" green="0.96003657320000002" blue="0.95808344820000002" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="BFf-mg-G8R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xpS-uz-Wvd" secondAttribute="trailing" constant="10" id="7vW-FQ-LEs"/>
+                    <constraint firstItem="xpS-uz-Wvd" firstAttribute="centerY" secondItem="6UG-Sn-8lG" secondAttribute="centerY" id="CHm-lY-yFR"/>
+                    <constraint firstAttribute="trailing" secondItem="BFf-mg-G8R" secondAttribute="trailing" constant="10" id="RVh-Rg-Wi5"/>
+                    <constraint firstItem="BFf-mg-G8R" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="U8k-Qz-QKV"/>
+                    <constraint firstItem="6UG-Sn-8lG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YpZ-io-Zms"/>
+                    <constraint firstItem="6UG-Sn-8lG" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.9" id="hIf-WT-rIC"/>
+                    <constraint firstItem="xpS-uz-Wvd" firstAttribute="leading" secondItem="6UG-Sn-8lG" secondAttribute="trailing" constant="10" id="isL-rS-mx8"/>
+                    <constraint firstItem="6UG-Sn-8lG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="uox-kU-EKf"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="championatImageView" destination="6UG-Sn-8lG" id="PK8-au-aUu"/>
+                <outlet property="championatNameLabel" destination="xpS-uz-Wvd" id="SU8-9A-MMy"/>
+            </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="next-button.png" width="30" height="30"/>
+    </resources>
 </document>
