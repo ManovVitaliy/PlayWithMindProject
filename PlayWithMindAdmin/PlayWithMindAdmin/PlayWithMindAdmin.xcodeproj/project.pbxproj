@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		A8336AC2B3CBBE3B939BCE36 /* Pods_PlayWithMindAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52014396C0545B580E882C0F /* Pods_PlayWithMindAdmin.framework */; };
 		CEDC1A8420B5831500F9A9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1A8320B5831500F9A9FC /* AppDelegate.swift */; };
-		CEDC1A8620B5831500F9A9FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1A8520B5831500F9A9FC /* ViewController.swift */; };
+		CEDC1A8620B5831500F9A9FC /* ChooseChampionatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1A8520B5831500F9A9FC /* ChooseChampionatViewController.swift */; };
 		CEDC1A8920B5831500F9A9FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A8720B5831500F9A9FC /* Main.storyboard */; };
 		CEDC1A8B20B5831900F9A9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A8A20B5831900F9A9FC /* Assets.xcassets */; };
 		CEDC1A8E20B5831900F9A9FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A8C20B5831900F9A9FC /* LaunchScreen.storyboard */; };
 		CEDC1A9C20B58D8E00F9A9FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A9B20B58D8E00F9A9FC /* GoogleService-Info.plist */; };
+		CEDC1ACD20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1ACB20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift */; };
+		CEDC1ACE20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1ACC20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +24,14 @@
 		8ABFD835C65EEAA765545083 /* Pods-PlayWithMindAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMindAdmin.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMindAdmin/Pods-PlayWithMindAdmin.release.xcconfig"; sourceTree = "<group>"; };
 		CEDC1A8020B5831500F9A9FC /* PlayWithMindAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWithMindAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDC1A8320B5831500F9A9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEDC1A8520B5831500F9A9FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEDC1A8520B5831500F9A9FC /* ChooseChampionatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseChampionatViewController.swift; sourceTree = "<group>"; };
 		CEDC1A8820B5831500F9A9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEDC1A8A20B5831900F9A9FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEDC1A8D20B5831900F9A9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEDC1A8F20B5831900F9A9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEDC1A9B20B58D8E00F9A9FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEDC1ACB20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseChampionatTableViewCell.swift; sourceTree = "<group>"; };
+		CEDC1ACC20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseChampionatTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +84,8 @@
 		CEDC1A8220B5831500F9A9FC /* PlayWithMindAdmin */ = {
 			isa = PBXGroup;
 			children = (
+				CEDC1AC720B59C3700F9A9FC /* Classes */,
 				CEDC1A8320B5831500F9A9FC /* AppDelegate.swift */,
-				CEDC1A8520B5831500F9A9FC /* ViewController.swift */,
 				CEDC1A8720B5831500F9A9FC /* Main.storyboard */,
 				CEDC1A8A20B5831900F9A9FC /* Assets.xcassets */,
 				CEDC1A8C20B5831900F9A9FC /* LaunchScreen.storyboard */,
@@ -89,6 +93,40 @@
 				CEDC1A9B20B58D8E00F9A9FC /* GoogleService-Info.plist */,
 			);
 			path = PlayWithMindAdmin;
+			sourceTree = "<group>";
+		};
+		CEDC1AC720B59C3700F9A9FC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AC820B59C4600F9A9FC /* ChooseChampionatModule */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CEDC1AC820B59C4600F9A9FC /* ChooseChampionatModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1ACA20B59C6200F9A9FC /* ChooseChampionatCell */,
+				CEDC1AC920B59C5700F9A9FC /* Controller */,
+			);
+			path = ChooseChampionatModule;
+			sourceTree = "<group>";
+		};
+		CEDC1AC920B59C5700F9A9FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1A8520B5831500F9A9FC /* ChooseChampionatViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEDC1ACA20B59C6200F9A9FC /* ChooseChampionatCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1ACB20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift */,
+				CEDC1ACC20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib */,
+			);
+			path = ChooseChampionatCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +192,7 @@
 				CEDC1A8E20B5831900F9A9FC /* LaunchScreen.storyboard in Resources */,
 				CEDC1A9C20B58D8E00F9A9FC /* GoogleService-Info.plist in Resources */,
 				CEDC1A8B20B5831900F9A9FC /* Assets.xcassets in Resources */,
+				CEDC1ACE20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib in Resources */,
 				CEDC1A8920B5831500F9A9FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +247,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDC1A8620B5831500F9A9FC /* ViewController.swift in Sources */,
+				CEDC1A8620B5831500F9A9FC /* ChooseChampionatViewController.swift in Sources */,
+				CEDC1ACD20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift in Sources */,
 				CEDC1A8420B5831500F9A9FC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
