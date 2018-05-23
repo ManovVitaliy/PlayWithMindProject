@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8336AC2B3CBBE3B939BCE36 /* Pods_PlayWithMindAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52014396C0545B580E882C0F /* Pods_PlayWithMindAdmin.framework */; };
 		CEDC1A8420B5831500F9A9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1A8320B5831500F9A9FC /* AppDelegate.swift */; };
 		CEDC1A8620B5831500F9A9FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1A8520B5831500F9A9FC /* ViewController.swift */; };
 		CEDC1A8920B5831500F9A9FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A8720B5831500F9A9FC /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52014396C0545B580E882C0F /* Pods_PlayWithMindAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayWithMindAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1C0E24393EEB3D89FEA3A6 /* Pods-PlayWithMindAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMindAdmin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMindAdmin/Pods-PlayWithMindAdmin.debug.xcconfig"; sourceTree = "<group>"; };
+		8ABFD835C65EEAA765545083 /* Pods-PlayWithMindAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMindAdmin.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMindAdmin/Pods-PlayWithMindAdmin.release.xcconfig"; sourceTree = "<group>"; };
 		CEDC1A8020B5831500F9A9FC /* PlayWithMindAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWithMindAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDC1A8320B5831500F9A9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEDC1A8520B5831500F9A9FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8336AC2B3CBBE3B939BCE36 /* Pods_PlayWithMindAdmin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		958B736FDF4F7D2780DF8BB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A1C0E24393EEB3D89FEA3A6 /* Pods-PlayWithMindAdmin.debug.xcconfig */,
+				8ABFD835C65EEAA765545083 /* Pods-PlayWithMindAdmin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0F82E7D00A16E5759F66759 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52014396C0545B580E882C0F /* Pods_PlayWithMindAdmin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CEDC1A7720B5831500F9A9FC = {
 			isa = PBXGroup;
 			children = (
 				CEDC1A8220B5831500F9A9FC /* PlayWithMindAdmin */,
 				CEDC1A8120B5831500F9A9FC /* Products */,
+				958B736FDF4F7D2780DF8BB7 /* Pods */,
+				C0F82E7D00A16E5759F66759 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEDC1A9220B5831900F9A9FC /* Build configuration list for PBXNativeTarget "PlayWithMindAdmin" */;
 			buildPhases = (
+				4BAEC13CF8AE156E9D8C438B /* [CP] Check Pods Manifest.lock */,
 				CEDC1A7C20B5831500F9A9FC /* Sources */,
 				CEDC1A7D20B5831500F9A9FC /* Frameworks */,
 				CEDC1A7E20B5831500F9A9FC /* Resources */,
+				F77DA7FF9665309DAA2BA6FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BAEC13CF8AE156E9D8C438B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PlayWithMindAdmin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F77DA7FF9665309DAA2BA6FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PlayWithMindAdmin/Pods-PlayWithMindAdmin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlayWithMindAdmin/Pods-PlayWithMindAdmin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEDC1A7C20B5831500F9A9FC /* Sources */ = {
@@ -278,15 +347,13 @@
 		};
 		CEDC1A9320B5831900F9A9FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A1C0E24393EEB3D89FEA3A6 /* Pods-PlayWithMindAdmin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7G5K43D27D;
 				INFOPLIST_FILE = PlayWithMindAdmin/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MVA.PlayWithMindAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +363,13 @@
 		};
 		CEDC1A9420B5831900F9A9FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ABFD835C65EEAA765545083 /* Pods-PlayWithMindAdmin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7G5K43D27D;
 				INFOPLIST_FILE = PlayWithMindAdmin/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MVA.PlayWithMindAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
