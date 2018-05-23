@@ -13,6 +13,7 @@
 		CEDC1A8920B5831500F9A9FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A8720B5831500F9A9FC /* Main.storyboard */; };
 		CEDC1A8B20B5831900F9A9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A8A20B5831900F9A9FC /* Assets.xcassets */; };
 		CEDC1A8E20B5831900F9A9FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A8C20B5831900F9A9FC /* LaunchScreen.storyboard */; };
+		CEDC1A9C20B58D8E00F9A9FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A9B20B58D8E00F9A9FC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CEDC1A8A20B5831900F9A9FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEDC1A8D20B5831900F9A9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEDC1A8F20B5831900F9A9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDC1A9B20B58D8E00F9A9FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				CEDC1A8A20B5831900F9A9FC /* Assets.xcassets */,
 				CEDC1A8C20B5831900F9A9FC /* LaunchScreen.storyboard */,
 				CEDC1A8F20B5831900F9A9FC /* Info.plist */,
+				CEDC1A9B20B58D8E00F9A9FC /* GoogleService-Info.plist */,
 			);
 			path = PlayWithMindAdmin;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDC1A8E20B5831900F9A9FC /* LaunchScreen.storyboard in Resources */,
+				CEDC1A9C20B58D8E00F9A9FC /* GoogleService-Info.plist in Resources */,
 				CEDC1A8B20B5831900F9A9FC /* Assets.xcassets in Resources */,
 				CEDC1A8920B5831500F9A9FC /* Main.storyboard in Resources */,
 			);
@@ -353,7 +357,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7G5K43D27D;
 				INFOPLIST_FILE = PlayWithMindAdmin/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = MVA.PlayWithMindAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -369,7 +376,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7G5K43D27D;
 				INFOPLIST_FILE = PlayWithMindAdmin/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = MVA.PlayWithMindAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
