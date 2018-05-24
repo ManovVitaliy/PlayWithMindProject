@@ -14,8 +14,8 @@
 		CEDC1A8B20B5831900F9A9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A8A20B5831900F9A9FC /* Assets.xcassets */; };
 		CEDC1A8E20B5831900F9A9FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A8C20B5831900F9A9FC /* LaunchScreen.storyboard */; };
 		CEDC1A9C20B58D8E00F9A9FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A9B20B58D8E00F9A9FC /* GoogleService-Info.plist */; };
-		CEDC1ACD20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1ACB20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift */; };
-		CEDC1ACE20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1ACC20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib */; };
+		CEDC1ACD20B59CD200F9A9FC /* ChooseItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1ACB20B59CD200F9A9FC /* ChooseItemTableViewCell.swift */; };
+		CEDC1ACE20B59CD200F9A9FC /* ChooseItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1ACC20B59CD200F9A9FC /* ChooseItemTableViewCell.xib */; };
 		CEDC1AD220B5A76A00F9A9FC /* Championat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AD120B5A76A00F9A9FC /* Championat.swift */; };
 		CEDC1AD620B5A97300F9A9FC /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AD520B5A97300F9A9FC /* FirebaseService.swift */; };
 		CEDC1AD920B5AF2800F9A9FC /* next-button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AD820B5AF2700F9A9FC /* next-button.png */; };
@@ -23,10 +23,15 @@
 		CEF9BAA920B6B4D5000D8836 /* add-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAA720B6B4D5000D8836 /* add-icon.png */; };
 		CEF9BAAA20B6B4D5000D8836 /* update-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAA820B6B4D5000D8836 /* update-icon.png */; };
 		CEF9BAAE20B6B913000D8836 /* ChooseCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAAD20B6B913000D8836 /* ChooseCountryViewController.swift */; };
-		CEF9BAB420B6C517000D8836 /* CreateNewCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAB220B6C517000D8836 /* CreateNewCountryViewController.swift */; };
-		CEF9BAB520B6C517000D8836 /* CreateNewCountryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAB320B6C517000D8836 /* CreateNewCountryViewController.xib */; };
-		CEF9BAB920B6D1C7000D8836 /* NewCountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAB720B6D1C7000D8836 /* NewCountryTableViewCell.swift */; };
-		CEF9BABA20B6D1C7000D8836 /* NewCountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAB820B6D1C7000D8836 /* NewCountryTableViewCell.xib */; };
+		CEF9BAB420B6C517000D8836 /* AbstractNewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAB220B6C517000D8836 /* AbstractNewItemViewController.swift */; };
+		CEF9BAB520B6C517000D8836 /* AbstractNewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAB320B6C517000D8836 /* AbstractNewItemViewController.xib */; };
+		CEF9BAB920B6D1C7000D8836 /* AbstractNewItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAB720B6D1C7000D8836 /* AbstractNewItemTableViewCell.swift */; };
+		CEF9BABA20B6D1C7000D8836 /* AbstractNewItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAB820B6D1C7000D8836 /* AbstractNewItemTableViewCell.xib */; };
+		CEF9BAC120B6DB45000D8836 /* CreateNewCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAC020B6DB45000D8836 /* CreateNewCountryViewController.swift */; };
+		CEF9BAC720B6F32B000D8836 /* CreateNewChampionatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAC620B6F32B000D8836 /* CreateNewChampionatViewController.swift */; };
+		CEF9BACE20B6F6A1000D8836 /* ChooseTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BACD20B6F6A1000D8836 /* ChooseTeamViewController.swift */; };
+		CEF9BAD020B6F6B4000D8836 /* CreateNewTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BACF20B6F6B4000D8836 /* CreateNewTeamViewController.swift */; };
+		CEF9BAD320B6F9EC000D8836 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAD220B6F9EC000D8836 /* Team.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +46,8 @@
 		CEDC1A8D20B5831900F9A9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEDC1A8F20B5831900F9A9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEDC1A9B20B58D8E00F9A9FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CEDC1ACB20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseChampionatTableViewCell.swift; sourceTree = "<group>"; };
-		CEDC1ACC20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseChampionatTableViewCell.xib; sourceTree = "<group>"; };
+		CEDC1ACB20B59CD200F9A9FC /* ChooseItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseItemTableViewCell.swift; sourceTree = "<group>"; };
+		CEDC1ACC20B59CD200F9A9FC /* ChooseItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseItemTableViewCell.xib; sourceTree = "<group>"; };
 		CEDC1AD120B5A76A00F9A9FC /* Championat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championat.swift; sourceTree = "<group>"; };
 		CEDC1AD520B5A97300F9A9FC /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		CEDC1AD820B5AF2700F9A9FC /* next-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next-button.png"; sourceTree = "<group>"; };
@@ -50,10 +55,15 @@
 		CEF9BAA720B6B4D5000D8836 /* add-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-icon.png"; sourceTree = "<group>"; };
 		CEF9BAA820B6B4D5000D8836 /* update-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update-icon.png"; sourceTree = "<group>"; };
 		CEF9BAAD20B6B913000D8836 /* ChooseCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountryViewController.swift; sourceTree = "<group>"; };
-		CEF9BAB220B6C517000D8836 /* CreateNewCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewCountryViewController.swift; sourceTree = "<group>"; };
-		CEF9BAB320B6C517000D8836 /* CreateNewCountryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateNewCountryViewController.xib; sourceTree = "<group>"; };
-		CEF9BAB720B6D1C7000D8836 /* NewCountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCountryTableViewCell.swift; sourceTree = "<group>"; };
-		CEF9BAB820B6D1C7000D8836 /* NewCountryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewCountryTableViewCell.xib; sourceTree = "<group>"; };
+		CEF9BAB220B6C517000D8836 /* AbstractNewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractNewItemViewController.swift; sourceTree = "<group>"; };
+		CEF9BAB320B6C517000D8836 /* AbstractNewItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AbstractNewItemViewController.xib; sourceTree = "<group>"; };
+		CEF9BAB720B6D1C7000D8836 /* AbstractNewItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractNewItemTableViewCell.swift; sourceTree = "<group>"; };
+		CEF9BAB820B6D1C7000D8836 /* AbstractNewItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AbstractNewItemTableViewCell.xib; sourceTree = "<group>"; };
+		CEF9BAC020B6DB45000D8836 /* CreateNewCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewCountryViewController.swift; sourceTree = "<group>"; };
+		CEF9BAC620B6F32B000D8836 /* CreateNewChampionatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewChampionatViewController.swift; sourceTree = "<group>"; };
+		CEF9BACD20B6F6A1000D8836 /* ChooseTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTeamViewController.swift; sourceTree = "<group>"; };
+		CEF9BACF20B6F6B4000D8836 /* CreateNewTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTeamViewController.swift; sourceTree = "<group>"; };
+		CEF9BAD220B6F9EC000D8836 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +133,10 @@
 		CEDC1AC720B59C3700F9A9FC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CEF9BAA420B6A3BA000D8836 /* Abstract classes */,
 				CEF9BAAB20B6B8B4000D8836 /* ChooseCountryModule */,
-				CEF9BAA420B6A3BA000D8836 /* Abstract class */,
 				CEDC1AC820B59C4600F9A9FC /* ChooseChampionatModule */,
+				CEF9BAC820B6F5DC000D8836 /* ChooseTeamModule */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -133,8 +144,8 @@
 		CEDC1AC820B59C4600F9A9FC /* ChooseChampionatModule */ = {
 			isa = PBXGroup;
 			children = (
-				CEDC1ACA20B59C6200F9A9FC /* ChooseChampionatCell */,
-				CEDC1AC920B59C5700F9A9FC /* Controller */,
+				CEF9BAC420B6F2FA000D8836 /* CreateNewChampionatModule */,
+				CEF9BAC320B6EDA9000D8836 /* ChampionatListModule */,
 			);
 			path = ChooseChampionatModule;
 			sourceTree = "<group>";
@@ -150,8 +161,8 @@
 		CEDC1ACA20B59C6200F9A9FC /* ChooseChampionatCell */ = {
 			isa = PBXGroup;
 			children = (
-				CEDC1ACB20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift */,
-				CEDC1ACC20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib */,
+				CEDC1ACB20B59CD200F9A9FC /* ChooseItemTableViewCell.swift */,
+				CEDC1ACC20B59CD200F9A9FC /* ChooseItemTableViewCell.xib */,
 			);
 			path = ChooseChampionatCell;
 			sourceTree = "<group>";
@@ -159,6 +170,7 @@
 		CEDC1ACF20B5A73100F9A9FC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				CEF9BAD120B6F9D8000D8836 /* Team */,
 				CEDC1AD020B5A75100F9A9FC /* Championat */,
 			);
 			path = Entities;
@@ -198,19 +210,20 @@
 			path = Recources;
 			sourceTree = "<group>";
 		};
-		CEF9BAA420B6A3BA000D8836 /* Abstract class */ = {
+		CEF9BAA420B6A3BA000D8836 /* Abstract classes */ = {
 			isa = PBXGroup;
 			children = (
-				CEF9BAA520B6A42C000D8836 /* AbstractViewController.swift */,
+				CEF9BABC20B6DA40000D8836 /* AbstractMainViewController */,
+				CEF9BABB20B6DA15000D8836 /* AbstractNewItemViewController */,
 			);
-			path = "Abstract class";
+			path = "Abstract classes";
 			sourceTree = "<group>";
 		};
 		CEF9BAAB20B6B8B4000D8836 /* ChooseCountryModule */ = {
 			isa = PBXGroup;
 			children = (
+				CEF9BAC220B6ED98000D8836 /* CountryListModule */,
 				CEF9BAAF20B6C4D8000D8836 /* CreateNewCountryModule */,
-				CEF9BAAC20B6B8EC000D8836 /* Controller */,
 			);
 			path = ChooseCountryModule;
 			sourceTree = "<group>";
@@ -226,9 +239,7 @@
 		CEF9BAAF20B6C4D8000D8836 /* CreateNewCountryModule */ = {
 			isa = PBXGroup;
 			children = (
-				CEF9BAB620B6D19B000D8836 /* CreateNewCountryCell */,
-				CEF9BAB120B6C501000D8836 /* View */,
-				CEF9BAB020B6C4FB000D8836 /* Controller */,
+				CEF9BABE20B6DB10000D8836 /* Controller */,
 			);
 			path = CreateNewCountryModule;
 			sourceTree = "<group>";
@@ -236,7 +247,7 @@
 		CEF9BAB020B6C4FB000D8836 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEF9BAB220B6C517000D8836 /* CreateNewCountryViewController.swift */,
+				CEF9BAB220B6C517000D8836 /* AbstractNewItemViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,18 +255,134 @@
 		CEF9BAB120B6C501000D8836 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF9BAB320B6C517000D8836 /* CreateNewCountryViewController.xib */,
+				CEF9BAB320B6C517000D8836 /* AbstractNewItemViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		CEF9BAB620B6D19B000D8836 /* CreateNewCountryCell */ = {
+		CEF9BAB620B6D19B000D8836 /* AbstractCreateNewItemCell */ = {
 			isa = PBXGroup;
 			children = (
-				CEF9BAB720B6D1C7000D8836 /* NewCountryTableViewCell.swift */,
-				CEF9BAB820B6D1C7000D8836 /* NewCountryTableViewCell.xib */,
+				CEF9BAB720B6D1C7000D8836 /* AbstractNewItemTableViewCell.swift */,
+				CEF9BAB820B6D1C7000D8836 /* AbstractNewItemTableViewCell.xib */,
 			);
-			path = CreateNewCountryCell;
+			path = AbstractCreateNewItemCell;
+			sourceTree = "<group>";
+		};
+		CEF9BABB20B6DA15000D8836 /* AbstractNewItemViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BAB620B6D19B000D8836 /* AbstractCreateNewItemCell */,
+				CEF9BAB120B6C501000D8836 /* View */,
+				CEF9BAB020B6C4FB000D8836 /* Controller */,
+			);
+			path = AbstractNewItemViewController;
+			sourceTree = "<group>";
+		};
+		CEF9BABC20B6DA40000D8836 /* AbstractMainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1ACA20B59C6200F9A9FC /* ChooseChampionatCell */,
+				CEF9BABD20B6DA4F000D8836 /* Controller */,
+			);
+			path = AbstractMainViewController;
+			sourceTree = "<group>";
+		};
+		CEF9BABD20B6DA4F000D8836 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BAA520B6A42C000D8836 /* AbstractViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEF9BABE20B6DB10000D8836 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BAC020B6DB45000D8836 /* CreateNewCountryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEF9BAC220B6ED98000D8836 /* CountryListModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BAAC20B6B8EC000D8836 /* Controller */,
+			);
+			path = CountryListModule;
+			sourceTree = "<group>";
+		};
+		CEF9BAC320B6EDA9000D8836 /* ChampionatListModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AC920B59C5700F9A9FC /* Controller */,
+			);
+			path = ChampionatListModule;
+			sourceTree = "<group>";
+		};
+		CEF9BAC420B6F2FA000D8836 /* CreateNewChampionatModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BAC520B6F307000D8836 /* Controller */,
+			);
+			path = CreateNewChampionatModule;
+			sourceTree = "<group>";
+		};
+		CEF9BAC520B6F307000D8836 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BAC620B6F32B000D8836 /* CreateNewChampionatViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEF9BAC820B6F5DC000D8836 /* ChooseTeamModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BACA20B6F63A000D8836 /* CreateNewTeamModule */,
+				CEF9BAC920B6F625000D8836 /* TeamListModule */,
+			);
+			path = ChooseTeamModule;
+			sourceTree = "<group>";
+		};
+		CEF9BAC920B6F625000D8836 /* TeamListModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BACB20B6F674000D8836 /* Controller */,
+			);
+			path = TeamListModule;
+			sourceTree = "<group>";
+		};
+		CEF9BACA20B6F63A000D8836 /* CreateNewTeamModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BACC20B6F681000D8836 /* Controller */,
+			);
+			path = CreateNewTeamModule;
+			sourceTree = "<group>";
+		};
+		CEF9BACB20B6F674000D8836 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BACD20B6F6A1000D8836 /* ChooseTeamViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEF9BACC20B6F681000D8836 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BACF20B6F6B4000D8836 /* CreateNewTeamViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEF9BAD120B6F9D8000D8836 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BAD220B6F9EC000D8836 /* Team.swift */,
+			);
+			path = Team;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,13 +447,13 @@
 			files = (
 				CEDC1A8E20B5831900F9A9FC /* LaunchScreen.storyboard in Resources */,
 				CEDC1A9C20B58D8E00F9A9FC /* GoogleService-Info.plist in Resources */,
-				CEF9BAB520B6C517000D8836 /* CreateNewCountryViewController.xib in Resources */,
-				CEF9BABA20B6D1C7000D8836 /* NewCountryTableViewCell.xib in Resources */,
+				CEF9BAB520B6C517000D8836 /* AbstractNewItemViewController.xib in Resources */,
+				CEF9BABA20B6D1C7000D8836 /* AbstractNewItemTableViewCell.xib in Resources */,
 				CEF9BAA920B6B4D5000D8836 /* add-icon.png in Resources */,
 				CEF9BAAA20B6B4D5000D8836 /* update-icon.png in Resources */,
 				CEDC1AD920B5AF2800F9A9FC /* next-button.png in Resources */,
 				CEDC1A8B20B5831900F9A9FC /* Assets.xcassets in Resources */,
-				CEDC1ACE20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib in Resources */,
+				CEDC1ACE20B59CD200F9A9FC /* ChooseItemTableViewCell.xib in Resources */,
 				CEDC1A8920B5831500F9A9FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,13 +508,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEF9BAB420B6C517000D8836 /* CreateNewCountryViewController.swift in Sources */,
+				CEF9BAB420B6C517000D8836 /* AbstractNewItemViewController.swift in Sources */,
 				CEF9BAAE20B6B913000D8836 /* ChooseCountryViewController.swift in Sources */,
+				CEF9BAD320B6F9EC000D8836 /* Team.swift in Sources */,
+				CEF9BAD020B6F6B4000D8836 /* CreateNewTeamViewController.swift in Sources */,
 				CEDC1A8620B5831500F9A9FC /* ChooseChampionatViewController.swift in Sources */,
 				CEDC1AD620B5A97300F9A9FC /* FirebaseService.swift in Sources */,
-				CEDC1ACD20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift in Sources */,
+				CEF9BACE20B6F6A1000D8836 /* ChooseTeamViewController.swift in Sources */,
+				CEDC1ACD20B59CD200F9A9FC /* ChooseItemTableViewCell.swift in Sources */,
 				CEDC1A8420B5831500F9A9FC /* AppDelegate.swift in Sources */,
-				CEF9BAB920B6D1C7000D8836 /* NewCountryTableViewCell.swift in Sources */,
+				CEF9BAC120B6DB45000D8836 /* CreateNewCountryViewController.swift in Sources */,
+				CEF9BAB920B6D1C7000D8836 /* AbstractNewItemTableViewCell.swift in Sources */,
+				CEF9BAC720B6F32B000D8836 /* CreateNewChampionatViewController.swift in Sources */,
 				CEF9BAA620B6A42C000D8836 /* AbstractViewController.swift in Sources */,
 				CEDC1AD220B5A76A00F9A9FC /* Championat.swift in Sources */,
 			);

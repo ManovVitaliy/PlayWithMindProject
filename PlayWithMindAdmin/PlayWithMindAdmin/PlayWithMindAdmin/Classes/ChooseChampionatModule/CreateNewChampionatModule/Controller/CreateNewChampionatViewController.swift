@@ -1,5 +1,5 @@
 //
-//  CreateNewCountryViewController.swift
+//  CreateNewChampionatViewController.swift
 //  PlayWithMindAdmin
 //
 //  Created by user on 5/24/18.
@@ -8,10 +8,12 @@
 
 import UIKit
 
-class CreateNewCountryViewController: AbstractNewItemViewController {
+class CreateNewChampionatViewController: AbstractNewItemViewController {
     
-    //MARK: - view controller's lifecycle
+    var countryName = ""
 
+    //MARK: - view controller's lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
@@ -32,7 +34,7 @@ class CreateNewCountryViewController: AbstractNewItemViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! AbstractNewItemTableViewCell
         
-        cell.countryLabel.text = "Country"
+        cell.countryLabel.text = "Championat"
         
         return cell
     }
@@ -47,12 +49,12 @@ class CreateNewCountryViewController: AbstractNewItemViewController {
     
     override func saveButtonTapped(_ sender: Any) {
         if let cell = self.tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as? AbstractNewItemTableViewCell {
-            if let newCountryName = cell.countryTextField.text {
-                FirebaseService.sharedInstance.postCountry(countryName: newCountryName) {
+            if let newChampionatName = cell.countryTextField.text {
+                FirebaseService.sharedInstance.postChampionat(countryName: self.countryName, championatName: newChampionatName) {
                     self.dismiss(animated: true, completion: nil)
                 }
             }
         }
     }
-    
+
 }

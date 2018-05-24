@@ -45,7 +45,7 @@
         <!--Choose Championat View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ChooseChampionatViewController" customModule="PlayWithMindAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChooseChampionatViewController" id="BYZ-38-t0r" customClass="ChooseChampionatViewController" customModule="PlayWithMindAdmin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,11 +67,42 @@
                     <navigationItem key="navigationItem" id="zf9-qQ-d5N"/>
                     <connections>
                         <outlet property="chooseChampionatTableView" destination="833-Mh-0JP" id="V0k-01-eTL"/>
+                        <segue destination="zkC-vV-hMK" kind="show" identifier="showChooseTeam" id="3Gs-oq-Jtn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1994.4000000000001" y="117.39130434782609"/>
+            <point key="canvasLocation" x="1993" y="116"/>
+        </scene>
+        <!--Choose Team View Controller-->
+        <scene sceneID="ciq-Md-Z8m">
+            <objects>
+                <viewController storyboardIdentifier="ChooseTeamViewController" id="zkC-vV-hMK" customClass="ChooseTeamViewController" customModule="PlayWithMindAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fyV-Pe-AgQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w4g-s3-aB2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w4g-s3-aB2" firstAttribute="leading" secondItem="w55-PL-fFI" secondAttribute="leading" id="JC9-Kl-Juc"/>
+                            <constraint firstItem="w4g-s3-aB2" firstAttribute="top" secondItem="w55-PL-fFI" secondAttribute="top" id="V8s-Iy-Kgl"/>
+                            <constraint firstItem="w4g-s3-aB2" firstAttribute="trailing" secondItem="w55-PL-fFI" secondAttribute="trailing" id="knw-Re-oAJ"/>
+                            <constraint firstItem="w4g-s3-aB2" firstAttribute="bottom" secondItem="w55-PL-fFI" secondAttribute="bottom" id="sbb-XW-5Kl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w55-PL-fFI"/>
+                    </view>
+                    <connections>
+                        <outlet property="chooseTeamTableView" destination="w4g-s3-aB2" id="WXY-n2-kmr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZm-ZZ-fjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2908" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Me-Ps-HqQ">

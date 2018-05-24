@@ -12,6 +12,8 @@ class AbstractViewController: UIViewController {
     
     var createButton = UIButton()
     var updateButton = UIButton()
+    
+    //MARK: - view controller's lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +22,14 @@ class AbstractViewController: UIViewController {
         createButton = UIButton(type: .custom)
         createButton.setImage(UIImage(named: "add-icon"), for: .normal)
         createButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        createButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
         createButton.addTarget(self, action: #selector(createButtonTappaed), for: .touchUpInside)
         let item1 = UIBarButtonItem(customView: createButton)
         
         updateButton = UIButton(type: .custom)
         updateButton.setImage(UIImage(named: "update-icon"), for: .normal)
         updateButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        updateButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
         updateButton.addTarget(self, action: #selector(updateButtonTappaed), for: .touchUpInside)
         let item2 = UIBarButtonItem(customView: updateButton)
         
@@ -33,6 +37,11 @@ class AbstractViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor.black
         let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
+        navigationController?.navigationBar.tintColor = UIColor.white
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
     }
     
     func createButtonHidden(hidden: Bool) {

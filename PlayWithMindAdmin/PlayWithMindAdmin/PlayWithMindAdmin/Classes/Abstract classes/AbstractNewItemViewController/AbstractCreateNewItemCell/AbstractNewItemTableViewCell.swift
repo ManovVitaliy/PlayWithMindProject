@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewCountryTableViewCell: UITableViewCell {
+class AbstractNewItemTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var countryTextField: UITextField!
@@ -19,5 +19,14 @@ class NewCountryTableViewCell: UITableViewCell {
         self.countryTextField.layer.borderWidth = 2
         self.countryTextField.layer.borderColor = UIColor.black.cgColor
         self.countryTextField.layer.masksToBounds = true
+        countryTextField.delegate = self
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.countryTextField {
+            self.countryTextField.resignFirstResponder()
+        }
+        return true
+    }
+    
 }

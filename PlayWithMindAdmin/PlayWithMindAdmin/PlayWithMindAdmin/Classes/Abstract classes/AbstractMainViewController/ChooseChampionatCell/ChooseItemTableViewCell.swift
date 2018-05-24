@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChooseChampionatTableViewCell: UITableViewCell {
+class ChooseItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var championatImageView: UIImageView!
     @IBOutlet weak var championatNameLabel: UILabel!
