@@ -29,7 +29,7 @@ class ChooseChampionatViewController: AbstractViewController, UITableViewDataSou
             }
         }
         self.title = "ChooseChampionatViewController"
-        self.btn1Hidden(hidden: false)
+        self.createButtonHidden(hidden: false)
     }
     
     private func setupTableView() {

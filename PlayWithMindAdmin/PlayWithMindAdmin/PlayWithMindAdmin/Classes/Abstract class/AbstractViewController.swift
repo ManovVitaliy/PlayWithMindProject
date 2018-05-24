@@ -10,24 +10,24 @@ import UIKit
 
 class AbstractViewController: UIViewController {
     
-    var btn1 = UIButton()
-    var btn2 = UIButton()
+    var createButton = UIButton()
+    var updateButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Abstract Controller"
         
-        btn1 = UIButton(type: .custom)
-        btn1.setImage(UIImage(named: "add-icon"), for: .normal)
-        btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        btn1.addTarget(self, action: #selector(btn1Tappaed), for: .touchUpInside)
-        let item1 = UIBarButtonItem(customView: btn1)
+        createButton = UIButton(type: .custom)
+        createButton.setImage(UIImage(named: "add-icon"), for: .normal)
+        createButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        createButton.addTarget(self, action: #selector(createButtonTappaed), for: .touchUpInside)
+        let item1 = UIBarButtonItem(customView: createButton)
         
-        btn2 = UIButton(type: .custom)
-        btn2.setImage(UIImage(named: "update-icon"), for: .normal)
-        btn2.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        btn2.addTarget(self, action: #selector(btn2Tappaed), for: .touchUpInside)
-        let item2 = UIBarButtonItem(customView: btn2)
+        updateButton = UIButton(type: .custom)
+        updateButton.setImage(UIImage(named: "update-icon"), for: .normal)
+        updateButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        updateButton.addTarget(self, action: #selector(updateButtonTappaed), for: .touchUpInside)
+        let item2 = UIBarButtonItem(customView: updateButton)
         
         self.navigationItem.setRightBarButtonItems([item1,item2], animated: true)
         self.navigationController?.navigationBar.barTintColor = UIColor.black
@@ -35,19 +35,19 @@ class AbstractViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
     
-    func btn1Hidden(hidden: Bool) {
-        self.btn1.isHidden = hidden
+    func createButtonHidden(hidden: Bool) {
+        self.createButton.isHidden = hidden
     }
     
-    func btn2Hidden(hidden: Bool) {
-        self.btn2.isHidden = hidden
+    func updateButtonHidden(hidden: Bool) {
+        self.updateButton.isHidden = hidden
     }
     
-    @objc func btn1Tappaed() {
+    @objc func createButtonTappaed() {
         print("btn1 abstract Tapped")
     }
     
-    @objc func btn2Tappaed() {
+    @objc func updateButtonTappaed() {
         print("btn2 abstract Tapped")
     }
     

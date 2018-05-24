@@ -23,6 +23,10 @@
 		CEF9BAA920B6B4D5000D8836 /* add-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAA720B6B4D5000D8836 /* add-icon.png */; };
 		CEF9BAAA20B6B4D5000D8836 /* update-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAA820B6B4D5000D8836 /* update-icon.png */; };
 		CEF9BAAE20B6B913000D8836 /* ChooseCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAAD20B6B913000D8836 /* ChooseCountryViewController.swift */; };
+		CEF9BAB420B6C517000D8836 /* CreateNewCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAB220B6C517000D8836 /* CreateNewCountryViewController.swift */; };
+		CEF9BAB520B6C517000D8836 /* CreateNewCountryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAB320B6C517000D8836 /* CreateNewCountryViewController.xib */; };
+		CEF9BAB920B6D1C7000D8836 /* NewCountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAB720B6D1C7000D8836 /* NewCountryTableViewCell.swift */; };
+		CEF9BABA20B6D1C7000D8836 /* NewCountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAB820B6D1C7000D8836 /* NewCountryTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		CEF9BAA720B6B4D5000D8836 /* add-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-icon.png"; sourceTree = "<group>"; };
 		CEF9BAA820B6B4D5000D8836 /* update-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update-icon.png"; sourceTree = "<group>"; };
 		CEF9BAAD20B6B913000D8836 /* ChooseCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountryViewController.swift; sourceTree = "<group>"; };
+		CEF9BAB220B6C517000D8836 /* CreateNewCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewCountryViewController.swift; sourceTree = "<group>"; };
+		CEF9BAB320B6C517000D8836 /* CreateNewCountryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateNewCountryViewController.xib; sourceTree = "<group>"; };
+		CEF9BAB720B6D1C7000D8836 /* NewCountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCountryTableViewCell.swift; sourceTree = "<group>"; };
+		CEF9BAB820B6D1C7000D8836 /* NewCountryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewCountryTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +209,7 @@
 		CEF9BAAB20B6B8B4000D8836 /* ChooseCountryModule */ = {
 			isa = PBXGroup;
 			children = (
+				CEF9BAAF20B6C4D8000D8836 /* CreateNewCountryModule */,
 				CEF9BAAC20B6B8EC000D8836 /* Controller */,
 			);
 			path = ChooseCountryModule;
@@ -212,6 +221,41 @@
 				CEF9BAAD20B6B913000D8836 /* ChooseCountryViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEF9BAAF20B6C4D8000D8836 /* CreateNewCountryModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BAB620B6D19B000D8836 /* CreateNewCountryCell */,
+				CEF9BAB120B6C501000D8836 /* View */,
+				CEF9BAB020B6C4FB000D8836 /* Controller */,
+			);
+			path = CreateNewCountryModule;
+			sourceTree = "<group>";
+		};
+		CEF9BAB020B6C4FB000D8836 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BAB220B6C517000D8836 /* CreateNewCountryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEF9BAB120B6C501000D8836 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BAB320B6C517000D8836 /* CreateNewCountryViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEF9BAB620B6D19B000D8836 /* CreateNewCountryCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BAB720B6D1C7000D8836 /* NewCountryTableViewCell.swift */,
+				CEF9BAB820B6D1C7000D8836 /* NewCountryTableViewCell.xib */,
+			);
+			path = CreateNewCountryCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +320,8 @@
 			files = (
 				CEDC1A8E20B5831900F9A9FC /* LaunchScreen.storyboard in Resources */,
 				CEDC1A9C20B58D8E00F9A9FC /* GoogleService-Info.plist in Resources */,
+				CEF9BAB520B6C517000D8836 /* CreateNewCountryViewController.xib in Resources */,
+				CEF9BABA20B6D1C7000D8836 /* NewCountryTableViewCell.xib in Resources */,
 				CEF9BAA920B6B4D5000D8836 /* add-icon.png in Resources */,
 				CEF9BAAA20B6B4D5000D8836 /* update-icon.png in Resources */,
 				CEDC1AD920B5AF2800F9A9FC /* next-button.png in Resources */,
@@ -335,11 +381,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF9BAB420B6C517000D8836 /* CreateNewCountryViewController.swift in Sources */,
 				CEF9BAAE20B6B913000D8836 /* ChooseCountryViewController.swift in Sources */,
 				CEDC1A8620B5831500F9A9FC /* ChooseChampionatViewController.swift in Sources */,
 				CEDC1AD620B5A97300F9A9FC /* FirebaseService.swift in Sources */,
 				CEDC1ACD20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift in Sources */,
 				CEDC1A8420B5831500F9A9FC /* AppDelegate.swift in Sources */,
+				CEF9BAB920B6D1C7000D8836 /* NewCountryTableViewCell.swift in Sources */,
 				CEF9BAA620B6A42C000D8836 /* AbstractViewController.swift in Sources */,
 				CEDC1AD220B5A76A00F9A9FC /* Championat.swift in Sources */,
 			);

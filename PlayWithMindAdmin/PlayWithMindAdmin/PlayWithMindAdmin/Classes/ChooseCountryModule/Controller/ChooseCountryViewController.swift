@@ -33,8 +33,8 @@ class ChooseCountryViewController: AbstractViewController, UITableViewDataSource
     
     private func setupNavigationBar() {
         self.title = navTtitle
-        self.btn1Hidden(hidden: false)
-        self.btn2Hidden(hidden: true)
+        self.createButtonHidden(hidden: false)
+        self.updateButtonHidden(hidden: true)
     }
     
     private func setupTableView() {
@@ -51,5 +51,11 @@ class ChooseCountryViewController: AbstractViewController, UITableViewDataSource
         let cell = self.chooseCountryTableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ChooseChampionatTableViewCell
         cell.championatNameLabel.text = self.countriesArray[indexPath.row]
         return cell
+    }
+    
+    override func createButtonTappaed() {
+        let createNewCountryVC = CreateNewCountryViewController.init(nibName: "CreateNewCountryViewController", bundle: nil)
+        
+        self.present(createNewCountryVC, animated: true, completion: nil)
     }
 }
