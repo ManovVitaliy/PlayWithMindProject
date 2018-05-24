@@ -15,6 +15,8 @@ class AbstractNewItemViewController: UIViewController, UITableViewDataSource, UI
     
     let cellIdentifier = "AbstractNewItemTableViewCell"
 
+    //MARK: - view controller's lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
@@ -26,6 +28,8 @@ class AbstractNewItemViewController: UIViewController, UITableViewDataSource, UI
         self.tableView.register(UINib(nibName: "AbstractNewItemTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
     
+    //MARK: - tableView data Source
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -35,6 +39,8 @@ class AbstractNewItemViewController: UIViewController, UITableViewDataSource, UI
         
         return cell
     }
+    
+    //MARK: - actions
     
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
