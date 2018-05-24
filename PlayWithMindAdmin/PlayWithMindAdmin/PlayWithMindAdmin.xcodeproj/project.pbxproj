@@ -22,6 +22,7 @@
 		CEF9BAA620B6A42C000D8836 /* AbstractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAA520B6A42C000D8836 /* AbstractViewController.swift */; };
 		CEF9BAA920B6B4D5000D8836 /* add-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAA720B6B4D5000D8836 /* add-icon.png */; };
 		CEF9BAAA20B6B4D5000D8836 /* update-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAA820B6B4D5000D8836 /* update-icon.png */; };
+		CEF9BAAE20B6B913000D8836 /* ChooseCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAAD20B6B913000D8836 /* ChooseCountryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		CEF9BAA520B6A42C000D8836 /* AbstractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractViewController.swift; sourceTree = "<group>"; };
 		CEF9BAA720B6B4D5000D8836 /* add-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-icon.png"; sourceTree = "<group>"; };
 		CEF9BAA820B6B4D5000D8836 /* update-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update-icon.png"; sourceTree = "<group>"; };
+		CEF9BAAD20B6B913000D8836 /* ChooseCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		CEDC1AC720B59C3700F9A9FC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CEF9BAAB20B6B8B4000D8836 /* ChooseCountryModule */,
 				CEF9BAA420B6A3BA000D8836 /* Abstract class */,
 				CEDC1AC820B59C4600F9A9FC /* ChooseChampionatModule */,
 			);
@@ -193,6 +196,22 @@
 				CEF9BAA520B6A42C000D8836 /* AbstractViewController.swift */,
 			);
 			path = "Abstract class";
+			sourceTree = "<group>";
+		};
+		CEF9BAAB20B6B8B4000D8836 /* ChooseCountryModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BAAC20B6B8EC000D8836 /* Controller */,
+			);
+			path = ChooseCountryModule;
+			sourceTree = "<group>";
+		};
+		CEF9BAAC20B6B8EC000D8836 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BAAD20B6B913000D8836 /* ChooseCountryViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF9BAAE20B6B913000D8836 /* ChooseCountryViewController.swift in Sources */,
 				CEDC1A8620B5831500F9A9FC /* ChooseChampionatViewController.swift in Sources */,
 				CEDC1AD620B5A97300F9A9FC /* FirebaseService.swift in Sources */,
 				CEDC1ACD20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift in Sources */,

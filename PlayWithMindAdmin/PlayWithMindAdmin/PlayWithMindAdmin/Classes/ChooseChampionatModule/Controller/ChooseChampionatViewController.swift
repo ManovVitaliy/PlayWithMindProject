@@ -28,7 +28,7 @@ class ChooseChampionatViewController: AbstractViewController, UITableViewDataSou
                 self?.chooseChampionatTableView.reloadData()
             }
         }
-//        self.title = "ChooseChampionatViewController"
+        self.title = "ChooseChampionatViewController"
         self.btn1Hidden(hidden: false)
     }
     

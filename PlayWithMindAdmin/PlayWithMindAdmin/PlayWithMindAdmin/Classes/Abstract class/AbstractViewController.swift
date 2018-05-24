@@ -15,7 +15,7 @@ class AbstractViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "AbstractViewController"
+        self.title = "Abstract Controller"
         
         btn1 = UIButton(type: .custom)
         btn1.setImage(UIImage(named: "add-icon"), for: .normal)
@@ -31,6 +31,8 @@ class AbstractViewController: UIViewController {
         
         self.navigationItem.setRightBarButtonItems([item1,item2], animated: true)
         self.navigationController?.navigationBar.barTintColor = UIColor.black
+        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
     }
     
     func btn1Hidden(hidden: Bool) {
