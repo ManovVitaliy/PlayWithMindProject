@@ -19,6 +19,9 @@
 		CEDC1AD220B5A76A00F9A9FC /* Championat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AD120B5A76A00F9A9FC /* Championat.swift */; };
 		CEDC1AD620B5A97300F9A9FC /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AD520B5A97300F9A9FC /* FirebaseService.swift */; };
 		CEDC1AD920B5AF2800F9A9FC /* next-button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AD820B5AF2700F9A9FC /* next-button.png */; };
+		CEF9BAA620B6A42C000D8836 /* AbstractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAA520B6A42C000D8836 /* AbstractViewController.swift */; };
+		CEF9BAA920B6B4D5000D8836 /* add-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAA720B6B4D5000D8836 /* add-icon.png */; };
+		CEF9BAAA20B6B4D5000D8836 /* update-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAA820B6B4D5000D8836 /* update-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		CEDC1AD120B5A76A00F9A9FC /* Championat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championat.swift; sourceTree = "<group>"; };
 		CEDC1AD520B5A97300F9A9FC /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		CEDC1AD820B5AF2700F9A9FC /* next-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next-button.png"; sourceTree = "<group>"; };
+		CEF9BAA520B6A42C000D8836 /* AbstractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractViewController.swift; sourceTree = "<group>"; };
+		CEF9BAA720B6B4D5000D8836 /* add-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-icon.png"; sourceTree = "<group>"; };
+		CEF9BAA820B6B4D5000D8836 /* update-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 		CEDC1AC720B59C3700F9A9FC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CEF9BAA420B6A3BA000D8836 /* Abstract class */,
 				CEDC1AC820B59C4600F9A9FC /* ChooseChampionatModule */,
 			);
 			path = Classes;
@@ -174,8 +181,18 @@
 			isa = PBXGroup;
 			children = (
 				CEDC1AD820B5AF2700F9A9FC /* next-button.png */,
+				CEF9BAA720B6B4D5000D8836 /* add-icon.png */,
+				CEF9BAA820B6B4D5000D8836 /* update-icon.png */,
 			);
 			path = Recources;
+			sourceTree = "<group>";
+		};
+		CEF9BAA420B6A3BA000D8836 /* Abstract class */ = {
+			isa = PBXGroup;
+			children = (
+				CEF9BAA520B6A42C000D8836 /* AbstractViewController.swift */,
+			);
+			path = "Abstract class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +257,8 @@
 			files = (
 				CEDC1A8E20B5831900F9A9FC /* LaunchScreen.storyboard in Resources */,
 				CEDC1A9C20B58D8E00F9A9FC /* GoogleService-Info.plist in Resources */,
+				CEF9BAA920B6B4D5000D8836 /* add-icon.png in Resources */,
+				CEF9BAAA20B6B4D5000D8836 /* update-icon.png in Resources */,
 				CEDC1AD920B5AF2800F9A9FC /* next-button.png in Resources */,
 				CEDC1A8B20B5831900F9A9FC /* Assets.xcassets in Resources */,
 				CEDC1ACE20B59CD200F9A9FC /* ChooseChampionatTableViewCell.xib in Resources */,
@@ -301,6 +320,7 @@
 				CEDC1AD620B5A97300F9A9FC /* FirebaseService.swift in Sources */,
 				CEDC1ACD20B59CD200F9A9FC /* ChooseChampionatTableViewCell.swift in Sources */,
 				CEDC1A8420B5831500F9A9FC /* AppDelegate.swift in Sources */,
+				CEF9BAA620B6A42C000D8836 /* AbstractViewController.swift in Sources */,
 				CEDC1AD220B5A76A00F9A9FC /* Championat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

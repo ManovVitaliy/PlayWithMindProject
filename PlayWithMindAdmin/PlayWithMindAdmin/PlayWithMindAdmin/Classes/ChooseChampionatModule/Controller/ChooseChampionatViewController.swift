@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
-class ChooseChampionatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ChooseChampionatViewController: AbstractViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var chooseChampionatTableView: UITableView!
     
@@ -28,6 +28,8 @@ class ChooseChampionatViewController: UIViewController, UITableViewDataSource, U
                 self?.chooseChampionatTableView.reloadData()
             }
         }
+//        self.title = "ChooseChampionatViewController"
+        self.btn1Hidden(hidden: false)
     }
     
     private func setupTableView() {
@@ -45,5 +47,13 @@ class ChooseChampionatViewController: UIViewController, UITableViewDataSource, U
         cell.championatNameLabel.text = self.champsArray[indexPath.row].championatName
         return cell
     }
+    
+//    override func btn1Tappaed() {
+//        print("btn1 choose Tapped")
+//    }
+//
+//    override func btn2Tappaed() {
+//        print("btn2 choose Tapped")
+//    }
 }
 
