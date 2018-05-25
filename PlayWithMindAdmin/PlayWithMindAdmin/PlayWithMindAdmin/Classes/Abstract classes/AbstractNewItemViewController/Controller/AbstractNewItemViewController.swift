@@ -12,6 +12,7 @@ class AbstractNewItemViewController: UIViewController, UITableViewDataSource, UI
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var saveButton: UIButton!
     
     let cellIdentifier = "AbstractNewItemTableViewCell"
 

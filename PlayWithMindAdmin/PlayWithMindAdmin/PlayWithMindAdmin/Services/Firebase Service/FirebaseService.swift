@@ -17,6 +17,7 @@ class FirebaseService: NSObject {
     private let keyCountry = "Country"
     private let keyChampionat = "Championat"
     private let keyTeam = "Team"
+    private let keyPlayer = "Player"
     
     //MARK: - GET
     
@@ -29,7 +30,6 @@ class FirebaseService: NSObject {
                 } else {
                     completion(nil)
                 }
-                
             }
         }
     }
@@ -69,6 +69,28 @@ class FirebaseService: NSObject {
                         teamsArray.append(team)
                     }
                     completion(teamsArray)
+                } else {
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    func getPlayers(teamName: String, completion: @escaping((_ playerArray: [Player]?) -> Void)) {
+        let firebasePlayer = Database.database().reference().child(keyPlayer)
+        let firebasePlayersForTeam = firebasePlayer.child(teamName)
+        firebasePlayersForTeam.observe(DataEventType.value) { (snapshot) in
+            if let data = snapshot.value {
+                if let dataArray = data as? [String] {
+                    var playersArray = [Player]()
+                    for playerName in dataArray {
+                        let player = Player()
+                        player.playerName = playerName
+                        playersArray.append(player)
+                    }
+                    completion(playersArray)
                 } else {
                     completion(nil)
                 }
@@ -119,6 +141,21 @@ class FirebaseService: NSObject {
                 completion()
             } else {
                 firebaseTeamForChampionat.setValue([teamName])
+                completion()
+            }
+        }
+    }
+    
+    func postPlayer(teamName: String, playerName: String, completion: @escaping(() -> Void)) {
+        let firebasePlayer = Database.database().reference().child(keyPlayer)
+        let firebasePlayerForTeam = firebasePlayer.child(teamName)
+        firebasePlayerForTeam.observeSingleEvent(of: DataEventType.value) { (snapshot) in
+            if var playersArray = snapshot.value as? [String] {
+                playersArray.append(playerName)
+                firebasePlayerForTeam.setValue(playersArray)
+                completion()
+            } else {
+                firebasePlayerForTeam.setValue([playerName])
                 completion()
             }
         }

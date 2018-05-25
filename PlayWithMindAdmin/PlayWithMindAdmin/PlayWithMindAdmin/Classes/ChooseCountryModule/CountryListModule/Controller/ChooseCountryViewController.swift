@@ -13,7 +13,6 @@ class ChooseCountryViewController: AbstractViewController, UITableViewDataSource
     @IBOutlet weak var chooseCountryTableView: UITableView!
     
     //constants
-    private let cellIdentifier = "ChooseItemTableViewCell"
     private let navTtitle = "Choose country"
     
     var countriesArray = [String]()

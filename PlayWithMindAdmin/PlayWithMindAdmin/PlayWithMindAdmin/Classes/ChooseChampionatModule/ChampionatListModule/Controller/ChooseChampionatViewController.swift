@@ -13,9 +13,6 @@ class ChooseChampionatViewController: AbstractViewController, UITableViewDataSou
 
     @IBOutlet weak var chooseChampionatTableView: UITableView!
     
-    //constants
-    private let cellIdentifier = "ChooseItemTableViewCell"
-    
     var country: String = ""
     
     var champsArray = [Championat]()

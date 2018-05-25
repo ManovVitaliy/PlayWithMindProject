@@ -1,22 +1,24 @@
 //
-//  CreateNewTeamViewController.swift
+//  UpdateTeamViewController.swift
 //  PlayWithMindAdmin
 //
-//  Created by user on 5/24/18.
+//  Created by user on 5/25/18.
 //  Copyright © 2018 Vitaliy. All rights reserved.
 //
 
 import UIKit
 
-class CreateNewTeamViewController: AbstractNewItemViewController {
+class UpdateTeamViewController: AbstractNewItemViewController {
 
-    var championatName = ""
+    var teamName = ""
     
     //MARK: - view controller's lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
+        self.saveButton.setTitle("UPDATE", for: .normal)
+        self.titleLabel.text = teamName
     }
     
     override func setupTableView() {
@@ -46,12 +48,13 @@ class CreateNewTeamViewController: AbstractNewItemViewController {
     }
     
     override func saveButtonTapped(_ sender: Any) {
-        if let cell = self.tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as? AbstractNewItemTableViewCell {
-            if let newTeamName = cell.countryTextField.text {
-                FirebaseService.sharedInstance.postTeam(championatName: championatName, teamName: newTeamName) {
-                    self.dismiss(animated: true, completion: nil)
-                }
-            }
-        }
+//        if let cell = self.tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as? AbstractNewItemTableViewCell {
+//            if let newTeamName = cell.countryTextField.text {
+//                FirebaseService.sharedInstance.postTeam(championatName: championatName, teamName: newTeamName) {
+//                    self.dismiss(animated: true, completion: nil)
+//                }
+//            }
+//        }
     }
+
 }

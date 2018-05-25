@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AbstractNewItemViewController" customModule="PlayWithMindAdmin">
             <connections>
+                <outlet property="saveButton" destination="vdv-v0-zSx" id="16o-dV-qFU"/>
                 <outlet property="tableView" destination="lAq-zx-nE4" id="BkN-Nt-U8X"/>
                 <outlet property="titleLabel" destination="jvn-Fy-KrJ" id="RLy-he-9bC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

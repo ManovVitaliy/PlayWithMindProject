@@ -12,9 +12,6 @@ class ChooseTeamViewController: AbstractViewController, UITableViewDataSource, U
 
     @IBOutlet weak var chooseTeamTableView: UITableView!
     
-    //constants
-    private let cellIdentifier = "ChooseItemTableViewCell"
-    
     var championat: String = ""
     
     var teamsArray = [Team]()
@@ -52,12 +49,22 @@ class ChooseTeamViewController: AbstractViewController, UITableViewDataSource, U
         return cell
     }
     
+    //MARK: - tableView delegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedTeamName = self.teamsArray[indexPath.row].teamName
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let playerListVC = storyboard.instantiateViewController(withIdentifier: "ChoosePlayerViewController") as! ChoosePlayerViewController
+        playerListVC.team = selectedTeamName
+        self.navigationController?.pushViewController(playerListVC, animated: true)
+    }
+    
     //MARK: - actions
     
     override func createButtonTappaed() {
-        let createNewChampionatVC = CreateNewTeamViewController.init(nibName: "AbstractNewItemViewController", bundle: nil)
-        createNewChampionatVC.championatName = self.championat
+        let createNewTeamVC = CreateNewTeamViewController.init(nibName: "AbstractNewItemViewController", bundle: nil)
+        createNewTeamVC.championatName = self.championat
         
-        self.present(createNewChampionatVC, animated: true, completion: nil)
+        self.present(createNewTeamVC, animated: true, completion: nil)
     }
 }

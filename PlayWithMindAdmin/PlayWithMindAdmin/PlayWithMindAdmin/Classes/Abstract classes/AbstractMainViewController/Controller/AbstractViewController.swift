@@ -13,6 +13,8 @@ class AbstractViewController: UIViewController {
     var createButton = UIButton()
     var updateButton = UIButton()
     
+    let cellIdentifier = "ChooseItemTableViewCell"
+    
     //MARK: - view controller's lifecycle
 
     override func viewDidLoad() {

@@ -19,6 +19,10 @@
 		CEDC1AD220B5A76A00F9A9FC /* Championat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AD120B5A76A00F9A9FC /* Championat.swift */; };
 		CEDC1AD620B5A97300F9A9FC /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AD520B5A97300F9A9FC /* FirebaseService.swift */; };
 		CEDC1AD920B5AF2800F9A9FC /* next-button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AD820B5AF2700F9A9FC /* next-button.png */; };
+		CEEA92AC20B807240098839A /* ChoosePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA92AB20B807240098839A /* ChoosePlayerViewController.swift */; };
+		CEEA92AF20B808560098839A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA92AE20B808560098839A /* Player.swift */; };
+		CEEA92B120B809800098839A /* CreateNewPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA92B020B809800098839A /* CreateNewPlayerViewController.swift */; };
+		CEEA92B520B812A60098839A /* UpdateTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA92B420B812A60098839A /* UpdateTeamViewController.swift */; };
 		CEF9BAA620B6A42C000D8836 /* AbstractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAA520B6A42C000D8836 /* AbstractViewController.swift */; };
 		CEF9BAA920B6B4D5000D8836 /* add-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAA720B6B4D5000D8836 /* add-icon.png */; };
 		CEF9BAAA20B6B4D5000D8836 /* update-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAA820B6B4D5000D8836 /* update-icon.png */; };
@@ -51,6 +55,10 @@
 		CEDC1AD120B5A76A00F9A9FC /* Championat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championat.swift; sourceTree = "<group>"; };
 		CEDC1AD520B5A97300F9A9FC /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		CEDC1AD820B5AF2700F9A9FC /* next-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next-button.png"; sourceTree = "<group>"; };
+		CEEA92AB20B807240098839A /* ChoosePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerViewController.swift; sourceTree = "<group>"; };
+		CEEA92AE20B808560098839A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CEEA92B020B809800098839A /* CreateNewPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPlayerViewController.swift; sourceTree = "<group>"; };
+		CEEA92B420B812A60098839A /* UpdateTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTeamViewController.swift; sourceTree = "<group>"; };
 		CEF9BAA520B6A42C000D8836 /* AbstractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractViewController.swift; sourceTree = "<group>"; };
 		CEF9BAA720B6B4D5000D8836 /* add-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-icon.png"; sourceTree = "<group>"; };
 		CEF9BAA820B6B4D5000D8836 /* update-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update-icon.png"; sourceTree = "<group>"; };
@@ -137,6 +145,7 @@
 				CEF9BAAB20B6B8B4000D8836 /* ChooseCountryModule */,
 				CEDC1AC820B59C4600F9A9FC /* ChooseChampionatModule */,
 				CEF9BAC820B6F5DC000D8836 /* ChooseTeamModule */,
+				CEEA92A620B8044D0098839A /* ChoosePlayerModule */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 		CEDC1ACF20B5A73100F9A9FC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				CEEA92AD20B8083C0098839A /* Player */,
 				CEF9BAD120B6F9D8000D8836 /* Team */,
 				CEDC1AD020B5A75100F9A9FC /* Championat */,
 			);
@@ -208,6 +218,72 @@
 				CEF9BAA820B6B4D5000D8836 /* update-icon.png */,
 			);
 			path = Recources;
+			sourceTree = "<group>";
+		};
+		CEEA92A620B8044D0098839A /* ChoosePlayerModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA92B220B80D950098839A /* UpdateTeamModule */,
+				CEEA92A820B8047F0098839A /* CreateNewPlayerModule */,
+				CEEA92A720B8046C0098839A /* PlayerListModule */,
+			);
+			path = ChoosePlayerModule;
+			sourceTree = "<group>";
+		};
+		CEEA92A720B8046C0098839A /* PlayerListModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA92AA20B804A30098839A /* Controller */,
+			);
+			path = PlayerListModule;
+			sourceTree = "<group>";
+		};
+		CEEA92A820B8047F0098839A /* CreateNewPlayerModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA92A920B8049B0098839A /* Controller */,
+			);
+			path = CreateNewPlayerModule;
+			sourceTree = "<group>";
+		};
+		CEEA92A920B8049B0098839A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA92B020B809800098839A /* CreateNewPlayerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEEA92AA20B804A30098839A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA92AB20B807240098839A /* ChoosePlayerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEEA92AD20B8083C0098839A /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA92AE20B808560098839A /* Player.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		CEEA92B220B80D950098839A /* UpdateTeamModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA92B320B80DAC0098839A /* Controller */,
+			);
+			path = UpdateTeamModule;
+			sourceTree = "<group>";
+		};
+		CEEA92B320B80DAC0098839A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA92B420B812A60098839A /* UpdateTeamViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		CEF9BAA420B6A3BA000D8836 /* Abstract classes */ = {
@@ -512,13 +588,17 @@
 				CEF9BAAE20B6B913000D8836 /* ChooseCountryViewController.swift in Sources */,
 				CEF9BAD320B6F9EC000D8836 /* Team.swift in Sources */,
 				CEF9BAD020B6F6B4000D8836 /* CreateNewTeamViewController.swift in Sources */,
+				CEEA92AF20B808560098839A /* Player.swift in Sources */,
 				CEDC1A8620B5831500F9A9FC /* ChooseChampionatViewController.swift in Sources */,
 				CEDC1AD620B5A97300F9A9FC /* FirebaseService.swift in Sources */,
 				CEF9BACE20B6F6A1000D8836 /* ChooseTeamViewController.swift in Sources */,
 				CEDC1ACD20B59CD200F9A9FC /* ChooseItemTableViewCell.swift in Sources */,
 				CEDC1A8420B5831500F9A9FC /* AppDelegate.swift in Sources */,
+				CEEA92B120B809800098839A /* CreateNewPlayerViewController.swift in Sources */,
 				CEF9BAC120B6DB45000D8836 /* CreateNewCountryViewController.swift in Sources */,
+				CEEA92B520B812A60098839A /* UpdateTeamViewController.swift in Sources */,
 				CEF9BAB920B6D1C7000D8836 /* AbstractNewItemTableViewCell.swift in Sources */,
+				CEEA92AC20B807240098839A /* ChoosePlayerViewController.swift in Sources */,
 				CEF9BAC720B6F32B000D8836 /* CreateNewChampionatViewController.swift in Sources */,
 				CEF9BAA620B6A42C000D8836 /* AbstractViewController.swift in Sources */,
 				CEDC1AD220B5A76A00F9A9FC /* Championat.swift in Sources */,

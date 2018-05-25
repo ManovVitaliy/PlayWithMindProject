@@ -98,11 +98,42 @@
                     </view>
                     <connections>
                         <outlet property="chooseTeamTableView" destination="w4g-s3-aB2" id="WXY-n2-kmr"/>
+                        <segue destination="ZFZ-Az-Hnc" kind="show" identifier="showChoosePlayer" id="3k6-xV-yhS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZm-ZZ-fjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2908" y="116"/>
+        </scene>
+        <!--Choose Player View Controller-->
+        <scene sceneID="NvI-We-1Pr">
+            <objects>
+                <viewController storyboardIdentifier="ChoosePlayerViewController" id="ZFZ-Az-Hnc" customClass="ChoosePlayerViewController" customModule="PlayWithMindAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fmg-Hn-yLU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vV7-Ae-9ej">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vV7-Ae-9ej" firstAttribute="trailing" secondItem="P6X-zd-Od8" secondAttribute="trailing" id="M03-CO-GOP"/>
+                            <constraint firstItem="vV7-Ae-9ej" firstAttribute="bottom" secondItem="P6X-zd-Od8" secondAttribute="bottom" id="QPU-kM-Em1"/>
+                            <constraint firstItem="vV7-Ae-9ej" firstAttribute="leading" secondItem="P6X-zd-Od8" secondAttribute="leading" id="i8c-2L-aac"/>
+                            <constraint firstItem="vV7-Ae-9ej" firstAttribute="top" secondItem="P6X-zd-Od8" secondAttribute="top" id="zlN-96-QXT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P6X-zd-Od8"/>
+                    </view>
+                    <connections>
+                        <outlet property="choosePlayerTableView" destination="vV7-Ae-9ej" id="3Kf-iD-MDS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m0e-tY-vZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664.8000000000002" y="115.59220389805098"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Me-Ps-HqQ">
