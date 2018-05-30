@@ -36,7 +36,7 @@ class UpdateTeamViewController: AbstractNewItemViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! AbstractNewItemTableViewCell
         
-        cell.countryLabel.text = "team"
+        cell.itemCellLabel.text = "team"
         
         return cell
     }

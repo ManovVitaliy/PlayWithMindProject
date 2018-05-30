@@ -45,8 +45,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="countryLabel" destination="ygl-PT-Hzd" id="QOv-gX-UoP"/>
-                <outlet property="countryTextField" destination="uCP-ST-Oiy" id="BNI-De-USh"/>
+                <outlet property="itemCellLabel" destination="ygl-PT-Hzd" id="QOv-gX-UoP"/>
+                <outlet property="itemCellTextField" destination="uCP-ST-Oiy" id="BNI-De-USh"/>
             </connections>
         </tableViewCell>
     </objects>

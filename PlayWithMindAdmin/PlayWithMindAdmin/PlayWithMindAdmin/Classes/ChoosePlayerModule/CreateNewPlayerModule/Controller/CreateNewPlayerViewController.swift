@@ -34,7 +34,7 @@ class CreateNewPlayerViewController: AbstractNewItemViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! AbstractNewItemTableViewCell
         
-        cell.countryLabel.text = "player"
+        cell.itemCellLabel.text = "player"
         
         return cell
     }
@@ -49,8 +49,11 @@ class CreateNewPlayerViewController: AbstractNewItemViewController {
     
     override func saveButtonTapped(_ sender: Any) {
         if let cell = self.tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as? AbstractNewItemTableViewCell {
-            if let newPlayerName = cell.countryTextField.text {
-                FirebaseService.sharedInstance.postPlayer(teamName: teamName, playerName: newPlayerName) {
+            if let newPlayerName = cell.itemCellTextField.text {
+                let player = Player()
+                player.playerName = newPlayerName
+                player.playerImage = "urlImage \(newPlayerName)"
+                FirebaseService.sharedInstance.postPlayer(teamName: teamName, player: player) {
                     self.dismiss(animated: true, completion: nil)
                 }
             }

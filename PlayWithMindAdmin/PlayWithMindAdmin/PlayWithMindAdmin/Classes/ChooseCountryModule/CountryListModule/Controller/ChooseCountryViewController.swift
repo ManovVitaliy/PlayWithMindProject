@@ -15,7 +15,7 @@ class ChooseCountryViewController: AbstractViewController, UITableViewDataSource
     //constants
     private let navTtitle = "Choose country"
     
-    var countriesArray = [String]()
+    var countriesArray = [Country]()
     
     //MARK: - view controller's lifecycle
     
@@ -52,17 +52,17 @@ class ChooseCountryViewController: AbstractViewController, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.chooseCountryTableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ChooseItemTableViewCell
-        cell.championatNameLabel.text = self.countriesArray[indexPath.row]
+        cell.championatNameLabel.text = self.countriesArray[indexPath.row].countryName
         return cell
     }
     
     //MARK: - tableView delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCountryName = self.countriesArray[indexPath.row]
+        let selectedCountry = self.countriesArray[indexPath.row]
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let championatListVC = storyboard.instantiateViewController(withIdentifier: "ChooseChampionatViewController") as! ChooseChampionatViewController
-        championatListVC.country = selectedCountryName
+        championatListVC.country = selectedCountry.countryName
         self.navigationController?.pushViewController(championatListVC, animated: true)
     }
     

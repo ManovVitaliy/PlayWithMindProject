@@ -32,7 +32,7 @@ class CreateNewCountryViewController: AbstractNewItemViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! AbstractNewItemTableViewCell
         
-        cell.countryLabel.text = "Country"
+        cell.itemCellLabel.text = "Country"
         
         return cell
     }
@@ -47,8 +47,11 @@ class CreateNewCountryViewController: AbstractNewItemViewController {
     
     override func saveButtonTapped(_ sender: Any) {
         if let cell = self.tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as? AbstractNewItemTableViewCell {
-            if let newCountryName = cell.countryTextField.text {
-                FirebaseService.sharedInstance.postCountry(countryName: newCountryName) {
+            if let newCountryName = cell.itemCellTextField.text {
+                let country = Country()
+                country.countryName = newCountryName
+                country.countryImage = "urlImage \(newCountryName)"
+                FirebaseService.sharedInstance.postCountry(country: country) {
                     self.dismiss(animated: true, completion: nil)
                 }
             }

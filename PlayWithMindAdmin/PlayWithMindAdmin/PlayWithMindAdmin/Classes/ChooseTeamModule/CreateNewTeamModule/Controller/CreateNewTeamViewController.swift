@@ -34,7 +34,7 @@ class CreateNewTeamViewController: AbstractNewItemViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! AbstractNewItemTableViewCell
         
-        cell.countryLabel.text = "team"
+        cell.itemCellLabel.text = "team"
         
         return cell
     }
@@ -47,8 +47,11 @@ class CreateNewTeamViewController: AbstractNewItemViewController {
     
     override func saveButtonTapped(_ sender: Any) {
         if let cell = self.tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as? AbstractNewItemTableViewCell {
-            if let newTeamName = cell.countryTextField.text {
-                FirebaseService.sharedInstance.postTeam(championatName: championatName, teamName: newTeamName) {
+            if let newTeamName = cell.itemCellTextField.text {
+                let team = Team()
+                team.teamName = newTeamName
+                team.teamImage = "urlImage \(newTeamName)"
+                FirebaseService.sharedInstance.postTeam(championatName: championatName, team: team) {
                     self.dismiss(animated: true, completion: nil)
                 }
             }

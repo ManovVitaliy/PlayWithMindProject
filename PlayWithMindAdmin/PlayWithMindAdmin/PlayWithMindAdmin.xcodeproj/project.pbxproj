@@ -23,6 +23,7 @@
 		CEEA92AF20B808560098839A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA92AE20B808560098839A /* Player.swift */; };
 		CEEA92B120B809800098839A /* CreateNewPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA92B020B809800098839A /* CreateNewPlayerViewController.swift */; };
 		CEEA92B520B812A60098839A /* UpdateTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA92B420B812A60098839A /* UpdateTeamViewController.swift */; };
+		CEEA92B820B8254B0098839A /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA92B720B8254B0098839A /* Country.swift */; };
 		CEF9BAA620B6A42C000D8836 /* AbstractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9BAA520B6A42C000D8836 /* AbstractViewController.swift */; };
 		CEF9BAA920B6B4D5000D8836 /* add-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAA720B6B4D5000D8836 /* add-icon.png */; };
 		CEF9BAAA20B6B4D5000D8836 /* update-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF9BAA820B6B4D5000D8836 /* update-icon.png */; };
@@ -59,6 +60,7 @@
 		CEEA92AE20B808560098839A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		CEEA92B020B809800098839A /* CreateNewPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPlayerViewController.swift; sourceTree = "<group>"; };
 		CEEA92B420B812A60098839A /* UpdateTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTeamViewController.swift; sourceTree = "<group>"; };
+		CEEA92B720B8254B0098839A /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		CEF9BAA520B6A42C000D8836 /* AbstractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractViewController.swift; sourceTree = "<group>"; };
 		CEF9BAA720B6B4D5000D8836 /* add-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-icon.png"; sourceTree = "<group>"; };
 		CEF9BAA820B6B4D5000D8836 /* update-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update-icon.png"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		CEDC1ACF20B5A73100F9A9FC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				CEEA92B620B825320098839A /* Country */,
 				CEEA92AD20B8083C0098839A /* Player */,
 				CEF9BAD120B6F9D8000D8836 /* Team */,
 				CEDC1AD020B5A75100F9A9FC /* Championat */,
@@ -284,6 +287,14 @@
 				CEEA92B420B812A60098839A /* UpdateTeamViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEEA92B620B825320098839A /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA92B720B8254B0098839A /* Country.swift */,
+			);
+			path = Country;
 			sourceTree = "<group>";
 		};
 		CEF9BAA420B6A3BA000D8836 /* Abstract classes */ = {
@@ -591,6 +602,7 @@
 				CEEA92AF20B808560098839A /* Player.swift in Sources */,
 				CEDC1A8620B5831500F9A9FC /* ChooseChampionatViewController.swift in Sources */,
 				CEDC1AD620B5A97300F9A9FC /* FirebaseService.swift in Sources */,
+				CEEA92B820B8254B0098839A /* Country.swift in Sources */,
 				CEF9BACE20B6F6A1000D8836 /* ChooseTeamViewController.swift in Sources */,
 				CEDC1ACD20B59CD200F9A9FC /* ChooseItemTableViewCell.swift in Sources */,
 				CEDC1A8420B5831500F9A9FC /* AppDelegate.swift in Sources */,

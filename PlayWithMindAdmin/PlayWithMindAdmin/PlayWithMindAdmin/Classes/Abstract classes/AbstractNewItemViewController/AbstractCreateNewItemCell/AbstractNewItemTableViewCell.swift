@@ -10,21 +10,21 @@ import UIKit
 
 class AbstractNewItemTableViewCell: UITableViewCell, UITextFieldDelegate {
 
-    @IBOutlet weak var countryLabel: UILabel!
-    @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var itemCellLabel: UILabel!
+    @IBOutlet weak var itemCellTextField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.countryTextField.layer.cornerRadius = 2
-        self.countryTextField.layer.borderWidth = 2
-        self.countryTextField.layer.borderColor = UIColor.black.cgColor
-        self.countryTextField.layer.masksToBounds = true
-        countryTextField.delegate = self
+        self.itemCellTextField.layer.cornerRadius = 2
+        self.itemCellTextField.layer.borderWidth = 2
+        self.itemCellTextField.layer.borderColor = UIColor.black.cgColor
+        self.itemCellTextField.layer.masksToBounds = true
+        itemCellTextField.delegate = self
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == self.countryTextField {
-            self.countryTextField.resignFirstResponder()
+        if textField == self.itemCellTextField {
+            self.itemCellTextField.resignFirstResponder()
         }
         return true
     }
