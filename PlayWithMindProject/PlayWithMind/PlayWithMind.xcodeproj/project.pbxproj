@@ -32,6 +32,7 @@
 		CEE55B6C20F4E0F500563E51 /* Championat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6B20F4E0F500563E51 /* Championat.swift */; };
 		CEE55B6E20F4E13300563E51 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6D20F4E13300563E51 /* Team.swift */; };
 		CEE55B7020F4E16800563E51 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6F20F4E16800563E51 /* Player.swift */; };
+		CEE55B7520F4F53A00563E51 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B7420F4F53900563E51 /* Section.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		CEE55B6B20F4E0F500563E51 /* Championat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championat.swift; sourceTree = "<group>"; };
 		CEE55B6D20F4E13300563E51 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		CEE55B6F20F4E16800563E51 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CEE55B7420F4F53900563E51 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		D2AD3AC10440B8170D31A3BA /* Pods-PlayWithMind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMind/Pods-PlayWithMind.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 		CEDC1A9E20B58E9B00F9A9FC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				CEE55B7320F4F51600563E51 /* Section */,
 				CEE55B6A20F4E06100563E51 /* Player */,
 				CEE55B6920F4E05C00563E51 /* Team */,
 				CEE55B6820F4E05200563E51 /* Championat */,
@@ -297,6 +300,14 @@
 			path = Player;
 			sourceTree = "<group>";
 		};
+		CEE55B7320F4F51600563E51 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B7420F4F53900563E51 /* Section.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -425,6 +436,7 @@
 				CEDC1AC320B594C200F9A9FC /* CollapsibleTableViewHeader.swift in Sources */,
 				CEE55B6C20F4E0F500563E51 /* Championat.swift in Sources */,
 				CEE55B6720F4E04100563E51 /* Country.swift in Sources */,
+				CEE55B7520F4F53A00563E51 /* Section.swift in Sources */,
 				CEDC1ABC20B5944600F9A9FC /* ChooseTeamViewController.swift in Sources */,
 				CEE55B7020F4E16800563E51 /* Player.swift in Sources */,
 				CEDC1AB520B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift in Sources */,

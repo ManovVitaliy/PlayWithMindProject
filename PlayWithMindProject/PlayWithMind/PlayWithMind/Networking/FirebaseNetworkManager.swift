@@ -112,4 +112,14 @@ class FirebaseNetworkManager {
         }
     }
     
+    func getSections(completion: @escaping((_ sectionArray: [Section]?) -> Void)) {
+        let firebaseChampionat = Database.database().reference().child(keyChampionat)
+        firebaseChampionat.observe(DataEventType.value) { (snapshot) in
+            if let data = snapshot.value as? [String: AnyObject] {
+                let sectionsArray = Section.fromDictToModel(dictionary: data)
+                completion(sectionsArray)
+            }
+        }
+    }
+    
 }
