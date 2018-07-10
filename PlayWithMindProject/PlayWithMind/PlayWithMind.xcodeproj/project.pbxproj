@@ -30,6 +30,7 @@
 		CEE55B6420F4DF0100563E51 /* FirebaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */; };
 		CEE55B6720F4E04100563E51 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6620F4E04100563E51 /* Country.swift */; };
 		CEE55B6C20F4E0F500563E51 /* Championat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6B20F4E0F500563E51 /* Championat.swift */; };
+		CEE55B6E20F4E13300563E51 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6D20F4E13300563E51 /* Team.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkManager.swift; sourceTree = "<group>"; };
 		CEE55B6620F4E04100563E51 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		CEE55B6B20F4E0F500563E51 /* Championat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championat.swift; sourceTree = "<group>"; };
+		CEE55B6D20F4E13300563E51 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		D2AD3AC10440B8170D31A3BA /* Pods-PlayWithMind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMind/Pods-PlayWithMind.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -280,6 +282,7 @@
 		CEE55B6920F4E05C00563E51 /* Team */ = {
 			isa = PBXGroup;
 			children = (
+				CEE55B6D20F4E13300563E51 /* Team.swift */,
 			);
 			path = Team;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				CEDC1A6620B582B200F9A9FC /* AppDelegate.swift in Sources */,
 				CEDC1ABF20B5947600F9A9FC /* ChooseTeamTableViewCell.swift in Sources */,
 				CEE55B6420F4DF0100563E51 /* FirebaseNetworkManager.swift in Sources */,
+				CEE55B6E20F4E13300563E51 /* Team.swift in Sources */,
 				CEDC1AB820B5914C00F9A9FC /* FootballTeamShemeViewController.swift in Sources */,
 				CEDC1ABA20B591FE00F9A9FC /* Scheme.swift in Sources */,
 			);
