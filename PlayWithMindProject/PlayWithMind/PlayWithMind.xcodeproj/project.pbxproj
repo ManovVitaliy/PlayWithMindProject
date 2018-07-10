@@ -28,6 +28,7 @@
 		CEDC1AC420B594C200F9A9FC /* CollapsibleTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AC220B594C200F9A9FC /* CollapsibleTableViewHeader.xib */; };
 		CEDC1AC620B5952600F9A9FC /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AC520B5952600F9A9FC /* History.storyboard */; };
 		CEE55B6420F4DF0100563E51 /* FirebaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */; };
+		CEE55B6720F4E04100563E51 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6620F4E04100563E51 /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		CEDC1AC220B594C200F9A9FC /* CollapsibleTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsibleTableViewHeader.xib; sourceTree = "<group>"; };
 		CEDC1AC520B5952600F9A9FC /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkManager.swift; sourceTree = "<group>"; };
+		CEE55B6620F4E04100563E51 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		D2AD3AC10440B8170D31A3BA /* Pods-PlayWithMind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMind/Pods-PlayWithMind.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,10 @@
 		CEDC1A9E20B58E9B00F9A9FC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				CEE55B6A20F4E06100563E51 /* Player */,
+				CEE55B6920F4E05C00563E51 /* Team */,
+				CEE55B6820F4E05200563E51 /* Championat */,
+				CEE55B6520F4E02C00563E51 /* Country */,
 				CEDC1AAA20B590A000F9A9FC /* Scheme */,
 			);
 			path = Entities;
@@ -251,6 +257,35 @@
 				CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		CEE55B6520F4E02C00563E51 /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B6620F4E04100563E51 /* Country.swift */,
+			);
+			path = Country;
+			sourceTree = "<group>";
+		};
+		CEE55B6820F4E05200563E51 /* Championat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Championat;
+			sourceTree = "<group>";
+		};
+		CEE55B6920F4E05C00563E51 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		CEE55B6A20F4E06100563E51 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDC1AC320B594C200F9A9FC /* CollapsibleTableViewHeader.swift in Sources */,
+				CEE55B6720F4E04100563E51 /* Country.swift in Sources */,
 				CEDC1ABC20B5944600F9A9FC /* ChooseTeamViewController.swift in Sources */,
 				CEDC1AB520B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift in Sources */,
 				CEDC1A6620B582B200F9A9FC /* AppDelegate.swift in Sources */,
