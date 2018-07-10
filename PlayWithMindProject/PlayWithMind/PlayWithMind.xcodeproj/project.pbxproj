@@ -29,6 +29,7 @@
 		CEDC1AC620B5952600F9A9FC /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AC520B5952600F9A9FC /* History.storyboard */; };
 		CEE55B6420F4DF0100563E51 /* FirebaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */; };
 		CEE55B6720F4E04100563E51 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6620F4E04100563E51 /* Country.swift */; };
+		CEE55B6C20F4E0F500563E51 /* Championat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6B20F4E0F500563E51 /* Championat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		CEDC1AC520B5952600F9A9FC /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkManager.swift; sourceTree = "<group>"; };
 		CEE55B6620F4E04100563E51 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		CEE55B6B20F4E0F500563E51 /* Championat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championat.swift; sourceTree = "<group>"; };
 		D2AD3AC10440B8170D31A3BA /* Pods-PlayWithMind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMind/Pods-PlayWithMind.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -270,6 +272,7 @@
 		CEE55B6820F4E05200563E51 /* Championat */ = {
 			isa = PBXGroup;
 			children = (
+				CEE55B6B20F4E0F500563E51 /* Championat.swift */,
 			);
 			path = Championat;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDC1AC320B594C200F9A9FC /* CollapsibleTableViewHeader.swift in Sources */,
+				CEE55B6C20F4E0F500563E51 /* Championat.swift in Sources */,
 				CEE55B6720F4E04100563E51 /* Country.swift in Sources */,
 				CEDC1ABC20B5944600F9A9FC /* ChooseTeamViewController.swift in Sources */,
 				CEDC1AB520B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift in Sources */,
