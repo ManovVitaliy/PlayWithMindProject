@@ -29,7 +29,9 @@ class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
         delegate?.toggleSection(header: self, section: cell.section)
     }
     func setCollapsed(collapsed: Bool) {
-        arrowLabel.rotate(collapsed ? 0.0 : .pi / 2)
+        DispatchQueue.main.async { [weak self] in
+            self?.arrowLabel.rotate(collapsed ? 0.0 : .pi / 2)
+        }
     }
 }
 

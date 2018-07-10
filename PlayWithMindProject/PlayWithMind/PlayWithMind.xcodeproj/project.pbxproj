@@ -27,6 +27,7 @@
 		CEDC1AC320B594C200F9A9FC /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AC120B594C200F9A9FC /* CollapsibleTableViewHeader.swift */; };
 		CEDC1AC420B594C200F9A9FC /* CollapsibleTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AC220B594C200F9A9FC /* CollapsibleTableViewHeader.xib */; };
 		CEDC1AC620B5952600F9A9FC /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AC520B5952600F9A9FC /* History.storyboard */; };
+		CEE55B6420F4DF0100563E51 /* FirebaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		CEDC1AC120B594C200F9A9FC /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
 		CEDC1AC220B594C200F9A9FC /* CollapsibleTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsibleTableViewHeader.xib; sourceTree = "<group>"; };
 		CEDC1AC520B5952600F9A9FC /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkManager.swift; sourceTree = "<group>"; };
 		D2AD3AC10440B8170D31A3BA /* Pods-PlayWithMind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMind/Pods-PlayWithMind.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 		CEDC1A6420B582B200F9A9FC /* PlayWithMind */ = {
 			isa = PBXGroup;
 			children = (
+				CEE55B6220F4DED500563E51 /* Networking */,
 				CEDC1AA020B58EB400F9A9FC /* Resources */,
 				CEDC1A9F20B58EA800F9A9FC /* Storyboards */,
 				CEDC1A9E20B58E9B00F9A9FC /* Entities */,
@@ -242,6 +245,14 @@
 			path = Scheme;
 			sourceTree = "<group>";
 		};
+		CEE55B6220F4DED500563E51 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -372,6 +383,7 @@
 				CEDC1AB520B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift in Sources */,
 				CEDC1A6620B582B200F9A9FC /* AppDelegate.swift in Sources */,
 				CEDC1ABF20B5947600F9A9FC /* ChooseTeamTableViewCell.swift in Sources */,
+				CEE55B6420F4DF0100563E51 /* FirebaseNetworkManager.swift in Sources */,
 				CEDC1AB820B5914C00F9A9FC /* FootballTeamShemeViewController.swift in Sources */,
 				CEDC1ABA20B591FE00F9A9FC /* Scheme.swift in Sources */,
 			);
