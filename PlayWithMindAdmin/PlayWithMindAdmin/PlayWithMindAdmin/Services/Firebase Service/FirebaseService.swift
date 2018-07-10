@@ -45,7 +45,8 @@ class FirebaseService: NSObject {
     
     func getChampionats(countryName: String, completion: @escaping((_ championatArray: [Championat]?) -> Void)) {
         let firebaseChampionat = Database.database().reference().child(keyChampionat)
-        firebaseChampionat.observe(DataEventType.value) { (snapshot) in
+        let firebaseChampionatsForCountry = firebaseChampionat.child(countryName)
+        firebaseChampionatsForCountry.observe(DataEventType.value) { (snapshot) in
             if let data = snapshot.value {
                 if let dataDict = data as? [String: AnyObject] {
                     let keys = dataDict.keys
@@ -122,8 +123,9 @@ class FirebaseService: NSObject {
     
     func postChampionat(countryName: String, championat: Championat, completion: @escaping(() -> Void)) {
         let firebaseChampionat = Database.database().reference().child(keyChampionat)
+        let firebaseChampionatForCountry = firebaseChampionat.child(countryName)
         let dict = Championat.fromModelToDict(championat: championat)
-        firebaseChampionat.updateChildValues(dict)
+        firebaseChampionatForCountry.updateChildValues(dict)
         completion()
     }
     
@@ -135,11 +137,10 @@ class FirebaseService: NSObject {
         completion()
     }
     
-    func postPlayer(teamName: String, player: Player, completion: @escaping(() -> Void)) {
+    func postPlayer(teamName: String, player: [String: AnyObject], completion: @escaping(() -> Void)) {
         let firebasePlayer = Database.database().reference().child(keyPlayer)
         let firebasePlayerForTeam = firebasePlayer.child(teamName)
-        let dict = Player.fromModelToDict(player: player)
-        firebasePlayerForTeam.updateChildValues(dict)
+        firebasePlayerForTeam.updateChildValues(player)
         completion()
     }
 }

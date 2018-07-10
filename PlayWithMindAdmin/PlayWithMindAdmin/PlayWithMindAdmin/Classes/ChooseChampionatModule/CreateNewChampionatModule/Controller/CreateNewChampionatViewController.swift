@@ -17,6 +17,7 @@ class CreateNewChampionatViewController: AbstractNewItemViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
+        self.titleLabel.text = "New Championat"
     }
     
     override func setupTableView() {

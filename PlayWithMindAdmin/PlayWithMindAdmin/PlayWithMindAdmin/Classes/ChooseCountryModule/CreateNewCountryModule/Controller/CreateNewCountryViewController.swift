@@ -15,6 +15,7 @@ class CreateNewCountryViewController: AbstractNewItemViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
+        self.titleLabel.text = "New Country"
     }
     
     override func setupTableView() {

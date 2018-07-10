@@ -17,6 +17,7 @@ class CreateNewTeamViewController: AbstractNewItemViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
+        self.titleLabel.text = "New Team"
     }
     
     override func setupTableView() {
