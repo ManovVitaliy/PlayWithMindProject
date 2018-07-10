@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 class FirebaseNetworkManager {
     
-    static let sharedInstance = FirebaseService()
+    static let sharedInstance = FirebaseNetworkManager()
     
     //constants
     private let keyCountry = "Country"
