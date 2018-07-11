@@ -334,13 +334,14 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     }
     
     @IBAction func homeTeamChangeTapped(_ sender: Any) {
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier: "ChooseTeamViewController")
-        
-        self.navigationController?.pushViewController(destinationVC, animated: true)
+        pushChooseTeamVC()
     }
     
     @IBAction func awayTeamChangeTapped(_ sender: Any) {
+        pushChooseTeamVC()
+    }
+    
+    private func pushChooseTeamVC() {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "ChooseTeamViewController")
         
