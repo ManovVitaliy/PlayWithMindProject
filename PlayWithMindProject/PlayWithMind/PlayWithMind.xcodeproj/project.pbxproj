@@ -9,11 +9,30 @@
 /* Begin PBXBuildFile section */
 		44C8CFFF7BFC08EC8090A744 /* Pods_PlayWithMind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2105219A11FBD7EAC9F67EF /* Pods_PlayWithMind.framework */; };
 		CEDC1A6620B582B200F9A9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1A6520B582B200F9A9FC /* AppDelegate.swift */; };
-		CEDC1A6820B582B200F9A9FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1A6720B582B200F9A9FC /* ViewController.swift */; };
 		CEDC1A6B20B582B200F9A9FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A6920B582B200F9A9FC /* Main.storyboard */; };
 		CEDC1A6D20B582B700F9A9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A6C20B582B700F9A9FC /* Assets.xcassets */; };
 		CEDC1A7020B582B700F9A9FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A6E20B582B700F9A9FC /* LaunchScreen.storyboard */; };
 		CEDC1A9620B587D600F9A9FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A9520B587D600F9A9FC /* GoogleService-Info.plist */; };
+		CEDC1AAF20B590DA00F9A9FC /* defaultPlayer.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AAB20B590DA00F9A9FC /* defaultPlayer.png */; };
+		CEDC1AB020B590DA00F9A9FC /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AAC20B590DA00F9A9FC /* back-button.png */; };
+		CEDC1AB120B590DA00F9A9FC /* football-field.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AAD20B590DA00F9A9FC /* football-field.jpg */; };
+		CEDC1AB220B590DA00F9A9FC /* next-button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AAE20B590DA00F9A9FC /* next-button.png */; };
+		CEDC1AB520B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AB320B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift */; };
+		CEDC1AB620B5912500F9A9FC /* FootballPlayerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AB420B5912500F9A9FC /* FootballPlayerCollectionViewCell.xib */; };
+		CEDC1AB820B5914C00F9A9FC /* FootballTeamShemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AB720B5914C00F9A9FC /* FootballTeamShemeViewController.swift */; };
+		CEDC1ABA20B591FE00F9A9FC /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AB920B591FE00F9A9FC /* Scheme.swift */; };
+		CEDC1ABC20B5944600F9A9FC /* ChooseTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1ABB20B5944600F9A9FC /* ChooseTeamViewController.swift */; };
+		CEDC1ABF20B5947600F9A9FC /* ChooseTeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1ABD20B5947600F9A9FC /* ChooseTeamTableViewCell.swift */; };
+		CEDC1AC020B5947600F9A9FC /* ChooseTeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1ABE20B5947600F9A9FC /* ChooseTeamTableViewCell.xib */; };
+		CEDC1AC320B594C200F9A9FC /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AC120B594C200F9A9FC /* CollapsibleTableViewHeader.swift */; };
+		CEDC1AC420B594C200F9A9FC /* CollapsibleTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AC220B594C200F9A9FC /* CollapsibleTableViewHeader.xib */; };
+		CEDC1AC620B5952600F9A9FC /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AC520B5952600F9A9FC /* History.storyboard */; };
+		CEE55B6420F4DF0100563E51 /* FirebaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */; };
+		CEE55B6720F4E04100563E51 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6620F4E04100563E51 /* Country.swift */; };
+		CEE55B6C20F4E0F500563E51 /* Championat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6B20F4E0F500563E51 /* Championat.swift */; };
+		CEE55B6E20F4E13300563E51 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6D20F4E13300563E51 /* Team.swift */; };
+		CEE55B7020F4E16800563E51 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6F20F4E16800563E51 /* Player.swift */; };
+		CEE55B7520F4F53A00563E51 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B7420F4F53900563E51 /* Section.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,12 +40,31 @@
 		CDDCB34401753E1CF15BE909 /* Pods-PlayWithMind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMind.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMind/Pods-PlayWithMind.release.xcconfig"; sourceTree = "<group>"; };
 		CEDC1A6220B582B200F9A9FC /* PlayWithMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWithMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDC1A6520B582B200F9A9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEDC1A6720B582B200F9A9FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEDC1A6A20B582B200F9A9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEDC1A6C20B582B700F9A9FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEDC1A6F20B582B700F9A9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEDC1A7120B582B700F9A9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEDC1A9520B587D600F9A9FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEDC1AAB20B590DA00F9A9FC /* defaultPlayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPlayer.png; sourceTree = "<group>"; };
+		CEDC1AAC20B590DA00F9A9FC /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button.png"; sourceTree = "<group>"; };
+		CEDC1AAD20B590DA00F9A9FC /* football-field.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "football-field.jpg"; sourceTree = "<group>"; };
+		CEDC1AAE20B590DA00F9A9FC /* next-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next-button.png"; sourceTree = "<group>"; };
+		CEDC1AB320B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballPlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEDC1AB420B5912500F9A9FC /* FootballPlayerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FootballPlayerCollectionViewCell.xib; sourceTree = "<group>"; };
+		CEDC1AB720B5914C00F9A9FC /* FootballTeamShemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballTeamShemeViewController.swift; sourceTree = "<group>"; };
+		CEDC1AB920B591FE00F9A9FC /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
+		CEDC1ABB20B5944600F9A9FC /* ChooseTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTeamViewController.swift; sourceTree = "<group>"; };
+		CEDC1ABD20B5947600F9A9FC /* ChooseTeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTeamTableViewCell.swift; sourceTree = "<group>"; };
+		CEDC1ABE20B5947600F9A9FC /* ChooseTeamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseTeamTableViewCell.xib; sourceTree = "<group>"; };
+		CEDC1AC120B594C200F9A9FC /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
+		CEDC1AC220B594C200F9A9FC /* CollapsibleTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsibleTableViewHeader.xib; sourceTree = "<group>"; };
+		CEDC1AC520B5952600F9A9FC /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkManager.swift; sourceTree = "<group>"; };
+		CEE55B6620F4E04100563E51 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		CEE55B6B20F4E0F500563E51 /* Championat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championat.swift; sourceTree = "<group>"; };
+		CEE55B6D20F4E13300563E51 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		CEE55B6F20F4E16800563E51 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CEE55B7420F4F53900563E51 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		D2AD3AC10440B8170D31A3BA /* Pods-PlayWithMind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMind/Pods-PlayWithMind.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,15 +118,194 @@
 		CEDC1A6420B582B200F9A9FC /* PlayWithMind */ = {
 			isa = PBXGroup;
 			children = (
+				CEE55B6220F4DED500563E51 /* Networking */,
+				CEDC1AA020B58EB400F9A9FC /* Resources */,
+				CEDC1A9F20B58EA800F9A9FC /* Storyboards */,
+				CEDC1A9E20B58E9B00F9A9FC /* Entities */,
+				CEDC1A9D20B58E7C00F9A9FC /* Classes */,
 				CEDC1A6520B582B200F9A9FC /* AppDelegate.swift */,
-				CEDC1A6720B582B200F9A9FC /* ViewController.swift */,
-				CEDC1A6920B582B200F9A9FC /* Main.storyboard */,
 				CEDC1A6C20B582B700F9A9FC /* Assets.xcassets */,
 				CEDC1A6E20B582B700F9A9FC /* LaunchScreen.storyboard */,
 				CEDC1A7120B582B700F9A9FC /* Info.plist */,
 				CEDC1A9520B587D600F9A9FC /* GoogleService-Info.plist */,
 			);
 			path = PlayWithMind;
+			sourceTree = "<group>";
+		};
+		CEDC1A9D20B58E7C00F9A9FC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AA120B58FD800F9A9FC /* Forecast Sequence */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CEDC1A9E20B58E9B00F9A9FC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B7320F4F51600563E51 /* Section */,
+				CEE55B6A20F4E06100563E51 /* Player */,
+				CEE55B6920F4E05C00563E51 /* Team */,
+				CEE55B6820F4E05200563E51 /* Championat */,
+				CEE55B6520F4E02C00563E51 /* Country */,
+				CEDC1AAA20B590A000F9A9FC /* Scheme */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CEDC1A9F20B58EA800F9A9FC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1A6920B582B200F9A9FC /* Main.storyboard */,
+				CEDC1AC520B5952600F9A9FC /* History.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CEDC1AA020B58EB400F9A9FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AAC20B590DA00F9A9FC /* back-button.png */,
+				CEDC1AAB20B590DA00F9A9FC /* defaultPlayer.png */,
+				CEDC1AAD20B590DA00F9A9FC /* football-field.jpg */,
+				CEDC1AAE20B590DA00F9A9FC /* next-button.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CEDC1AA120B58FD800F9A9FC /* Forecast Sequence */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AA320B5900F00F9A9FC /* Football Team Scheme Module */,
+				CEDC1AA220B58FF900F9A9FC /* Choose Team Module */,
+			);
+			path = "Forecast Sequence";
+			sourceTree = "<group>";
+		};
+		CEDC1AA220B58FF900F9A9FC /* Choose Team Module */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AA720B5905600F9A9FC /* Controller */,
+				CEDC1AA620B5904A00F9A9FC /* ChooseTeamCell */,
+				CEDC1AA520B5904400F9A9FC /* Model */,
+				CEDC1AA420B5902E00F9A9FC /* ChooseTeamTableViewHeader */,
+			);
+			path = "Choose Team Module";
+			sourceTree = "<group>";
+		};
+		CEDC1AA320B5900F00F9A9FC /* Football Team Scheme Module */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AA920B5907400F9A9FC /* Controller */,
+				CEDC1AA820B5906900F9A9FC /* FootballPlayerCell */,
+			);
+			path = "Football Team Scheme Module";
+			sourceTree = "<group>";
+		};
+		CEDC1AA420B5902E00F9A9FC /* ChooseTeamTableViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AC120B594C200F9A9FC /* CollapsibleTableViewHeader.swift */,
+				CEDC1AC220B594C200F9A9FC /* CollapsibleTableViewHeader.xib */,
+			);
+			path = ChooseTeamTableViewHeader;
+			sourceTree = "<group>";
+		};
+		CEDC1AA520B5904400F9A9FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEDC1AA620B5904A00F9A9FC /* ChooseTeamCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1ABD20B5947600F9A9FC /* ChooseTeamTableViewCell.swift */,
+				CEDC1ABE20B5947600F9A9FC /* ChooseTeamTableViewCell.xib */,
+			);
+			path = ChooseTeamCell;
+			sourceTree = "<group>";
+		};
+		CEDC1AA720B5905600F9A9FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1ABB20B5944600F9A9FC /* ChooseTeamViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEDC1AA820B5906900F9A9FC /* FootballPlayerCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AB320B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift */,
+				CEDC1AB420B5912500F9A9FC /* FootballPlayerCollectionViewCell.xib */,
+			);
+			path = FootballPlayerCell;
+			sourceTree = "<group>";
+		};
+		CEDC1AA920B5907400F9A9FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AB720B5914C00F9A9FC /* FootballTeamShemeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEDC1AAA20B590A000F9A9FC /* Scheme */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AB920B591FE00F9A9FC /* Scheme.swift */,
+			);
+			path = Scheme;
+			sourceTree = "<group>";
+		};
+		CEE55B6220F4DED500563E51 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CEE55B6520F4E02C00563E51 /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B6620F4E04100563E51 /* Country.swift */,
+			);
+			path = Country;
+			sourceTree = "<group>";
+		};
+		CEE55B6820F4E05200563E51 /* Championat */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B6B20F4E0F500563E51 /* Championat.swift */,
+			);
+			path = Championat;
+			sourceTree = "<group>";
+		};
+		CEE55B6920F4E05C00563E51 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B6D20F4E13300563E51 /* Team.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		CEE55B6A20F4E06100563E51 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B6F20F4E16800563E51 /* Player.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		CEE55B7320F4F51600563E51 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B7420F4F53900563E51 /* Section.swift */,
+			);
+			path = Section;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +368,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDC1AC420B594C200F9A9FC /* CollapsibleTableViewHeader.xib in Resources */,
 				CEDC1A7020B582B700F9A9FC /* LaunchScreen.storyboard in Resources */,
+				CEDC1AC020B5947600F9A9FC /* ChooseTeamTableViewCell.xib in Resources */,
 				CEDC1A9620B587D600F9A9FC /* GoogleService-Info.plist in Resources */,
+				CEDC1AB220B590DA00F9A9FC /* next-button.png in Resources */,
+				CEDC1AB020B590DA00F9A9FC /* back-button.png in Resources */,
+				CEDC1AB120B590DA00F9A9FC /* football-field.jpg in Resources */,
 				CEDC1A6D20B582B700F9A9FC /* Assets.xcassets in Resources */,
+				CEDC1AAF20B590DA00F9A9FC /* defaultPlayer.png in Resources */,
 				CEDC1A6B20B582B200F9A9FC /* Main.storyboard in Resources */,
+				CEDC1AB620B5912500F9A9FC /* FootballPlayerCollectionViewCell.xib in Resources */,
+				CEDC1AC620B5952600F9A9FC /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,8 +433,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDC1A6820B582B200F9A9FC /* ViewController.swift in Sources */,
+				CEDC1AC320B594C200F9A9FC /* CollapsibleTableViewHeader.swift in Sources */,
+				CEE55B6C20F4E0F500563E51 /* Championat.swift in Sources */,
+				CEE55B6720F4E04100563E51 /* Country.swift in Sources */,
+				CEE55B7520F4F53A00563E51 /* Section.swift in Sources */,
+				CEDC1ABC20B5944600F9A9FC /* ChooseTeamViewController.swift in Sources */,
+				CEE55B7020F4E16800563E51 /* Player.swift in Sources */,
+				CEDC1AB520B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift in Sources */,
 				CEDC1A6620B582B200F9A9FC /* AppDelegate.swift in Sources */,
+				CEDC1ABF20B5947600F9A9FC /* ChooseTeamTableViewCell.swift in Sources */,
+				CEE55B6420F4DF0100563E51 /* FirebaseNetworkManager.swift in Sources */,
+				CEE55B6E20F4E13300563E51 /* Team.swift in Sources */,
+				CEDC1AB820B5914C00F9A9FC /* FootballTeamShemeViewController.swift in Sources */,
+				CEDC1ABA20B591FE00F9A9FC /* Scheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
