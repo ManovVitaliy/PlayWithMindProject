@@ -33,7 +33,7 @@ DEPENDENCIES:
   - Firebase/Database
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -55,4 +55,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 36ff81edf441e2c300354031a4d529c4729452a0
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
