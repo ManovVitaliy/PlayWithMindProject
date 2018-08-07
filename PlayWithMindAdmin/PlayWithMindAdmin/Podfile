@@ -9,5 +9,8 @@ target 'PlayWithMindAdmin' do
 
 pod 'Firebase/Core'
 pod 'Firebase/Database'
+pod 'Fabric', '~> 1.7.9'
+pod 'Crashlytics', '~> 3.10.5'
+pod 'Firebase/Crash'
 
 end

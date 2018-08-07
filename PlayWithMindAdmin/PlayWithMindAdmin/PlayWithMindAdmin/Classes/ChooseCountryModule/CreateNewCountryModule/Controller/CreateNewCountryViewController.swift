@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Crashlytics
 
 class CreateNewCountryViewController: AbstractNewItemViewController {
     
@@ -22,6 +23,7 @@ class CreateNewCountryViewController: AbstractNewItemViewController {
         self.setupTableView()
         self.titleLabel.text = "New Country"
         currentDictionary()
+        Crashlytics.sharedInstance().crash()
     }
     
     override func setupTableView() {
