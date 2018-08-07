@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A8336AC2B3CBBE3B939BCE36 /* Pods_PlayWithMindAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52014396C0545B580E882C0F /* Pods_PlayWithMindAdmin.framework */; };
+		CE2D2A59211891100000E454 /* UpdatePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D2A58211891100000E454 /* UpdatePlayerViewController.swift */; };
 		CEDC1A8420B5831500F9A9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1A8320B5831500F9A9FC /* AppDelegate.swift */; };
 		CEDC1A8620B5831500F9A9FC /* ChooseChampionatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1A8520B5831500F9A9FC /* ChooseChampionatViewController.swift */; };
 		CEDC1A8920B5831500F9A9FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A8720B5831500F9A9FC /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		52014396C0545B580E882C0F /* Pods_PlayWithMindAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayWithMindAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A1C0E24393EEB3D89FEA3A6 /* Pods-PlayWithMindAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMindAdmin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMindAdmin/Pods-PlayWithMindAdmin.debug.xcconfig"; sourceTree = "<group>"; };
 		8ABFD835C65EEAA765545083 /* Pods-PlayWithMindAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMindAdmin.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMindAdmin/Pods-PlayWithMindAdmin.release.xcconfig"; sourceTree = "<group>"; };
+		CE2D2A58211891100000E454 /* UpdatePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePlayerViewController.swift; sourceTree = "<group>"; };
 		CEDC1A8020B5831500F9A9FC /* PlayWithMindAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWithMindAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDC1A8320B5831500F9A9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEDC1A8520B5831500F9A9FC /* ChooseChampionatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseChampionatViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,22 @@
 				52014396C0545B580E882C0F /* Pods_PlayWithMindAdmin.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE2D2A57211890B60000E454 /* UpdatePlayerModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE2D2A5A211891160000E454 /* Controller */,
+			);
+			path = UpdatePlayerModule;
+			sourceTree = "<group>";
+		};
+		CE2D2A5A211891160000E454 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE2D2A58211891100000E454 /* UpdatePlayerViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		CEDC1A7720B5831500F9A9FC = {
@@ -226,6 +244,7 @@
 		CEEA92A620B8044D0098839A /* ChoosePlayerModule */ = {
 			isa = PBXGroup;
 			children = (
+				CE2D2A57211890B60000E454 /* UpdatePlayerModule */,
 				CEEA92B220B80D950098839A /* UpdateTeamModule */,
 				CEEA92A820B8047F0098839A /* CreateNewPlayerModule */,
 				CEEA92A720B8046C0098839A /* PlayerListModule */,
@@ -484,6 +503,7 @@
 				CEDC1A7D20B5831500F9A9FC /* Frameworks */,
 				CEDC1A7E20B5831500F9A9FC /* Resources */,
 				F77DA7FF9665309DAA2BA6FE /* [CP] Embed Pods Frameworks */,
+				CE1413D22119B6280059CAC0 /* Upload symbols for crash reproting */,
 			);
 			buildRules = (
 			);
@@ -566,6 +586,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CE1413D22119B6280059CAC0 /* Upload symbols for crash reproting */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Upload symbols for crash reproting";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:205928640373:ios:9f3642db680cba86\n\n# Replace the /Path/To/ServiceAccount.json with the path to the key you just downloaded\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym \"${PROJECT_DIR}/Keys/playwithmind-39478-firebase-crashreporting-uoa7c-7b9da18caf.json\"";
+		};
 		F77DA7FF9665309DAA2BA6FE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -574,12 +608,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PlayWithMindAdmin/Pods-PlayWithMindAdmin-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -603,6 +639,7 @@
 				CEDC1A8620B5831500F9A9FC /* ChooseChampionatViewController.swift in Sources */,
 				CEDC1AD620B5A97300F9A9FC /* FirebaseService.swift in Sources */,
 				CEEA92B820B8254B0098839A /* Country.swift in Sources */,
+				CE2D2A59211891100000E454 /* UpdatePlayerViewController.swift in Sources */,
 				CEF9BACE20B6F6A1000D8836 /* ChooseTeamViewController.swift in Sources */,
 				CEDC1ACD20B59CD200F9A9FC /* ChooseItemTableViewCell.swift in Sources */,
 				CEDC1A8420B5831500F9A9FC /* AppDelegate.swift in Sources */,
@@ -759,6 +796,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7G5K43D27D;
 				INFOPLIST_FILE = PlayWithMindAdmin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

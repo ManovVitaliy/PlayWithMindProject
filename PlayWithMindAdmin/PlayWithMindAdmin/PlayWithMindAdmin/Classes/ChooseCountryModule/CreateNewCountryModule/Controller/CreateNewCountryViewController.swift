@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import Crashlytics
 
 class CreateNewCountryViewController: AbstractNewItemViewController {
+    
+    func currentDictionary() {
+        itemDictionary = [Country.countryNameKey: "",
+                          Country.countryImageKey: ""] as [String : AnyObject]
+    }
     
     //MARK: - view controller's lifecycle
 
@@ -16,6 +22,8 @@ class CreateNewCountryViewController: AbstractNewItemViewController {
         super.viewDidLoad()
         self.setupTableView()
         self.titleLabel.text = "New Country"
+        currentDictionary()
+        Crashlytics.sharedInstance().crash()
     }
     
     override func setupTableView() {
@@ -27,13 +35,11 @@ class CreateNewCountryViewController: AbstractNewItemViewController {
     //MARK: - tableView data Source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return itemDictionary.keys.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! AbstractNewItemTableViewCell
-        
-        cell.itemCellLabel.text = "Country"
+        let cell = super.tableView(tableView, cellForRowAt: indexPath) as! AbstractNewItemTableViewCell
         
         return cell
     }
@@ -47,15 +53,19 @@ class CreateNewCountryViewController: AbstractNewItemViewController {
     }
     
     override func saveButtonTapped(_ sender: Any) {
-        if let cell = self.tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as? AbstractNewItemTableViewCell {
-            if let newCountryName = cell.itemCellTextField.text {
-                let country = Country()
-                country.countryName = newCountryName
-                country.countryImage = "urlImage \(newCountryName)"
-                FirebaseService.sharedInstance.postCountry(country: country) {
-                    self.dismiss(animated: true, completion: nil)
-                }
+        let keysArray = Array(itemDictionary.keys)
+        for key in keysArray {
+            let value = itemDictionary[key] as! String
+            guard value != "" else {
+                self.allFieldsHaveToBeFullAlert()
+                return
             }
+            
+        }
+        let country = Country.fromDictToModel(dictionary: itemDictionary)
+        
+        FirebaseService.sharedInstance.postCountry(country: country) {
+            self.dismiss(animated: true, completion: nil)
         }
     }
     

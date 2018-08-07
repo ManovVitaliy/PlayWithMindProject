@@ -11,6 +11,11 @@ import UIKit
 class CreateNewChampionatViewController: AbstractNewItemViewController {
     
     var countryName = ""
+    
+    func currentDictionary() {
+        itemDictionary = [Championat.championatNameKey: "",
+                          Championat.championatImageKey: ""] as [String : AnyObject]
+    }
 
     //MARK: - view controller's lifecycle
     
@@ -18,6 +23,7 @@ class CreateNewChampionatViewController: AbstractNewItemViewController {
         super.viewDidLoad()
         self.setupTableView()
         self.titleLabel.text = "New Championat"
+        currentDictionary()
     }
     
     override func setupTableView() {
@@ -29,13 +35,11 @@ class CreateNewChampionatViewController: AbstractNewItemViewController {
     //MARK: - tableView data Source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return itemDictionary.keys.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! AbstractNewItemTableViewCell
-        
-        cell.itemCellLabel.text = "Championat"
+        let cell = super.tableView(tableView, cellForRowAt: indexPath) as! AbstractNewItemTableViewCell
         
         return cell
     }
@@ -49,16 +53,19 @@ class CreateNewChampionatViewController: AbstractNewItemViewController {
     }
     
     override func saveButtonTapped(_ sender: Any) {
-        if let cell = self.tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as? AbstractNewItemTableViewCell {
-            if let newChampionatName = cell.itemCellTextField.text {
-                let championat = Championat()
-                championat.championatName = newChampionatName
-                championat.championatImage = "urlImage \(newChampionatName)"
-                FirebaseService.sharedInstance.postChampionat(countryName: self.countryName, championat: championat) {
-                    self.dismiss(animated: true, completion: nil)
-                }
+        let keysArray = Array(itemDictionary.keys)
+        for key in keysArray {
+            let value = itemDictionary[key] as! String
+            guard value != "" else {
+                self.allFieldsHaveToBeFullAlert()
+                return
             }
+            
+        }
+        let championat = Championat.fromDictToModel(dictionary: itemDictionary)
+        
+        FirebaseService.sharedInstance.postChampionat(countryName: countryName, championat: championat) {
+            self.dismiss(animated: true, completion: nil)
         }
     }
-
 }

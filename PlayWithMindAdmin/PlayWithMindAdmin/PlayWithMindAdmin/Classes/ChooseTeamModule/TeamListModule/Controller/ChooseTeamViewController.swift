@@ -56,6 +56,7 @@ class ChooseTeamViewController: AbstractViewController, UITableViewDataSource, U
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let playerListVC = storyboard.instantiateViewController(withIdentifier: "ChoosePlayerViewController") as! ChoosePlayerViewController
         playerListVC.team = selectedTeamName
+        playerListVC.championatName = championat
         self.navigationController?.pushViewController(playerListVC, animated: true)
     }
     
