@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Fabric
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

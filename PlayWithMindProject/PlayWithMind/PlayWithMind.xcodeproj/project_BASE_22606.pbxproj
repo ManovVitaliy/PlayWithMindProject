@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44C8CFFF7BFC08EC8090A744 /* Pods_PlayWithMind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2105219A11FBD7EAC9F67EF /* Pods_PlayWithMind.framework */; };
+		CEDC1A6620B582B200F9A9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1A6520B582B200F9A9FC /* AppDelegate.swift */; };
+		CEDC1A6B20B582B200F9A9FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A6920B582B200F9A9FC /* Main.storyboard */; };
+		CEDC1A6D20B582B700F9A9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A6C20B582B700F9A9FC /* Assets.xcassets */; };
+		CEDC1A7020B582B700F9A9FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A6E20B582B700F9A9FC /* LaunchScreen.storyboard */; };
+		CEDC1A9620B587D600F9A9FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A9520B587D600F9A9FC /* GoogleService-Info.plist */; };
+		CEDC1AAF20B590DA00F9A9FC /* defaultPlayer.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AAB20B590DA00F9A9FC /* defaultPlayer.png */; };
+		CEDC1AB020B590DA00F9A9FC /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AAC20B590DA00F9A9FC /* back-button.png */; };
+		CEDC1AB120B590DA00F9A9FC /* football-field.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AAD20B590DA00F9A9FC /* football-field.jpg */; };
+		CEDC1AB220B590DA00F9A9FC /* next-button.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AAE20B590DA00F9A9FC /* next-button.png */; };
+		CEDC1AB520B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AB320B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift */; };
+		CEDC1AB620B5912500F9A9FC /* FootballPlayerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AB420B5912500F9A9FC /* FootballPlayerCollectionViewCell.xib */; };
+		CEDC1AB820B5914C00F9A9FC /* FootballTeamShemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AB720B5914C00F9A9FC /* FootballTeamShemeViewController.swift */; };
+		CEDC1ABA20B591FE00F9A9FC /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AB920B591FE00F9A9FC /* Scheme.swift */; };
+		CEDC1ABC20B5944600F9A9FC /* ChooseTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1ABB20B5944600F9A9FC /* ChooseTeamViewController.swift */; };
+		CEDC1ABF20B5947600F9A9FC /* ChooseTeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1ABD20B5947600F9A9FC /* ChooseTeamTableViewCell.swift */; };
+		CEDC1AC020B5947600F9A9FC /* ChooseTeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1ABE20B5947600F9A9FC /* ChooseTeamTableViewCell.xib */; };
+		CEDC1AC320B594C200F9A9FC /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1AC120B594C200F9A9FC /* CollapsibleTableViewHeader.swift */; };
+		CEDC1AC420B594C200F9A9FC /* CollapsibleTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AC220B594C200F9A9FC /* CollapsibleTableViewHeader.xib */; };
+		CEDC1AC620B5952600F9A9FC /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1AC520B5952600F9A9FC /* History.storyboard */; };
+		CEE55B6420F4DF0100563E51 /* FirebaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */; };
+		CEE55B6720F4E04100563E51 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6620F4E04100563E51 /* Country.swift */; };
+		CEE55B6C20F4E0F500563E51 /* Championat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6B20F4E0F500563E51 /* Championat.swift */; };
+		CEE55B6E20F4E13300563E51 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6D20F4E13300563E51 /* Team.swift */; };
+		CEE55B7020F4E16800563E51 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B6F20F4E16800563E51 /* Player.swift */; };
+		CEE55B7520F4F53A00563E51 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55B7420F4F53900563E51 /* Section.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A2105219A11FBD7EAC9F67EF /* Pods_PlayWithMind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayWithMind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDDCB34401753E1CF15BE909 /* Pods-PlayWithMind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMind.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMind/Pods-PlayWithMind.release.xcconfig"; sourceTree = "<group>"; };
+		CEDC1A6220B582B200F9A9FC /* PlayWithMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWithMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDC1A6520B582B200F9A9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEDC1A6A20B582B200F9A9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEDC1A6C20B582B700F9A9FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEDC1A6F20B582B700F9A9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEDC1A7120B582B700F9A9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDC1A9520B587D600F9A9FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEDC1AAB20B590DA00F9A9FC /* defaultPlayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPlayer.png; sourceTree = "<group>"; };
+		CEDC1AAC20B590DA00F9A9FC /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button.png"; sourceTree = "<group>"; };
+		CEDC1AAD20B590DA00F9A9FC /* football-field.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "football-field.jpg"; sourceTree = "<group>"; };
+		CEDC1AAE20B590DA00F9A9FC /* next-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next-button.png"; sourceTree = "<group>"; };
+		CEDC1AB320B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballPlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEDC1AB420B5912500F9A9FC /* FootballPlayerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FootballPlayerCollectionViewCell.xib; sourceTree = "<group>"; };
+		CEDC1AB720B5914C00F9A9FC /* FootballTeamShemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballTeamShemeViewController.swift; sourceTree = "<group>"; };
+		CEDC1AB920B591FE00F9A9FC /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
+		CEDC1ABB20B5944600F9A9FC /* ChooseTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTeamViewController.swift; sourceTree = "<group>"; };
+		CEDC1ABD20B5947600F9A9FC /* ChooseTeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTeamTableViewCell.swift; sourceTree = "<group>"; };
+		CEDC1ABE20B5947600F9A9FC /* ChooseTeamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseTeamTableViewCell.xib; sourceTree = "<group>"; };
+		CEDC1AC120B594C200F9A9FC /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
+		CEDC1AC220B594C200F9A9FC /* CollapsibleTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsibleTableViewHeader.xib; sourceTree = "<group>"; };
+		CEDC1AC520B5952600F9A9FC /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkManager.swift; sourceTree = "<group>"; };
+		CEE55B6620F4E04100563E51 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		CEE55B6B20F4E0F500563E51 /* Championat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championat.swift; sourceTree = "<group>"; };
+		CEE55B6D20F4E13300563E51 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		CEE55B6F20F4E16800563E51 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CEE55B7420F4F53900563E51 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		D2AD3AC10440B8170D31A3BA /* Pods-PlayWithMind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMind/Pods-PlayWithMind.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEDC1A5F20B582B200F9A9FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44C8CFFF7BFC08EC8090A744 /* Pods_PlayWithMind.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4171CA571A23C2547C311185 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2105219A11FBD7EAC9F67EF /* Pods_PlayWithMind.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77E8C95091A3FFFC03A06CDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2AD3AC10440B8170D31A3BA /* Pods-PlayWithMind.debug.xcconfig */,
+				CDDCB34401753E1CF15BE909 /* Pods-PlayWithMind.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CEDC1A5920B582B100F9A9FC = {
+			isa = PBXGroup;
+			children = (
+				CEDC1A6420B582B200F9A9FC /* PlayWithMind */,
+				CEDC1A6320B582B200F9A9FC /* Products */,
+				77E8C95091A3FFFC03A06CDB /* Pods */,
+				4171CA571A23C2547C311185 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CEDC1A6320B582B200F9A9FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1A6220B582B200F9A9FC /* PlayWithMind.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEDC1A6420B582B200F9A9FC /* PlayWithMind */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B6220F4DED500563E51 /* Networking */,
+				CEDC1AA020B58EB400F9A9FC /* Resources */,
+				CEDC1A9F20B58EA800F9A9FC /* Storyboards */,
+				CEDC1A9E20B58E9B00F9A9FC /* Entities */,
+				CEDC1A9D20B58E7C00F9A9FC /* Classes */,
+				CEDC1A6520B582B200F9A9FC /* AppDelegate.swift */,
+				CEDC1A6C20B582B700F9A9FC /* Assets.xcassets */,
+				CEDC1A6E20B582B700F9A9FC /* LaunchScreen.storyboard */,
+				CEDC1A7120B582B700F9A9FC /* Info.plist */,
+				CEDC1A9520B587D600F9A9FC /* GoogleService-Info.plist */,
+			);
+			path = PlayWithMind;
+			sourceTree = "<group>";
+		};
+		CEDC1A9D20B58E7C00F9A9FC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AA120B58FD800F9A9FC /* Forecast Sequence */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CEDC1A9E20B58E9B00F9A9FC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B7320F4F51600563E51 /* Section */,
+				CEE55B6A20F4E06100563E51 /* Player */,
+				CEE55B6920F4E05C00563E51 /* Team */,
+				CEE55B6820F4E05200563E51 /* Championat */,
+				CEE55B6520F4E02C00563E51 /* Country */,
+				CEDC1AAA20B590A000F9A9FC /* Scheme */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CEDC1A9F20B58EA800F9A9FC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1A6920B582B200F9A9FC /* Main.storyboard */,
+				CEDC1AC520B5952600F9A9FC /* History.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CEDC1AA020B58EB400F9A9FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AAC20B590DA00F9A9FC /* back-button.png */,
+				CEDC1AAB20B590DA00F9A9FC /* defaultPlayer.png */,
+				CEDC1AAD20B590DA00F9A9FC /* football-field.jpg */,
+				CEDC1AAE20B590DA00F9A9FC /* next-button.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CEDC1AA120B58FD800F9A9FC /* Forecast Sequence */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AA320B5900F00F9A9FC /* Football Team Scheme Module */,
+				CEDC1AA220B58FF900F9A9FC /* Choose Team Module */,
+			);
+			path = "Forecast Sequence";
+			sourceTree = "<group>";
+		};
+		CEDC1AA220B58FF900F9A9FC /* Choose Team Module */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AA720B5905600F9A9FC /* Controller */,
+				CEDC1AA620B5904A00F9A9FC /* ChooseTeamCell */,
+				CEDC1AA520B5904400F9A9FC /* Model */,
+				CEDC1AA420B5902E00F9A9FC /* ChooseTeamTableViewHeader */,
+			);
+			path = "Choose Team Module";
+			sourceTree = "<group>";
+		};
+		CEDC1AA320B5900F00F9A9FC /* Football Team Scheme Module */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AA920B5907400F9A9FC /* Controller */,
+				CEDC1AA820B5906900F9A9FC /* FootballPlayerCell */,
+			);
+			path = "Football Team Scheme Module";
+			sourceTree = "<group>";
+		};
+		CEDC1AA420B5902E00F9A9FC /* ChooseTeamTableViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AC120B594C200F9A9FC /* CollapsibleTableViewHeader.swift */,
+				CEDC1AC220B594C200F9A9FC /* CollapsibleTableViewHeader.xib */,
+			);
+			path = ChooseTeamTableViewHeader;
+			sourceTree = "<group>";
+		};
+		CEDC1AA520B5904400F9A9FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEDC1AA620B5904A00F9A9FC /* ChooseTeamCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1ABD20B5947600F9A9FC /* ChooseTeamTableViewCell.swift */,
+				CEDC1ABE20B5947600F9A9FC /* ChooseTeamTableViewCell.xib */,
+			);
+			path = ChooseTeamCell;
+			sourceTree = "<group>";
+		};
+		CEDC1AA720B5905600F9A9FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1ABB20B5944600F9A9FC /* ChooseTeamViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEDC1AA820B5906900F9A9FC /* FootballPlayerCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AB320B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift */,
+				CEDC1AB420B5912500F9A9FC /* FootballPlayerCollectionViewCell.xib */,
+			);
+			path = FootballPlayerCell;
+			sourceTree = "<group>";
+		};
+		CEDC1AA920B5907400F9A9FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AB720B5914C00F9A9FC /* FootballTeamShemeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEDC1AAA20B590A000F9A9FC /* Scheme */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC1AB920B591FE00F9A9FC /* Scheme.swift */,
+			);
+			path = Scheme;
+			sourceTree = "<group>";
+		};
+		CEE55B6220F4DED500563E51 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B6320F4DF0100563E51 /* FirebaseNetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CEE55B6520F4E02C00563E51 /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B6620F4E04100563E51 /* Country.swift */,
+			);
+			path = Country;
+			sourceTree = "<group>";
+		};
+		CEE55B6820F4E05200563E51 /* Championat */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B6B20F4E0F500563E51 /* Championat.swift */,
+			);
+			path = Championat;
+			sourceTree = "<group>";
+		};
+		CEE55B6920F4E05C00563E51 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B6D20F4E13300563E51 /* Team.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		CEE55B6A20F4E06100563E51 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B6F20F4E16800563E51 /* Player.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		CEE55B7320F4F51600563E51 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				CEE55B7420F4F53900563E51 /* Section.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEDC1A6120B582B200F9A9FC /* PlayWithMind */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDC1A7420B582B700F9A9FC /* Build configuration list for PBXNativeTarget "PlayWithMind" */;
+			buildPhases = (
+				D96CC619020F9F28CBE90E60 /* [CP] Check Pods Manifest.lock */,
+				CEDC1A5E20B582B200F9A9FC /* Sources */,
+				CEDC1A5F20B582B200F9A9FC /* Frameworks */,
+				CEDC1A6020B582B200F9A9FC /* Resources */,
+				C7BBE931328EAA0DC0BD60E2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlayWithMind;
+			productName = PlayWithMind;
+			productReference = CEDC1A6220B582B200F9A9FC /* PlayWithMind.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEDC1A5A20B582B100F9A9FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Vitaliy;
+				TargetAttributes = {
+					CEDC1A6120B582B200F9A9FC = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = CEDC1A5D20B582B100F9A9FC /* Build configuration list for PBXProject "PlayWithMind" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEDC1A5920B582B100F9A9FC;
+			productRefGroup = CEDC1A6320B582B200F9A9FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEDC1A6120B582B200F9A9FC /* PlayWithMind */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEDC1A6020B582B200F9A9FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDC1AC420B594C200F9A9FC /* CollapsibleTableViewHeader.xib in Resources */,
+				CEDC1A7020B582B700F9A9FC /* LaunchScreen.storyboard in Resources */,
+				CEDC1AC020B5947600F9A9FC /* ChooseTeamTableViewCell.xib in Resources */,
+				CEDC1A9620B587D600F9A9FC /* GoogleService-Info.plist in Resources */,
+				CEDC1AB220B590DA00F9A9FC /* next-button.png in Resources */,
+				CEDC1AB020B590DA00F9A9FC /* back-button.png in Resources */,
+				CEDC1AB120B590DA00F9A9FC /* football-field.jpg in Resources */,
+				CEDC1A6D20B582B700F9A9FC /* Assets.xcassets in Resources */,
+				CEDC1AAF20B590DA00F9A9FC /* defaultPlayer.png in Resources */,
+				CEDC1A6B20B582B200F9A9FC /* Main.storyboard in Resources */,
+				CEDC1AB620B5912500F9A9FC /* FootballPlayerCollectionViewCell.xib in Resources */,
+				CEDC1AC620B5952600F9A9FC /* History.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C7BBE931328EAA0DC0BD60E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PlayWithMind/Pods-PlayWithMind-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlayWithMind/Pods-PlayWithMind-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D96CC619020F9F28CBE90E60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PlayWithMind-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEDC1A5E20B582B200F9A9FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDC1AC320B594C200F9A9FC /* CollapsibleTableViewHeader.swift in Sources */,
+				CEE55B6C20F4E0F500563E51 /* Championat.swift in Sources */,
+				CEE55B6720F4E04100563E51 /* Country.swift in Sources */,
+				CEE55B7520F4F53A00563E51 /* Section.swift in Sources */,
+				CEDC1ABC20B5944600F9A9FC /* ChooseTeamViewController.swift in Sources */,
+				CEE55B7020F4E16800563E51 /* Player.swift in Sources */,
+				CEDC1AB520B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift in Sources */,
+				CEDC1A6620B582B200F9A9FC /* AppDelegate.swift in Sources */,
+				CEDC1ABF20B5947600F9A9FC /* ChooseTeamTableViewCell.swift in Sources */,
+				CEE55B6420F4DF0100563E51 /* FirebaseNetworkManager.swift in Sources */,
+				CEE55B6E20F4E13300563E51 /* Team.swift in Sources */,
+				CEDC1AB820B5914C00F9A9FC /* FootballTeamShemeViewController.swift in Sources */,
+				CEDC1ABA20B591FE00F9A9FC /* Scheme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEDC1A6920B582B200F9A9FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDC1A6A20B582B200F9A9FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEDC1A6E20B582B700F9A9FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDC1A6F20B582B700F9A9FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEDC1A7220B582B700F9A9FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEDC1A7320B582B700F9A9FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEDC1A7520B582B700F9A9FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2AD3AC10440B8170D31A3BA /* Pods-PlayWithMind.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7G5K43D27D;
+				INFOPLIST_FILE = PlayWithMind/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MVA.PlayWithMind;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEDC1A7620B582B700F9A9FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDDCB34401753E1CF15BE909 /* Pods-PlayWithMind.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7G5K43D27D;
+				INFOPLIST_FILE = PlayWithMind/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MVA.PlayWithMind;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEDC1A5D20B582B100F9A9FC /* Build configuration list for PBXProject "PlayWithMind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDC1A7220B582B700F9A9FC /* Debug */,
+				CEDC1A7320B582B700F9A9FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDC1A7420B582B700F9A9FC /* Build configuration list for PBXNativeTarget "PlayWithMind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDC1A7520B582B700F9A9FC /* Debug */,
+				CEDC1A7620B582B700F9A9FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEDC1A5A20B582B100F9A9FC /* Project object */;
+}
