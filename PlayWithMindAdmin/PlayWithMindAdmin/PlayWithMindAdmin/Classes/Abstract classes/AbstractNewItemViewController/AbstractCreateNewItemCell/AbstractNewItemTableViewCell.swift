@@ -13,6 +13,8 @@ class AbstractNewItemTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var itemCellLabel: UILabel!
     @IBOutlet weak var itemCellTextField: UITextField!
     
+    var delegate: UpdateDictionary!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.itemCellTextField.layer.cornerRadius = 2
@@ -20,6 +22,7 @@ class AbstractNewItemTableViewCell: UITableViewCell, UITextFieldDelegate {
         self.itemCellTextField.layer.borderColor = UIColor.black.cgColor
         self.itemCellTextField.layer.masksToBounds = true
         itemCellTextField.delegate = self
+        self.itemCellTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -27,6 +30,17 @@ class AbstractNewItemTableViewCell: UITableViewCell, UITextFieldDelegate {
             self.itemCellTextField.resignFirstResponder()
         }
         return true
+    }
+    
+    func fillCell(key: String, value: String) {
+        self.itemCellLabel.text = key
+        self.itemCellTextField.text = value
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if let key = self.itemCellLabel.text, let value = self.itemCellTextField.text {
+            delegate.updateDict(key: key, value: value)
+        }
     }
     
 }

@@ -13,6 +13,7 @@ class ChoosePlayerViewController: AbstractViewController, UITableViewDataSource,
     @IBOutlet weak var choosePlayerTableView: UITableView!
     
     var team: String = ""
+    var championatName: String = ""
     
     var playersArray = [Player]()
     
@@ -48,6 +49,18 @@ class ChoosePlayerViewController: AbstractViewController, UITableViewDataSource,
         return cell
     }
     
+    //MARK: - tableView delegate's methods
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let player = playersArray[indexPath.row]
+        
+        let updatePlayeVC = UpdatePlayerViewController.init(nibName: "AbstractNewItemViewController", bundle: nil)
+        updatePlayeVC.teamName = self.team
+        updatePlayeVC.player = player
+        
+        self.present(updatePlayeVC, animated: true, completion: nil)
+    }
+    
     //MARK: - actions
     
     override func createButtonTappaed() {
@@ -60,6 +73,7 @@ class ChoosePlayerViewController: AbstractViewController, UITableViewDataSource,
     override func updateButtonTappaed() {
         let updateTeamVC = UpdateTeamViewController.init(nibName: "AbstractNewItemViewController", bundle: nil)
         updateTeamVC.teamName = self.team
+        updateTeamVC.championatName = self.championatName
         
         self.present(updateTeamVC, animated: true, completion: nil)
     }

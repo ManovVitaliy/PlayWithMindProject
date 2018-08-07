@@ -11,11 +11,29 @@ import UIKit
 class CreateNewPlayerViewController: AbstractNewItemViewController {
 
     var teamName = ""
-    var playerDictionary = ["name" : "",
-                            "image": "",
-                            "power": "",
-                            "shot": "",
-                            "pass": ""]
+
+    func currentDictionary() {
+        itemDictionary = [Player.playerImageKey: "",
+                          Player.playerNameKey: "",
+                          Player.playerNationalityKey: "",
+                          Player.playerPositionKey: "",
+                          Player.attackingProwessKey: "0",
+                          Player.defensiveProwessKey: "0",
+                          Player.ballControllKey: "0",
+                          Player.shotKey: "0",
+                          Player.shortPassKey: "0",
+                          Player.longPassKey: "0",
+                          Player.headPlayKey: "0",
+                          Player.driblingKey: "0",
+                          Player.staminaKey: "0",
+                          Player.physicsKey: "0",
+                          Player.motivationKey: "0",
+                          Player.expirienceKey: "0",
+                          Player.speedKey: "0",
+                          Player.jumpKey: "0",
+                          Player.ballWinningKey: "0",
+                          Player.reflexesKey: "0"] as [String : AnyObject]
+    }
     
     //MARK: - view controller's lifecycle
     
@@ -23,6 +41,7 @@ class CreateNewPlayerViewController: AbstractNewItemViewController {
         super.viewDidLoad()
         self.setupTableView()
         self.titleLabel.text = "New Player"
+        currentDictionary()
     }
     
     override func setupTableView() {
@@ -34,16 +53,12 @@ class CreateNewPlayerViewController: AbstractNewItemViewController {
     //MARK: - tableView data Source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return playerDictionary.keys.count
+        return itemDictionary.keys.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! AbstractNewItemTableViewCell
-        
-        let keysArray = Array(playerDictionary.keys)
-        
-        cell.itemCellLabel.text = keysArray[indexPath.row]
-        
+        let cell = super.tableView(tableView, cellForRowAt: indexPath) as! AbstractNewItemTableViewCell
+
         return cell
     }
     
@@ -56,22 +71,18 @@ class CreateNewPlayerViewController: AbstractNewItemViewController {
     }
     
     override func saveButtonTapped(_ sender: Any) {
-        var playerDict = [String: String]()
-        var keyName = ""
-        for i in 0..<playerDictionary.keys.count {
-            if let cell = self.tableView.cellForRow(at: IndexPath(item: i, section: 0)) as? AbstractNewItemTableViewCell {
-                if let newValue = cell.itemCellTextField.text, let newKey = cell.itemCellLabel.text {
-                    if newKey == "name" {
-                        keyName = newValue
-                    }
-                    playerDict[newKey] = newValue
-                }
+        let keysArray = Array(itemDictionary.keys)
+        for key in keysArray {
+            let value = itemDictionary[key] as! String
+            guard value != "" else {
+                self.allFieldsHaveToBeFullAlert()
+                return
             }
+            
         }
+        let player = Player.fromDictToModel(dictionary: itemDictionary)
         
-        let finalDict = [keyName: playerDict]
-        
-        FirebaseService.sharedInstance.postPlayer(teamName: teamName, player: finalDict as [String : AnyObject]) {
+        FirebaseService.sharedInstance.postPlayer(teamName: teamName, player: player) {
             self.dismiss(animated: true, completion: nil)
         }
     }

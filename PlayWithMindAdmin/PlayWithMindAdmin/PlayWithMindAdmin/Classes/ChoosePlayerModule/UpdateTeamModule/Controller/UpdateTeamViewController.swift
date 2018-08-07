@@ -11,6 +11,15 @@ import UIKit
 class UpdateTeamViewController: AbstractNewItemViewController {
 
     var teamName = ""
+    var championatName = ""
+    
+    func currentDictionary() {
+        itemDictionary = [Team.teamNameKey: self.teamName,
+                          Team.teamImageKey: "",
+                          Team.coachPowerKey: "",
+                          Team.teamMotivationKey: "",
+                          Team.teamCollaborationKey: ""] as [String : AnyObject]
+    }
     
     //MARK: - view controller's lifecycle
     
@@ -19,6 +28,7 @@ class UpdateTeamViewController: AbstractNewItemViewController {
         self.setupTableView()
         self.saveButton.setTitle("UPDATE", for: .normal)
         self.titleLabel.text = teamName
+        currentDictionary()
     }
     
     override func setupTableView() {
@@ -30,13 +40,15 @@ class UpdateTeamViewController: AbstractNewItemViewController {
     //MARK: - tableView data Source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return itemDictionary.keys.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! AbstractNewItemTableViewCell
+        let cell = super.tableView(tableView, cellForRowAt: indexPath) as! AbstractNewItemTableViewCell
         
-        cell.itemCellLabel.text = "team"
+        if cell.itemCellLabel.text == Team.teamNameKey {
+            cell.itemCellTextField.isEnabled = false
+        }
         
         return cell
     }
@@ -48,13 +60,20 @@ class UpdateTeamViewController: AbstractNewItemViewController {
     }
     
     override func saveButtonTapped(_ sender: Any) {
-//        if let cell = self.tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as? AbstractNewItemTableViewCell {
-//            if let newTeamName = cell.countryTextField.text {
-//                FirebaseService.sharedInstance.postTeam(championatName: championatName, teamName: newTeamName) {
-//                    self.dismiss(animated: true, completion: nil)
-//                }
-//            }
-//        }
+        let keysArray = Array(itemDictionary.keys)
+        for key in keysArray {
+            let value = itemDictionary[key] as! String
+            guard value != "" else {
+                self.allFieldsHaveToBeFullAlert()
+                return
+            }
+            
+        }
+        let team = Team.fromDictToModel(dictionary: itemDictionary)
+        
+        FirebaseService.sharedInstance.postTeam(championatName: championatName, team: team) {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 
 }

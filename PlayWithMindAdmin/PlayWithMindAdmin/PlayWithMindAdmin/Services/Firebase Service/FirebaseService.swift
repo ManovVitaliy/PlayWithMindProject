@@ -137,10 +137,11 @@ class FirebaseService: NSObject {
         completion()
     }
     
-    func postPlayer(teamName: String, player: [String: AnyObject], completion: @escaping(() -> Void)) {
+    func postPlayer(teamName: String, player: Player, completion: @escaping(() -> Void)) {
         let firebasePlayer = Database.database().reference().child(keyPlayer)
         let firebasePlayerForTeam = firebasePlayer.child(teamName)
-        firebasePlayerForTeam.updateChildValues(player)
+        let dict = Player.fromModelToDict(player: player)
+        firebasePlayerForTeam.updateChildValues(dict)
         completion()
     }
 }
