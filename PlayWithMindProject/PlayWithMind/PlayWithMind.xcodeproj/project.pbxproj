@@ -320,6 +320,7 @@
 				CEDC1A5F20B582B200F9A9FC /* Frameworks */,
 				CEDC1A6020B582B200F9A9FC /* Resources */,
 				C7BBE931328EAA0DC0BD60E2 /* [CP] Embed Pods Frameworks */,
+				CE1413D42119CEA60059CAC0 /* upload reports crashes */,
 			);
 			buildRules = (
 			);
@@ -394,12 +395,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PlayWithMind/Pods-PlayWithMind-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -407,6 +410,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlayWithMind/Pods-PlayWithMind-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CE1413D42119CEA60059CAC0 /* upload reports crashes */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "upload reports crashes";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:my:app:id\n\n# Replace the /Path/To/ServiceAccount.json with the path to the key you just downloaded\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym \"${PROJECT_DIR/Keys/}\"";
 		};
 		D96CC619020F9F28CBE90E60 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
