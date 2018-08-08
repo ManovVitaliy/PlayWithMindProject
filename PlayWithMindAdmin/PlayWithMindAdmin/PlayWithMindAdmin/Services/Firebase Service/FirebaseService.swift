@@ -34,11 +34,14 @@ class FirebaseService: NSObject {
                         countryArray.append(country)
                     }
                     completion(countryArray)
+                    firebaseCountry.removeAllObservers()
                 } else {
                     completion(nil)
+                    firebaseCountry.removeAllObservers()
                 }
             } else {
                 completion(nil)
+                firebaseCountry.removeAllObservers()
             }
         }
     }
@@ -57,11 +60,14 @@ class FirebaseService: NSObject {
                         championatArray.append(championat)
                     }
                     completion(championatArray)
+                    firebaseChampionatsForCountry.removeAllObservers()
                 } else {
                     completion(nil)
+                    firebaseChampionatsForCountry.removeAllObservers()
                 }
             } else {
                 completion(nil)
+                firebaseChampionatsForCountry.removeAllObservers()
             }
         }
     }
@@ -80,11 +86,14 @@ class FirebaseService: NSObject {
                         teamArray.append(team)
                     }
                     completion(teamArray)
+                    firebaseTeamsForChampionat.removeAllObservers()
                 } else {
                     completion(nil)
+                    firebaseTeamsForChampionat.removeAllObservers()
                 }
             } else {
                 completion(nil)
+                firebaseTeamsForChampionat.removeAllObservers()
             }
         }
     }
@@ -103,11 +112,14 @@ class FirebaseService: NSObject {
                         playersArray.append(player)
                     }
                     completion(playersArray)
+                    firebasePlayersForTeam.removeAllObservers()
                 } else {
                     completion(nil)
+                    firebasePlayersForTeam.removeAllObservers()
                 }
             } else {
                 completion(nil)
+                firebasePlayersForTeam.removeAllObservers()
             }
         }
     }

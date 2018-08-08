@@ -62,7 +62,6 @@ class CreateNewTeamViewController: AbstractNewItemViewController {
                 self.allFieldsHaveToBeFullAlert()
                 return
             }
-            
         }
         let team = Team.fromDictToModel(dictionary: itemDictionary)
         

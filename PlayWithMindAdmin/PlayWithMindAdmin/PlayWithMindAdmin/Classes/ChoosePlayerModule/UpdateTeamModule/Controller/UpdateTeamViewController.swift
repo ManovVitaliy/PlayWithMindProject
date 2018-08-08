@@ -18,7 +18,8 @@ class UpdateTeamViewController: AbstractNewItemViewController {
                           Team.teamImageKey: "",
                           Team.coachPowerKey: "",
                           Team.teamMotivationKey: "",
-                          Team.teamCollaborationKey: ""] as [String : AnyObject]
+                          Team.teamCollaborationKey: "",
+                          Team.teamSchemeKey: ""] as [String : AnyObject]
     }
     
     //MARK: - view controller's lifecycle
