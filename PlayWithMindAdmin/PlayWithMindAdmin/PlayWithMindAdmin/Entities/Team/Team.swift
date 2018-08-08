@@ -16,12 +16,14 @@ class Team {
     static let coachPowerKey = "teamCoachPower"
     static let teamMotivationKey = "teamMotivation"
     static let teamCollaborationKey = "teamCollaboration"
+    static let teamSchemeKey = "teamScheme"
     
     var teamImage: String = ""
     var teamName: String = ""
     var coachPower: String = "0"
     var teamMotivation: String = "0"
     var teamCollaboration: String = "0"
+    var teamScheme = ""
     
     class func fromModelToDict(team: Team) -> [String: AnyObject] {
         var dict = [String: AnyObject]()
@@ -29,7 +31,8 @@ class Team {
                           teamImageKey: team.teamImage,
                           coachPowerKey: team.coachPower,
                           teamMotivationKey: team.teamMotivation,
-                          teamCollaborationKey: team.teamCollaboration] as [String : Any]
+                          teamCollaborationKey: team.teamCollaboration,
+                          teamSchemeKey: team.teamScheme] as [String : Any]
         dict = [team.teamName: dictHelper] as [String : AnyObject]
         
         return dict
@@ -51,6 +54,9 @@ class Team {
         }
         if let teamCollaboration = dictionary[teamCollaborationKey] as? String {
             team.teamCollaboration = teamCollaboration
+        }
+        if let teamScheme = dictionary[teamSchemeKey] as? String {
+            team.teamScheme = teamScheme
         }
         
         return team
