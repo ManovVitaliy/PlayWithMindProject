@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		44C8CFFF7BFC08EC8090A744 /* Pods_PlayWithMind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2105219A11FBD7EAC9F67EF /* Pods_PlayWithMind.framework */; };
+		CE3A681A211AF40500DA8562 /* FootbalTeamSchemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A6819211AF40500DA8562 /* FootbalTeamSchemeModel.swift */; };
 		CEDC1A6620B582B200F9A9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1A6520B582B200F9A9FC /* AppDelegate.swift */; };
 		CEDC1A6B20B582B200F9A9FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A6920B582B200F9A9FC /* Main.storyboard */; };
 		CEDC1A6D20B582B700F9A9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A6C20B582B700F9A9FC /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		A2105219A11FBD7EAC9F67EF /* Pods_PlayWithMind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayWithMind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDCB34401753E1CF15BE909 /* Pods-PlayWithMind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayWithMind.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayWithMind/Pods-PlayWithMind.release.xcconfig"; sourceTree = "<group>"; };
+		CE3A6819211AF40500DA8562 /* FootbalTeamSchemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootbalTeamSchemeModel.swift; sourceTree = "<group>"; };
 		CEDC1A6220B582B200F9A9FC /* PlayWithMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWithMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDC1A6520B582B200F9A9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEDC1A6A20B582B200F9A9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 				CDDCB34401753E1CF15BE909 /* Pods-PlayWithMind.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE3A6818211AF3D600DA8562 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE3A6819211AF40500DA8562 /* FootbalTeamSchemeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CEDC1A5920B582B100F9A9FC = {
@@ -196,6 +206,7 @@
 		CEDC1AA320B5900F00F9A9FC /* Football Team Scheme Module */ = {
 			isa = PBXGroup;
 			children = (
+				CE3A6818211AF3D600DA8562 /* Model */,
 				CEDC1AA920B5907400F9A9FC /* Controller */,
 				CEDC1AA820B5906900F9A9FC /* FootballPlayerCell */,
 			);
@@ -453,6 +464,7 @@
 				CEDC1AC320B594C200F9A9FC /* CollapsibleTableViewHeader.swift in Sources */,
 				CEE55B6C20F4E0F500563E51 /* Championat.swift in Sources */,
 				CEE55B6720F4E04100563E51 /* Country.swift in Sources */,
+				CE3A681A211AF40500DA8562 /* FootbalTeamSchemeModel.swift in Sources */,
 				CEE55B7520F4F53A00563E51 /* Section.swift in Sources */,
 				CEDC1ABC20B5944600F9A9FC /* ChooseTeamViewController.swift in Sources */,
 				CEE55B7020F4E16800563E51 /* Player.swift in Sources */,

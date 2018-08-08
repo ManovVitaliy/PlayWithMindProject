@@ -22,6 +22,8 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     private var awayTeamCurrentScheme: Scheme!
     private var awayTeamCurrentIndex: Int = 0
     
+    var footballTeamSchemeModel: FootbalTeamSchemeModel!
+    
     // constants
     private let cellIdentifier = "FootballPlayerCell"
     private let navigationBarTitle = "Main Screen"
@@ -30,13 +32,16 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     private var homeTeamSchemesArray: [Scheme] = [Scheme]()
     private var awayTeamSchemesArray: [Scheme] = [Scheme]()
     
+    override func loadView() {
+        super.loadView()
+        footballTeamSchemeModel = FootbalTeamSchemeModel()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupNavigationBar()
         self.setupCollectionView()
         self.setupSchemesArray()
-        let firebase = Database.database().reference().child("table")
-        firebase.setValue(["key": "newValue"])
     }
     
     private func setupNavigationBar() {
@@ -55,66 +60,11 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     }
     
     private func setupSchemesArray() {
-        let scheme1 = Scheme(firstLine: 1,
-                             secondLine: 4,
-                             thirdLine: 3,
-                             fourthLine: 1,
-                             fifthLine: 2).self
-        let scheme2 = Scheme(firstLine: 1,
-                             secondLine: 4,
-                             thirdLine: 3,
-                             fourthLine: 3,
-                             fifthLine: nil).self
-        let scheme3 = Scheme(firstLine: 1,
-                             secondLine: 4,
-                             thirdLine: 4,
-                             fourthLine: 2,
-                             fifthLine: nil).self
-        let scheme4 = Scheme(firstLine: 1,
-                             secondLine: 4,
-                             thirdLine: 1,
-                             fourthLine: 4,
-                             fifthLine: 1).self
-        let scheme5 = Scheme(firstLine: 1,
-                             secondLine: 3,
-                             thirdLine: 4,
-                             fourthLine: 3,
-                             fifthLine: nil).self
-        let scheme6 = Scheme(firstLine: 1,
-                             secondLine: 4,
-                             thirdLine: 4,
-                             fourthLine: 1,
-                             fifthLine: 1).self
-        let scheme7 = Scheme(firstLine: 1,
-                             secondLine: 5,
-                             thirdLine: 3,
-                             fourthLine: 2,
-                             fifthLine: nil).self
-        let scheme8 = Scheme(firstLine: 1,
-                             secondLine: 4,
-                             thirdLine: 3,
-                             fourthLine: 2,
-                             fifthLine: 1).self
-        
-        self.homeTeamSchemesArray.append(scheme1)
-        self.homeTeamSchemesArray.append(scheme2)
-        self.homeTeamSchemesArray.append(scheme3)
-        self.homeTeamSchemesArray.append(scheme4)
-        self.homeTeamSchemesArray.append(scheme5)
-        self.homeTeamSchemesArray.append(scheme6)
-        self.homeTeamSchemesArray.append(scheme7)
-        self.homeTeamSchemesArray.append(scheme8)
+        self.homeTeamSchemesArray = footballTeamSchemeModel.teamSchemesArray
         self.homeTeamCurrentScheme = self.homeTeamSchemesArray[homeTeamCurrentIndex]
         self.homeTeamSchemeNameLabel.text = self.homeTeamCurrentScheme.schemeName
         
-        self.awayTeamSchemesArray.append(scheme1)
-        self.awayTeamSchemesArray.append(scheme2)
-        self.awayTeamSchemesArray.append(scheme3)
-        self.awayTeamSchemesArray.append(scheme4)
-        self.awayTeamSchemesArray.append(scheme5)
-        self.awayTeamSchemesArray.append(scheme6)
-        self.awayTeamSchemesArray.append(scheme7)
-        self.awayTeamSchemesArray.append(scheme8)
+        self.awayTeamSchemesArray = footballTeamSchemeModel.teamSchemesArray
         self.awayTeamCurrentScheme = self.awayTeamSchemesArray[awayTeamCurrentIndex]
         self.awayTeamSchemeNameLabel.text = self.awayTeamCurrentScheme.schemeName
     }
