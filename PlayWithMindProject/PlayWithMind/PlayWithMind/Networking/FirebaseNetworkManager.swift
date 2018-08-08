@@ -34,11 +34,14 @@ class FirebaseNetworkManager {
                         countryArray.append(country)
                     }
                     completion(countryArray)
+                    firebaseCountry.removeAllObservers()
                 } else {
                     completion(nil)
+                    firebaseCountry.removeAllObservers()
                 }
             } else {
                 completion(nil)
+                firebaseCountry.removeAllObservers()
             }
         }
     }
@@ -57,11 +60,14 @@ class FirebaseNetworkManager {
                         championatArray.append(championat)
                     }
                     completion(championatArray)
+                    firebaseChampionatsForCountry.removeAllObservers()
                 } else {
                     completion(nil)
+                    firebaseChampionatsForCountry.removeAllObservers()
                 }
             } else {
                 completion(nil)
+                firebaseChampionatsForCountry.removeAllObservers()
             }
         }
     }
@@ -80,11 +86,14 @@ class FirebaseNetworkManager {
                         teamArray.append(team)
                     }
                     completion(teamArray)
+                    firebaseTeamsForChampionat.removeAllObservers()
                 } else {
                     completion(nil)
+                    firebaseTeamsForChampionat.removeAllObservers()
                 }
             } else {
                 completion(nil)
+                firebaseTeamsForChampionat.removeAllObservers()
             }
         }
     }
@@ -103,11 +112,14 @@ class FirebaseNetworkManager {
                         playersArray.append(player)
                     }
                     completion(playersArray)
+                    firebasePlayersForTeam.removeAllObservers()
                 } else {
                     completion(nil)
+                    firebasePlayersForTeam.removeAllObservers()
                 }
             } else {
                 completion(nil)
+                firebasePlayersForTeam.removeAllObservers()
             }
         }
     }
@@ -118,6 +130,10 @@ class FirebaseNetworkManager {
             if let data = snapshot.value as? [String: AnyObject] {
                 let sectionsArray = Section.fromDictToModel(dictionary: data)
                 completion(sectionsArray)
+                firebaseChampionat.removeAllObservers()
+            } else {
+                completion(nil)
+                firebaseChampionat.removeAllObservers()
             }
         }
     }
