@@ -10,9 +10,11 @@ import UIKit
 
 class UpdatePlayerViewController: AbstractNewItemViewController {
     
+    //MARK: - properties
     var teamName = ""
     var player = Player()
 
+    // update dataSource for tableView
     func currentDictionary() {
         itemDictionary = [Player.playerNameKey: player.playerName,
                           Player.playerImageKey: player.playerImage,
@@ -37,6 +39,7 @@ class UpdatePlayerViewController: AbstractNewItemViewController {
                           Player.reflexesKey: player.reflexes] as [String : AnyObject]
     }
     
+    //MARK: - view controller's lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
@@ -52,7 +55,6 @@ class UpdatePlayerViewController: AbstractNewItemViewController {
     }
     
     //MARK: - tableView data Source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemDictionary.keys.count
     }
@@ -68,11 +70,11 @@ class UpdatePlayerViewController: AbstractNewItemViewController {
     }
     
     //MARK: - actions
-    
     override func cancelButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // update player's parametrs and save in firebase
     override func saveButtonTapped(_ sender: Any) {
         let keysArray = Array(itemDictionary.keys)
         for key in keysArray {

@@ -33,7 +33,7 @@ class Player {
     static let ballWinningKey = "ballWinning"
     static let reflexesKey = "reflexes"
     
-    
+    //MARK: - properties
     var playerImage: String = ""
     var playerName: String = ""
     var nationality: String = ""
@@ -56,6 +56,7 @@ class Player {
     var ballWinning: String = "0"
     var reflexes: String = "0"
     
+    // convert model Player to dictionary
     class func fromModelToDict(player: Player) -> [String: AnyObject] {
         var dict = [String: AnyObject]()
         let dictHelper = [Player.playerNameKey: player.playerName,
@@ -84,6 +85,7 @@ class Player {
         return dict
     }
     
+    // convert dictionary to Player
     class func fromDictToModel(dictionary: [String: AnyObject]) -> Player {
         let player = Player()
         if let playerName = dictionary[Player.playerNameKey] as? String {

@@ -10,15 +10,15 @@ import UIKit
 
 class ChoosePlayerViewController: AbstractViewController, UITableViewDataSource, UITableViewDelegate {
 
+    //MARK: - outletes
     @IBOutlet weak var choosePlayerTableView: UITableView!
     
+    //MARK: - properties
     var team: String = ""
     var championatName: String = ""
-    
     var playersArray = [Player]()
     
     //MARK: - view controller's lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
@@ -38,7 +38,6 @@ class ChoosePlayerViewController: AbstractViewController, UITableViewDataSource,
     }
     
     //MARK: - tableView data Source
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.playersArray.count
     }
@@ -50,7 +49,6 @@ class ChoosePlayerViewController: AbstractViewController, UITableViewDataSource,
     }
     
     //MARK: - tableView delegate's methods
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let player = playersArray[indexPath.row]
         
@@ -62,7 +60,6 @@ class ChoosePlayerViewController: AbstractViewController, UITableViewDataSource,
     }
     
     //MARK: - actions
-    
     override func createButtonTappaed() {
         let createNewPlayerVC = CreateNewPlayerViewController.init(nibName: "AbstractNewItemViewController", bundle: nil)
         createNewPlayerVC.teamName = self.team

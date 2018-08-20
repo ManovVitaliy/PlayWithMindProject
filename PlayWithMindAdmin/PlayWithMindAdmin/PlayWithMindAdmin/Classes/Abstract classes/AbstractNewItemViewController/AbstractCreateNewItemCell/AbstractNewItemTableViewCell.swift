@@ -10,6 +10,7 @@ import UIKit
 
 class AbstractNewItemTableViewCell: UITableViewCell, UITextFieldDelegate {
 
+    //MARK: - outlets
     @IBOutlet weak var itemCellLabel: UILabel!
     @IBOutlet weak var itemCellTextField: UITextField!
     

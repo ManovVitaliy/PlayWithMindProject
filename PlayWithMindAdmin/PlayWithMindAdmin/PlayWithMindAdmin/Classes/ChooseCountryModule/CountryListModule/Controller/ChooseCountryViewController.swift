@@ -10,15 +10,16 @@ import UIKit
 
 class ChooseCountryViewController: AbstractViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var chooseCountryTableView: UITableView!
-    
     //constants
     private let navTtitle = "Choose country"
     
+    //MARK: - outlets
+    @IBOutlet weak var chooseCountryTableView: UITableView!
+    
+    //MARK: - properties
     var countriesArray = [Country]()
     
     //MARK: - view controller's lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupNavigationBar()
@@ -45,7 +46,6 @@ class ChooseCountryViewController: AbstractViewController, UITableViewDataSource
     }
     
     //MARK: - tableView data Source
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.countriesArray.count
     }
@@ -57,7 +57,6 @@ class ChooseCountryViewController: AbstractViewController, UITableViewDataSource
     }
     
     //MARK: - tableView delegate
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCountry = self.countriesArray[indexPath.row]
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
@@ -67,7 +66,6 @@ class ChooseCountryViewController: AbstractViewController, UITableViewDataSource
     }
     
     //MARK: - actions
-    
     override func createButtonTappaed() {
         let createNewCountryVC = CreateNewCountryViewController.init(nibName: "AbstractNewItemViewController", bundle: nil)
         

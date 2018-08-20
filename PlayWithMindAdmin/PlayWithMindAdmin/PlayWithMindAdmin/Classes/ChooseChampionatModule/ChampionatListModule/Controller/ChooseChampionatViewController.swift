@@ -11,14 +11,14 @@ import FirebaseDatabase
 
 class ChooseChampionatViewController: AbstractViewController, UITableViewDataSource, UITableViewDelegate {
 
+    //MARK: - outlets
     @IBOutlet weak var chooseChampionatTableView: UITableView!
     
+    //MARK: - properties
     var country: String = ""
-    
     var champsArray = [Championat]()
     
     //MARK: - view controller's lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
@@ -40,7 +40,6 @@ class ChooseChampionatViewController: AbstractViewController, UITableViewDataSou
     }
     
     //MARK: - tableView data Source
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.champsArray.count
     }
@@ -52,7 +51,6 @@ class ChooseChampionatViewController: AbstractViewController, UITableViewDataSou
     }
     
     //MARK: - tableView delegate
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedChampionatName = self.champsArray[indexPath.row].championatName
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
@@ -62,7 +60,6 @@ class ChooseChampionatViewController: AbstractViewController, UITableViewDataSou
     }
     
     //MARK: - actions
-    
     override func createButtonTappaed() {
         let createNewChampionatVC = CreateNewChampionatViewController.init(nibName: "AbstractNewItemViewController", bundle: nil)
         createNewChampionatVC.countryName = self.country

@@ -10,13 +10,14 @@ import UIKit
 
 class AbstractViewController: UIViewController {
     
+    //navigation bar's buttons
     var createButton = UIButton()
     var updateButton = UIButton()
     
+    //MARK: - constants
     let cellIdentifier = "ChooseItemTableViewCell"
     
     //MARK: - view controller's lifecycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Abstract Controller"
@@ -54,12 +55,12 @@ class AbstractViewController: UIViewController {
         self.updateButton.isHidden = hidden
     }
     
+    // Buttons's actions will be override in classes, who inharites from this abstract class
     @objc func createButtonTappaed() {
         print("btn1 abstract Tapped")
     }
-    
+
     @objc func updateButtonTappaed() {
         print("btn2 abstract Tapped")
     }
-    
 }

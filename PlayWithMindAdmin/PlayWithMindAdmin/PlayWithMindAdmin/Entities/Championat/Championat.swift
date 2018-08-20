@@ -14,9 +14,11 @@ class Championat {
     static let championatImageKey = "championatImage"
     static let championatNameKey = "championatName"
     
+    //MARK: - properties
     var championatImage: String = ""
     var championatName: String = ""
     
+    // convert model Championat to dictionary
     class func fromModelToDict(championat: Championat) -> [String: AnyObject] {
         var dict = [String: AnyObject]()
         let dictHelper = [championatNameKey: championat.championatName,
@@ -26,6 +28,7 @@ class Championat {
         return dict
     }
     
+    // convert dictionary to Championat
     class func fromDictToModel(dictionary: [String: AnyObject]) -> Championat {
         let championat = Championat()
         if let championatName = dictionary[championatNameKey] as? String {

@@ -14,16 +14,16 @@ protocol UpdateDictionary {
 
 class AbstractNewItemViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK: - outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var saveButton: UIButton!
     
+    //MARK: - properties
     var itemDictionary = [String: AnyObject]()
-    
     let cellIdentifier = "AbstractNewItemTableViewCell"
     
-    //MARK: - view controller's lifecycle
-
+    //MARK: - view controller's lifecycl
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
@@ -36,7 +36,6 @@ class AbstractNewItemViewController: UIViewController, UITableViewDataSource, UI
     }
     
     //MARK: - tableView data Source
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -57,7 +56,6 @@ class AbstractNewItemViewController: UIViewController, UITableViewDataSource, UI
     }
     
     //MARK: - actions
-    
     @IBAction func cancelButtonTapped(_ sender: Any) {
         
     }
@@ -79,6 +77,8 @@ class AbstractNewItemViewController: UIViewController, UITableViewDataSource, UI
 }
 
 extension AbstractNewItemViewController: UpdateDictionary {
+    //Every class, who inheritances from AbstractNewItemViewController has himself datasource(itemDictionary).
+    //They delegate it to AbstractNewItemViewController. There datasource is updating
     func updateDict(key: String, value: String) {
         self.itemDictionary[key] = value as AnyObject
     }

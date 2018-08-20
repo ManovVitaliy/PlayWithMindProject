@@ -11,6 +11,7 @@ import FirebaseDatabase
 
 class FirebaseService: NSObject {
 
+    // singletone
     static let sharedInstance = FirebaseService()
     
     //constants
@@ -20,7 +21,6 @@ class FirebaseService: NSObject {
     private let keyPlayer = "Player"
     
     //MARK: - GET
-    
     func getCountries(completion: @escaping((_ countriesArray: [Country]?) -> Void)) {
         let firebaseCountry = Database.database().reference().child(keyCountry)
         firebaseCountry.observe(DataEventType.value) { (snapshot) in
@@ -125,7 +125,6 @@ class FirebaseService: NSObject {
     }
     
     //MARK: - POST
-    
     func postCountry(country: Country, completion: @escaping(() -> Void)) {
         let firebaseCountry = Database.database().reference().child(keyCountry)
         let dict = Country.fromModelToDict(country: country)

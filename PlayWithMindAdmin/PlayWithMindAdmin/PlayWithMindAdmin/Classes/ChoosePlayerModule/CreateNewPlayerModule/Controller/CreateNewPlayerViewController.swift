@@ -10,8 +10,10 @@ import UIKit
 
 class CreateNewPlayerViewController: AbstractNewItemViewController {
 
+    // MARK: - properties
     var teamName = ""
-
+    
+    // update dataSource for tableView
     func currentDictionary() {
         itemDictionary = [Player.playerImageKey: "",
                           Player.playerNameKey: "",
@@ -36,7 +38,6 @@ class CreateNewPlayerViewController: AbstractNewItemViewController {
     }
     
     //MARK: - view controller's lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
@@ -51,7 +52,6 @@ class CreateNewPlayerViewController: AbstractNewItemViewController {
     }
     
     //MARK: - tableView data Source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemDictionary.keys.count
     }
@@ -65,11 +65,11 @@ class CreateNewPlayerViewController: AbstractNewItemViewController {
     //MARK: - tableView delegate
     
     //MARK: - actions
-    
     override func cancelButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // write new player to data base
     override func saveButtonTapped(_ sender: Any) {
         let keysArray = Array(itemDictionary.keys)
         for key in keysArray {

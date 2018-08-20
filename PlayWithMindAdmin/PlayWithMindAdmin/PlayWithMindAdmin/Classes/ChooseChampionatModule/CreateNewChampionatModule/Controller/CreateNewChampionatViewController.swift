@@ -10,15 +10,16 @@ import UIKit
 
 class CreateNewChampionatViewController: AbstractNewItemViewController {
     
+    //MARK: - properties
     var countryName = ""
     
+    // update dataSource for tableView
     func currentDictionary() {
         itemDictionary = [Championat.championatNameKey: "",
                           Championat.championatImageKey: ""] as [String : AnyObject]
     }
 
     //MARK: - view controller's lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
@@ -33,7 +34,6 @@ class CreateNewChampionatViewController: AbstractNewItemViewController {
     }
     
     //MARK: - tableView data Source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemDictionary.keys.count
     }
@@ -47,11 +47,11 @@ class CreateNewChampionatViewController: AbstractNewItemViewController {
     //MARK: - tableView delegate
     
     //MARK: - actions
-    
     override func cancelButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // create new championat and save it to firebase data base
     override func saveButtonTapped(_ sender: Any) {
         let keysArray = Array(itemDictionary.keys)
         for key in keysArray {

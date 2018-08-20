@@ -10,12 +10,15 @@ import UIKit
 
 class Country {
     
+    //MARK: - keys
     static let countryNameKey = "countryName"
     static let countryImageKey = "countryImage"
     
+    //MARK: - properties
     var countryImage: String = ""
     var countryName: String = ""
     
+    // convert model Player to dictionary
     class func fromModelToDict(country: Country) -> [String: AnyObject] {
         var dict = [String: AnyObject]()
         let dictHelper = [Country.countryNameKey: country.countryName,
@@ -25,6 +28,7 @@ class Country {
         return dict
     }
     
+    // convert dictionary to Player
     class func fromDictToModel(dictionary: [String: AnyObject]) -> Country {
         let country = Country()
         if let countryName = dictionary[Country.countryNameKey] as? String {

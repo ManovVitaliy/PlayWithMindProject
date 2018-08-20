@@ -10,19 +10,26 @@ import UIKit
 
 class CreateNewTeamViewController: AbstractNewItemViewController {
 
+    //MARK: - properties
     var championatName = ""
     
+    // update dataSource for tableView
     func currentDictionary() {
         itemDictionary = [Team.teamNameKey: "",
                           Team.teamImageKey: "",
-                          Team.coachPowerKey: "",
-                          Team.teamMotivationKey: "",
-                          Team.teamCollaborationKey: "",
-                          Team.teamSchemeKey: ""] as [String : AnyObject]
+                          Team.coachPowerKey: "0",
+                          Team.coachNameKey: "",
+                          Team.coachImageKey: "",
+                          Team.teamMotivationKey: "0",
+                          Team.teamCollaborationKey: "0",
+                          Team.teamSchemeKey: "",
+                          Team.teamStandartsGameKey: "0",
+                          Team.teamSurrenderKey: "0",
+                          Team.teamCharacterKey: "0",
+                          Team.teamBenchLengthKey: "0"] as [String : AnyObject]
     }
     
     //MARK: - view controller's lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
@@ -37,7 +44,6 @@ class CreateNewTeamViewController: AbstractNewItemViewController {
     }
     
     //MARK: - tableView data Source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemDictionary.keys.count
     }
@@ -49,11 +55,11 @@ class CreateNewTeamViewController: AbstractNewItemViewController {
     }
     
     //MARK: - actions
-    
     override func cancelButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // create team and save it to firebase
     override func saveButtonTapped(_ sender: Any) {
         let keysArray = Array(itemDictionary.keys)
         for key in keysArray {
