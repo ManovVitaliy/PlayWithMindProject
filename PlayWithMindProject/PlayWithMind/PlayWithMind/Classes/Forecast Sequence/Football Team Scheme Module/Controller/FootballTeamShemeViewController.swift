@@ -11,29 +11,30 @@ import FirebaseDatabase
 
 class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    //MARK: - outlets
     @IBOutlet weak var homeTeamCollectionView: UICollectionView!
     @IBOutlet weak var awayTeamCollectionView: UICollectionView!
     @IBOutlet weak var homeTeamSchemeNameLabel: UILabel!
     @IBOutlet weak var awayTeamSchemeNameLabel: UILabel!
     
+    //MARK: - properties
     private var homeTeamCurrentScheme: Scheme!
     private var homeTeamCurrentIndex: Int = 0
-    
     private var awayTeamCurrentScheme: Scheme!
     private var awayTeamCurrentIndex: Int = 0
-    
     var footballTeamSchemeModel: FootbalTeamSchemeModel!
+    private var homeTeamSchemesArray: [Scheme] = [Scheme]()
+    private var awayTeamSchemesArray: [Scheme] = [Scheme]()
     
     // constants
     private let cellIdentifier = "FootballPlayerCell"
     private let navigationBarTitle = "Main Screen"
     private let sizeKoeff: CGFloat = 0.98
     
-    private var homeTeamSchemesArray: [Scheme] = [Scheme]()
-    private var awayTeamSchemesArray: [Scheme] = [Scheme]()
-    
+    //MARK: - view controller's lifecycle
     override func loadView() {
         super.loadView()
+        //model initialization
         footballTeamSchemeModel = FootbalTeamSchemeModel()
     }
     
@@ -59,6 +60,7 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         self.awayTeamCollectionView.register(UINib(nibName: "FootballPlayerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: self.cellIdentifier)
     }
     
+    // data source
     private func setupSchemesArray() {
         self.homeTeamSchemesArray = footballTeamSchemeModel.teamSchemesArray
         self.homeTeamCurrentScheme = self.homeTeamSchemesArray[homeTeamCurrentIndex]
@@ -69,6 +71,7 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         self.awayTeamSchemeNameLabel.text = self.awayTeamCurrentScheme.schemeName
     }
     
+    //MARK: - collectionViewFlowLoyoutDelegate's method's
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if (collectionView == self.homeTeamCollectionView) {
             let numberOfLines: Int = self.homeTeamCurrentScheme.fifthLine != nil ? 5 : 4
@@ -151,6 +154,7 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         return UIEdgeInsetsMake(0, leftInset * sizeKoeff, 0, rightInset * sizeKoeff)
     }
     
+    //MARK: - collectionView data source methods
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         if (collectionView == self.homeTeamCurrentScheme) {
             if (self.homeTeamCurrentScheme.fifthLine != nil) {
@@ -235,7 +239,33 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         }
     }
     
+    //MARK: - actions
     @IBAction func backButtonHomeTeamTapped(_ sender: Any) {
+        homeTeamPreviousScheme()
+    }
+    
+    @IBAction func nextButtonHomeTeamTapped(_ sender: Any) {
+        homeTeamNextScheme()
+    }
+    
+    @IBAction func backButtonAwayTeamTapped(_ sender: Any) {
+        awayTeamPreviousScheme()
+    }
+    
+    @IBAction func nextButtonAwayTeamTapped(_ sender: Any) {
+        awayTeamNextScheme()
+    }
+    
+    @IBAction func homeTeamChangeTapped(_ sender: Any) {
+        pushChooseTeamVC()
+    }
+    
+    @IBAction func awayTeamChangeTapped(_ sender: Any) {
+        pushChooseTeamVC()
+    }
+    
+    //change home team scheme
+    private func homeTeamPreviousScheme() {
         if (self.homeTeamCurrentIndex == 0) {
             self.homeTeamCurrentIndex = self.homeTeamSchemesArray.count - 1
             self.homeTeamCurrentScheme = self.homeTeamSchemesArray[self.homeTeamCurrentIndex]
@@ -247,7 +277,7 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         self.homeTeamCollectionView.reloadData()
     }
     
-    @IBAction func nextButtonHomeTeamTapped(_ sender: Any) {
+    private func homeTeamNextScheme() {
         if (self.homeTeamCurrentIndex == self.homeTeamSchemesArray.count - 1) {
             self.homeTeamCurrentIndex = 0
             self.homeTeamCurrentScheme = self.homeTeamSchemesArray[self.homeTeamCurrentIndex]
@@ -259,7 +289,8 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         self.homeTeamCollectionView.reloadData()
     }
     
-    @IBAction func backButtonAwayTeamTapped(_ sender: Any) {
+    //change away team scheme
+    private func awayTeamPreviousScheme() {
         if (self.awayTeamCurrentIndex == 0) {
             self.awayTeamCurrentIndex = self.awayTeamSchemesArray.count - 1
             self.awayTeamCurrentScheme = self.awayTeamSchemesArray[self.awayTeamCurrentIndex]
@@ -271,7 +302,7 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         self.awayTeamCollectionView.reloadData()
     }
     
-    @IBAction func nextButtonAwayTeamTapped(_ sender: Any) {
+    private func awayTeamNextScheme() {
         if (self.awayTeamCurrentIndex == self.awayTeamSchemesArray.count - 1) {
             self.awayTeamCurrentIndex = 0
             self.awayTeamCurrentScheme = self.awayTeamSchemesArray[self.awayTeamCurrentIndex]
@@ -281,14 +312,6 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         }
         self.awayTeamSchemeNameLabel.text = self.awayTeamCurrentScheme.schemeName
         self.awayTeamCollectionView.reloadData()
-    }
-    
-    @IBAction func homeTeamChangeTapped(_ sender: Any) {
-        pushChooseTeamVC()
-    }
-    
-    @IBAction func awayTeamChangeTapped(_ sender: Any) {
-        pushChooseTeamVC()
     }
     
     private func pushChooseTeamVC() {

@@ -10,13 +10,15 @@ import UIKit
 
 class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
     
+    //MARK: - properties and delegates
     var delegate: CollapsibleTableViewHeaderDelegate?
     var section: Int = 0
     
+    //MARK: - outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var arrowLabel: UILabel!
     
-    
+    //MARK: - initialization
     override func awakeFromNib() {
         super.awakeFromNib()
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapHeader(gestureRecognizer:))))

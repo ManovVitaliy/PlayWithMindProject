@@ -14,14 +14,17 @@ protocol CollapsibleTableViewHeaderDelegate {
 
 class ChooseTeamViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK: - outlets
     @IBOutlet weak var chooseTeamTableView: UITableView!
     
     // constants
     private let cellIdentifier = "ChooseTeamTableViewCell"
     private let headerIdentifier = "CollapsibleTableViewHeader"
     
+    //MARK: - properties
     var sectionsArray = [Section]()
     
+    //MARK: - view controller's lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
@@ -41,6 +44,7 @@ class ChooseTeamViewController: UIViewController, UITableViewDataSource, UITable
         self.chooseTeamTableView.estimatedSectionHeaderHeight = UITableViewAutomaticDimension
     }
     
+    //get chempionats with teams
     private func getData() {
         FirebaseNetworkManager.sharedInstance.getSections { [weak self] (sectionsArray) in
             if let sectArray = sectionsArray {
@@ -50,6 +54,7 @@ class ChooseTeamViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    //MARK: - table view data source methods
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionsArray.count
     }
