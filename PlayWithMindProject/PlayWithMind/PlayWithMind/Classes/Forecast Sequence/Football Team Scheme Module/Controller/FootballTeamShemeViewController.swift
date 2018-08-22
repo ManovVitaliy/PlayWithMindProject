@@ -26,10 +26,21 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     private var homeTeamSchemesArray: [Scheme] = [Scheme]()
     private var awayTeamSchemesArray: [Scheme] = [Scheme]()
     
-    // constants
+    //MARK: - constants
     private let cellIdentifier = "FootballPlayerCell"
     private let navigationBarTitle = "Main Screen"
     private let sizeKoeff: CGFloat = 0.98
+    
+    // view controllers's identifiers
+    private let chooseChampionatVCIdentifier = "ChooseChampionatViewController"
+    private let teamParametersVCIdentifier = "TeamParametersViewController"
+    private let playerParametersVCIdentifier = "PlayerParametersViewController"
+    
+    // cell identifire
+    private let playerCollectionViewCellIdentifier = "FootballPlayerCollectionViewCell"
+    
+    //storyboard
+    private let mainStoryboardName = "Main"
     
     //MARK: - view controller's lifecycle
     override func loadView() {
@@ -46,18 +57,18 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     }
     
     private func setupNavigationBar() {
-        self.navigationController?.navigationBar.backgroundColor = UIColor.red
+        self.navigationController?.navigationBar.backgroundColor = UIColor.blue
         self.navigationItem.title = navigationBarTitle
     }
     
     private func setupCollectionView() {
         self.homeTeamCollectionView.delegate = self
         self.homeTeamCollectionView.dataSource = self
-        self.homeTeamCollectionView.register(UINib(nibName: "FootballPlayerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: self.cellIdentifier)
+        self.homeTeamCollectionView.register(UINib(nibName: playerCollectionViewCellIdentifier, bundle: nil), forCellWithReuseIdentifier: self.cellIdentifier)
         
         self.awayTeamCollectionView.delegate = self
         self.awayTeamCollectionView.dataSource = self
-        self.awayTeamCollectionView.register(UINib(nibName: "FootballPlayerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: self.cellIdentifier)
+        self.awayTeamCollectionView.register(UINib(nibName: playerCollectionViewCellIdentifier, bundle: nil), forCellWithReuseIdentifier: self.cellIdentifier)
     }
     
     // data source
@@ -239,6 +250,17 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         }
     }
     
+    //MARK: - collectionView delegate's methods
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (collectionView == self.homeTeamCollectionView) {
+            //TODO: - need update when database is been
+            showPlayerParameters()
+        } else {
+            //TODO: - need update when database is been
+            showPlayerParameters()
+        }
+    }
+    
     //MARK: - actions
     @IBAction func backButtonHomeTeamTapped(_ sender: Any) {
         homeTeamPreviousScheme()
@@ -257,11 +279,19 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     }
     
     @IBAction func homeTeamChangeTapped(_ sender: Any) {
-        pushChooseTeamVC()
+        pushChooseChampionatVC()
     }
     
     @IBAction func awayTeamChangeTapped(_ sender: Any) {
-        pushChooseTeamVC()
+        pushChooseChampionatVC()
+    }
+    
+    @IBAction func homeTeamSettingsTapped(_ sender: UIButton) {
+        showTeamSettings()
+    }
+    
+    @IBAction func awayTeamSettingsTapped(_ sender: UIButton) {
+        showTeamSettings()
     }
     
     //change home team scheme
@@ -314,9 +344,26 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         self.awayTeamCollectionView.reloadData()
     }
     
-    private func pushChooseTeamVC() {
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier: "ChooseTeamViewController")
+    //show team parameters
+    private func showTeamSettings() {
+        let storyboard = UIStoryboard.init(name: mainStoryboardName, bundle: nil)
+        let teamParametersVC = storyboard.instantiateViewController(withIdentifier: teamParametersVCIdentifier)
+        
+        self.navigationController?.pushViewController(teamParametersVC, animated: true)
+    }
+    
+    //show player parameters
+    private func showPlayerParameters() {
+        let storyboard = UIStoryboard.init(name: mainStoryboardName, bundle: nil)
+        let playerParametersVC = storyboard.instantiateViewController(withIdentifier: playerParametersVCIdentifier)
+        
+        self.navigationController?.pushViewController(playerParametersVC, animated: true)
+    }
+    
+    //show another championats and teams
+    private func pushChooseChampionatVC() {
+        let storyboard = UIStoryboard.init(name: mainStoryboardName, bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: chooseChampionatVCIdentifier)
         
         self.navigationController?.pushViewController(destinationVC, animated: true)
     }
