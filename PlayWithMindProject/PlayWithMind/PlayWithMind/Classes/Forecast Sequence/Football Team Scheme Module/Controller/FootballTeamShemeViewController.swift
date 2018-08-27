@@ -35,6 +35,8 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     private let chooseChampionatVCIdentifier = "ChooseChampionatViewController"
     private let teamParametersVCIdentifier = "TeamParametersViewController"
     private let playerParametersVCIdentifier = "PlayerParametersViewController"
+    private let substitutionListVCIdentifier = "SubstitutionsListViewController"
+    private let forecastVCIdentifier = "ForecastViewController"
     
     // cell identifire
     private let playerCollectionViewCellIdentifier = "FootballPlayerCollectionViewCell"
@@ -262,6 +264,8 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     }
     
     //MARK: - actions
+    
+    // change team's scheme buttons
     @IBAction func backButtonHomeTeamTapped(_ sender: Any) {
         homeTeamPreviousScheme()
     }
@@ -278,6 +282,7 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         awayTeamNextScheme()
     }
     
+    // choose new team buttons
     @IBAction func homeTeamChangeTapped(_ sender: Any) {
         pushChooseChampionatVC()
     }
@@ -286,12 +291,27 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         pushChooseChampionatVC()
     }
     
+    // change team's parameters buttons
     @IBAction func homeTeamSettingsTapped(_ sender: UIButton) {
         showTeamSettings()
     }
     
     @IBAction func awayTeamSettingsTapped(_ sender: UIButton) {
         showTeamSettings()
+    }
+    
+    // choose new player(substitutions list)
+    @IBAction func homeTeamSubstitutionsTapped(_ sender: UIButton) {
+        pushSubstitutionListVC()
+    }
+    
+    @IBAction func awayTeamSubstitutionsTapped(_ sender: UIButton) {
+        pushSubstitutionListVC()
+    }
+    
+    // push to forecast
+    @IBAction func getResultButtonTapped(_ sender: UIButton) {
+        pushForecastVC()
     }
     
     //change home team scheme
@@ -366,6 +386,21 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         let destinationVC = storyboard.instantiateViewController(withIdentifier: chooseChampionatVCIdentifier)
         
         self.navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
+    //push to substitutions list vc
+    private func pushSubstitutionListVC() {
+        let storyboard = UIStoryboard.init(name: mainStoryboardName, bundle: nil)
+        let substitutionsListVC = storyboard.instantiateViewController(withIdentifier: substitutionListVCIdentifier)
+        
+        self.navigationController?.pushViewController(substitutionsListVC, animated: true)
+    }
+    
+    private func pushForecastVC() {
+        let storyboard = UIStoryboard.init(name: mainStoryboardName, bundle: nil)
+        let forecastVC = storyboard.instantiateViewController(withIdentifier: forecastVCIdentifier)
+        
+        self.navigationController?.pushViewController(forecastVC, animated: true)
     }
     
 }
