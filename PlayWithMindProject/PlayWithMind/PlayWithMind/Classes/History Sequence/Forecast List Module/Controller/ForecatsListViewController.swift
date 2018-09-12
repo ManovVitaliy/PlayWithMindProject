@@ -11,19 +11,10 @@ import UIKit
 class ForecatsListViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {
     
     //MARK: - properties
+    private let constants = ForecastListConstants()
     
     //MARK: - outlets
     @IBOutlet weak var forecastListCollectionView: UICollectionView!
-    
-    //MARK: - constants
-    private let cellIdentifier = "ForecastInListCellIdentifier"
-    private let forecastInListCollectionViewCell = "ForecastInListCollectionViewCell"
-    
-    //vc
-    private let forecastVCIdentifier = "ForecastViewController"
-    
-    //storyboard
-    private let mainStoryboardName = "Main"
     
     //MARK: - view controller's lifecycle
     override func viewDidLoad() {
@@ -34,7 +25,7 @@ class ForecatsListViewController: UIViewController, UICollectionViewDelegateFlow
     private func setupCollectionView() {
         forecastListCollectionView.dataSource = self
         forecastListCollectionView.delegate = self
-        forecastListCollectionView.register(UINib.init(nibName: forecastInListCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        forecastListCollectionView.register(UINib.init(nibName: constants.forecastInListCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: constants.cellIdentifier)
     }
     
     //MARK: - collection view flow layout delegate's method
@@ -50,7 +41,7 @@ class ForecatsListViewController: UIViewController, UICollectionViewDelegateFlow
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = forecastListCollectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
+        let cell = forecastListCollectionView.dequeueReusableCell(withReuseIdentifier: constants.cellIdentifier, for: indexPath)
         
         return cell
     }
@@ -61,8 +52,8 @@ class ForecatsListViewController: UIViewController, UICollectionViewDelegateFlow
     }
     
     private func pushForecastVC() {
-        let storyboard = UIStoryboard.init(name: mainStoryboardName, bundle: nil)
-        let forecastVC = storyboard.instantiateViewController(withIdentifier: forecastVCIdentifier)
+        let storyboard = UIStoryboard.init(name: constants.mainStoryboardName, bundle: nil)
+        let forecastVC = storyboard.instantiateViewController(withIdentifier: constants.forecastVCIdentifier)
         
         self.navigationController?.pushViewController(forecastVC, animated: true)
     }

@@ -12,6 +12,7 @@
 		CE5D9314212EBC1B00DEBD40 /* SubstitutionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5D9312212EBC1B00DEBD40 /* SubstitutionCollectionViewCell.swift */; };
 		CE5D9315212EBC1B00DEBD40 /* SubstitutionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5D9313212EBC1B00DEBD40 /* SubstitutionCollectionViewCell.xib */; };
 		CE5D9317212EBC3E00DEBD40 /* SubstitutionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5D9316212EBC3E00DEBD40 /* SubstitutionsListViewController.swift */; };
+		CE6FA5A321499AE1007602A5 /* ForecastListConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FA5A221499AE1007602A5 /* ForecastListConstants.swift */; };
 		CE8768CA21342335008A0135 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8768C921342335008A0135 /* ForecastViewController.swift */; };
 		CE8768CD213423E0008A0135 /* ForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8768CB213423E0008A0135 /* ForecastCollectionViewCell.swift */; };
 		CE8768CE213423E0008A0135 /* ForecastCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8768CC213423E0008A0135 /* ForecastCollectionViewCell.xib */; };
@@ -62,6 +63,7 @@
 		CE5D9312212EBC1B00DEBD40 /* SubstitutionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubstitutionCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE5D9313212EBC1B00DEBD40 /* SubstitutionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubstitutionCollectionViewCell.xib; sourceTree = "<group>"; };
 		CE5D9316212EBC3E00DEBD40 /* SubstitutionsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubstitutionsListViewController.swift; sourceTree = "<group>"; };
+		CE6FA5A221499AE1007602A5 /* ForecastListConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListConstants.swift; sourceTree = "<group>"; };
 		CE8768C921342335008A0135 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		CE8768CB213423E0008A0135 /* ForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE8768CC213423E0008A0135 /* ForecastCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -180,6 +182,14 @@
 			path = SubstitutionCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		CE6FA5A121499ABF007602A5 /* ForecastListConstants */ = {
+			isa = PBXGroup;
+			children = (
+				CE6FA5A221499AE1007602A5 /* ForecastListConstants.swift */,
+			);
+			path = ForecastListConstants;
+			sourceTree = "<group>";
+		};
 		CE8768C6213422D6008A0135 /* Forecast Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +219,7 @@
 		CE8768CF21342AFB008A0135 /* Forecast List Module */ = {
 			isa = PBXGroup;
 			children = (
+				CE6FA5A121499ABF007602A5 /* ForecastListConstants */,
 				CE8768D121342B25008A0135 /* CollectionViewCell */,
 				CE8768D021342B16008A0135 /* Controller */,
 			);
@@ -704,6 +715,7 @@
 				CEE55B6720F4E04100563E51 /* Country.swift in Sources */,
 				CE9BB692212D8E7A003B2FD4 /* TeamParametersViewController.swift in Sources */,
 				CEA624A421499365009F40AF /* PlayerParametersConstants.swift in Sources */,
+				CE6FA5A321499AE1007602A5 /* ForecastListConstants.swift in Sources */,
 				CE8768CD213423E0008A0135 /* ForecastCollectionViewCell.swift in Sources */,
 				CE9BB697212D962F003B2FD4 /* ParameterCollectionViewCell.swift in Sources */,
 				CE3A681A211AF40500DA8562 /* FootbalTeamSchemeModel.swift in Sources */,
