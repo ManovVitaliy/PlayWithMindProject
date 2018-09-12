@@ -24,6 +24,11 @@
 		CE9BB698212D962F003B2FD4 /* ParameterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9BB696212D962F003B2FD4 /* ParameterCollectionViewCell.xib */; };
 		CE9BB69C212DA0CD003B2FD4 /* PlayerParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB69B212DA0CD003B2FD4 /* PlayerParametersViewController.swift */; };
 		CE9BB69E212DA9C5003B2FD4 /* ChooseChampionatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BB69D212DA9C5003B2FD4 /* ChooseChampionatViewController.swift */; };
+		CEA6249E21498E65009F40AF /* FootballTeamSchemeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6249D21498E65009F40AF /* FootballTeamSchemeConstants.swift */; };
+		CEA624A1214991D3009F40AF /* SubstitutionsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA624A0214991D3009F40AF /* SubstitutionsConstants.swift */; };
+		CEA624A421499365009F40AF /* PlayerParametersConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA624A321499365009F40AF /* PlayerParametersConstants.swift */; };
+		CEA624A72149940D009F40AF /* TeamParametersConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA624A62149940D009F40AF /* TeamParametersConstants.swift */; };
+		CEA624AA214994B7009F40AF /* ChooseTeamConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA624A9214994B7009F40AF /* ChooseTeamConstants.swift */; };
 		CEDC1A6620B582B200F9A9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC1A6520B582B200F9A9FC /* AppDelegate.swift */; };
 		CEDC1A6B20B582B200F9A9FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A6920B582B200F9A9FC /* Main.storyboard */; };
 		CEDC1A6D20B582B700F9A9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDC1A6C20B582B700F9A9FC /* Assets.xcassets */; };
@@ -69,6 +74,11 @@
 		CE9BB696212D962F003B2FD4 /* ParameterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParameterCollectionViewCell.xib; sourceTree = "<group>"; };
 		CE9BB69B212DA0CD003B2FD4 /* PlayerParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerParametersViewController.swift; sourceTree = "<group>"; };
 		CE9BB69D212DA9C5003B2FD4 /* ChooseChampionatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseChampionatViewController.swift; sourceTree = "<group>"; };
+		CEA6249D21498E65009F40AF /* FootballTeamSchemeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballTeamSchemeConstants.swift; sourceTree = "<group>"; };
+		CEA624A0214991D3009F40AF /* SubstitutionsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubstitutionsConstants.swift; sourceTree = "<group>"; };
+		CEA624A321499365009F40AF /* PlayerParametersConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerParametersConstants.swift; sourceTree = "<group>"; };
+		CEA624A62149940D009F40AF /* TeamParametersConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamParametersConstants.swift; sourceTree = "<group>"; };
+		CEA624A9214994B7009F40AF /* ChooseTeamConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTeamConstants.swift; sourceTree = "<group>"; };
 		CEDC1A6220B582B200F9A9FC /* PlayWithMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWithMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDC1A6520B582B200F9A9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEDC1A6A20B582B200F9A9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,6 +156,7 @@
 		CE5D930F212EBB9E00DEBD40 /* Substitutions Module */ = {
 			isa = PBXGroup;
 			children = (
+				CEA6249F214991AA009F40AF /* Constants */,
 				CE5D9311212EBBB800DEBD40 /* SubstitutionCollectionViewCell */,
 				CE5D9310212EBBAD00DEBD40 /* Controller */,
 			);
@@ -224,6 +235,7 @@
 		CE9BB68C212D7E49003B2FD4 /* Choose Team Module */ = {
 			isa = PBXGroup;
 			children = (
+				CEA624A821499492009F40AF /* ChooseTeamConstants */,
 				CE9BB68D212D7E62003B2FD4 /* Controller */,
 			);
 			path = "Choose Team Module";
@@ -240,6 +252,7 @@
 		CE9BB690212D8E59003B2FD4 /* Team Parameters Module */ = {
 			isa = PBXGroup;
 			children = (
+				CEA624A5214993E0009F40AF /* TeamParametersConstants */,
 				CE9BB694212D9564003B2FD4 /* ParameterCollectionViewCell */,
 				CE9BB693212D9559003B2FD4 /* Controller */,
 			);
@@ -266,6 +279,7 @@
 		CE9BB699212DA09D003B2FD4 /* Player Parameters Module */ = {
 			isa = PBXGroup;
 			children = (
+				CEA624A22149933C009F40AF /* Constants */,
 				CE9BB69A212DA0AF003B2FD4 /* Controller */,
 			);
 			path = "Player Parameters Module";
@@ -277,6 +291,46 @@
 				CE9BB69B212DA0CD003B2FD4 /* PlayerParametersViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CEA6249C21498E2E009F40AF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CEA6249D21498E65009F40AF /* FootballTeamSchemeConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CEA6249F214991AA009F40AF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CEA624A0214991D3009F40AF /* SubstitutionsConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CEA624A22149933C009F40AF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CEA624A321499365009F40AF /* PlayerParametersConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CEA624A5214993E0009F40AF /* TeamParametersConstants */ = {
+			isa = PBXGroup;
+			children = (
+				CEA624A62149940D009F40AF /* TeamParametersConstants.swift */,
+			);
+			path = TeamParametersConstants;
+			sourceTree = "<group>";
+		};
+		CEA624A821499492009F40AF /* ChooseTeamConstants */ = {
+			isa = PBXGroup;
+			children = (
+				CEA624A9214994B7009F40AF /* ChooseTeamConstants.swift */,
+			);
+			path = ChooseTeamConstants;
 			sourceTree = "<group>";
 		};
 		CEDC1A5920B582B100F9A9FC = {
@@ -384,6 +438,7 @@
 		CEDC1AA320B5900F00F9A9FC /* Football Team Scheme Module */ = {
 			isa = PBXGroup;
 			children = (
+				CEA6249C21498E2E009F40AF /* Constants */,
 				CE3A6818211AF3D600DA8562 /* Model */,
 				CEDC1AA920B5907400F9A9FC /* Controller */,
 				CEDC1AA820B5906900F9A9FC /* FootballPlayerCell */,
@@ -643,10 +698,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA624AA214994B7009F40AF /* ChooseTeamConstants.swift in Sources */,
 				CEDC1AC320B594C200F9A9FC /* CollapsibleTableViewHeader.swift in Sources */,
 				CEE55B6C20F4E0F500563E51 /* Championat.swift in Sources */,
 				CEE55B6720F4E04100563E51 /* Country.swift in Sources */,
 				CE9BB692212D8E7A003B2FD4 /* TeamParametersViewController.swift in Sources */,
+				CEA624A421499365009F40AF /* PlayerParametersConstants.swift in Sources */,
 				CE8768CD213423E0008A0135 /* ForecastCollectionViewCell.swift in Sources */,
 				CE9BB697212D962F003B2FD4 /* ParameterCollectionViewCell.swift in Sources */,
 				CE3A681A211AF40500DA8562 /* FootbalTeamSchemeModel.swift in Sources */,
@@ -654,14 +711,17 @@
 				CEE55B7020F4E16800563E51 /* Player.swift in Sources */,
 				CE8768CA21342335008A0135 /* ForecastViewController.swift in Sources */,
 				CE8768D621342BCE008A0135 /* ForecastInListCollectionViewCell.swift in Sources */,
+				CEA624A72149940D009F40AF /* TeamParametersConstants.swift in Sources */,
 				CEDC1AB520B5912500F9A9FC /* FootballPlayerCollectionViewCell.swift in Sources */,
 				CE9BB69E212DA9C5003B2FD4 /* ChooseChampionatViewController.swift in Sources */,
 				CEDC1A6620B582B200F9A9FC /* AppDelegate.swift in Sources */,
+				CEA6249E21498E65009F40AF /* FootballTeamSchemeConstants.swift in Sources */,
 				CE9BB69C212DA0CD003B2FD4 /* PlayerParametersViewController.swift in Sources */,
 				CEDC1ABF20B5947600F9A9FC /* ChooseChampionatTableViewCell.swift in Sources */,
 				CE8768D321342B44008A0135 /* ForecatsListViewController.swift in Sources */,
 				CE9BB68F212D7E9A003B2FD4 /* ChooseTeamViewController.swift in Sources */,
 				CE5D9314212EBC1B00DEBD40 /* SubstitutionCollectionViewCell.swift in Sources */,
+				CEA624A1214991D3009F40AF /* SubstitutionsConstants.swift in Sources */,
 				CEE55B6420F4DF0100563E51 /* FirebaseNetworkManager.swift in Sources */,
 				CEE55B6E20F4E13300563E51 /* Team.swift in Sources */,
 				CEDC1AB820B5914C00F9A9FC /* FootballTeamShemeViewController.swift in Sources */,

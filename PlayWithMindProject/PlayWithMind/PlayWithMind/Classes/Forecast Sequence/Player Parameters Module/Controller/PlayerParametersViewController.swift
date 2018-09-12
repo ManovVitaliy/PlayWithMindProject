@@ -17,12 +17,9 @@ class PlayerParametersViewController: UIViewController, UICollectionViewDataSour
     @IBOutlet weak var playerPosition: UILabel!
     @IBOutlet weak var playerParametersCollectionView: UICollectionView!
     
-    //MARK: - constants
-    private let parameterCollectionViewCellIdentifier = "ParameterCollectionViewCell"
-    private let cellIdentifier = "ParameterCell"
-    
     //MARK: - properties
     let player = Player()
+    private let constants = PlayerParametersConstants()
     
     //MARK: - view controller's lifecycle
     override func viewDidLoad() {
@@ -33,7 +30,7 @@ class PlayerParametersViewController: UIViewController, UICollectionViewDataSour
     private func setupCollectionView() {
         self.playerParametersCollectionView.delegate = self
         self.playerParametersCollectionView.dataSource = self
-        self.playerParametersCollectionView.register(UINib.init(nibName: parameterCollectionViewCellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        self.playerParametersCollectionView.register(UINib.init(nibName: constants.parameterCollectionViewCellIdentifier, bundle: nil), forCellWithReuseIdentifier: constants.cellIdentifier)
     }
     
     //MARK: - collectionView flow layout delegate's methods
@@ -48,7 +45,7 @@ class PlayerParametersViewController: UIViewController, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.playerParametersCollectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath)
+        let cell = self.playerParametersCollectionView.dequeueReusableCell(withReuseIdentifier: constants.cellIdentifier, for: indexPath)
         
         return cell
     }

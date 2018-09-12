@@ -14,12 +14,7 @@ class SubstitutionsListViewController: UIViewController, UICollectionViewDelegat
     @IBOutlet weak var substitutionsCollectionView: UICollectionView!
     
     //MARK: - properties
-    
-    //MARK: - constants
-    private let cellIdentifier = "SubstitutionCell"
-    private let parameterCollectionViewCellIdentifier = "SubstitutionCollectionViewCell"
-    private let playerParametersVCIdentifier =  "PlayerParametersViewController"
-    private let mainStoryboardName = "Main"
+    let constants = SubstitutionsConstants()
     
     //MARK: - view controller's lifecycle
     override func viewDidLoad() {
@@ -30,7 +25,7 @@ class SubstitutionsListViewController: UIViewController, UICollectionViewDelegat
     private func setupCollectionView() {
         substitutionsCollectionView.dataSource = self
         substitutionsCollectionView.delegate = self
-        substitutionsCollectionView.register(UINib.init(nibName: parameterCollectionViewCellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        substitutionsCollectionView.register(UINib.init(nibName: constants.parameterCollectionViewCellIdentifier, bundle: nil), forCellWithReuseIdentifier: constants.cellIdentifier)
     }
     
     //MARK: - collectionView flow layout delegate's methods
@@ -48,7 +43,7 @@ class SubstitutionsListViewController: UIViewController, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = substitutionsCollectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
+        let cell = substitutionsCollectionView.dequeueReusableCell(withReuseIdentifier: constants.cellIdentifier, for: indexPath)
         cell.backgroundView?.backgroundColor = UIColor.red
         
         return cell
@@ -56,8 +51,8 @@ class SubstitutionsListViewController: UIViewController, UICollectionViewDelegat
     
     //MARK: - collection view delegate's methods
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: mainStoryboardName, bundle: nil)
-        let playerParameteresVC = storyboard.instantiateViewController(withIdentifier: playerParametersVCIdentifier)
+        let storyboard = UIStoryboard(name: constants.mainStoryboardName, bundle: nil)
+        let playerParameteresVC = storyboard.instantiateViewController(withIdentifier: constants.playerParametersVCIdentifier)
         
         self.navigationController?.pushViewController(playerParameteresVC, animated: true)
     }

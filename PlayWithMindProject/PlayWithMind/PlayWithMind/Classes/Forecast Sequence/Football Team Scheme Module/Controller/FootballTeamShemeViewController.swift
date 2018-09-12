@@ -25,21 +25,7 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     var footballTeamSchemeModel: FootbalTeamSchemeModel!
     private var homeTeamSchemesArray: [Scheme] = [Scheme]()
     private var awayTeamSchemesArray: [Scheme] = [Scheme]()
-    
-    //MARK: - constants
-    private let cellIdentifier = "FootballPlayerCell"
-    private let navigationBarTitle = "Main Screen"
-    private let sizeKoeff: CGFloat = 0.98
-    
-    // view controllers's identifiers
-    private let chooseChampionatVCIdentifier = "ChooseChampionatViewController"
-    private let teamParametersVCIdentifier = "TeamParametersViewController"
-    private let playerParametersVCIdentifier = "PlayerParametersViewController"
-    private let substitutionListVCIdentifier = "SubstitutionsListViewController"
-    private let forecastVCIdentifier = "ForecastViewController"
-    
-    // cell identifire
-    private let playerCollectionViewCellIdentifier = "FootballPlayerCollectionViewCell"
+    private let constants = FootballTeamSchemeConstants()
     
     //storyboard
     private let mainStoryboardName = "Main"
@@ -60,17 +46,17 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     
     private func setupNavigationBar() {
         self.navigationController?.navigationBar.backgroundColor = UIColor.blue
-        self.navigationItem.title = navigationBarTitle
+        self.navigationItem.title = constants.navigationBarTitle
     }
     
     private func setupCollectionView() {
         self.homeTeamCollectionView.delegate = self
         self.homeTeamCollectionView.dataSource = self
-        self.homeTeamCollectionView.register(UINib(nibName: playerCollectionViewCellIdentifier, bundle: nil), forCellWithReuseIdentifier: self.cellIdentifier)
+        self.homeTeamCollectionView.register(UINib(nibName: constants.playerCollectionViewCellIdentifier, bundle: nil), forCellWithReuseIdentifier: constants.cellIdentifier)
         
         self.awayTeamCollectionView.delegate = self
         self.awayTeamCollectionView.dataSource = self
-        self.awayTeamCollectionView.register(UINib(nibName: playerCollectionViewCellIdentifier, bundle: nil), forCellWithReuseIdentifier: self.cellIdentifier)
+        self.awayTeamCollectionView.register(UINib(nibName: constants.playerCollectionViewCellIdentifier, bundle: nil), forCellWithReuseIdentifier: constants.cellIdentifier)
     }
     
     // data source
@@ -89,13 +75,13 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         if (collectionView == self.homeTeamCollectionView) {
             let numberOfLines: Int = self.homeTeamCurrentScheme.fifthLine != nil ? 5 : 4
             let height: CGFloat = self.homeTeamCollectionView.frame.height / (CGFloat(numberOfLines))
-            let size: CGSize = CGSize(width: sizeKoeff * height * 5 / 6, height: sizeKoeff * height)
+            let size: CGSize = CGSize(width: constants.sizeKoeff * height * 5 / 6, height: constants.sizeKoeff * height)
             
             return size
         } else {
             let numberOfLines: Int = self.awayTeamCurrentScheme.fifthLine != nil ? 5 : 4
             let height: CGFloat = self.awayTeamCollectionView.frame.height / (CGFloat(numberOfLines))
-            let size: CGSize = CGSize(width: sizeKoeff * height * 5 / 6, height: sizeKoeff * height)
+            let size: CGSize = CGSize(width: constants.sizeKoeff * height * 5 / 6, height: constants.sizeKoeff * height)
             
             return size
         }
@@ -164,7 +150,7 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
         let leftInset = (self.homeTeamCollectionView!.frame.size.width - CGFloat(totalCellWidth + totalSpacingWidth)) / 2
         let rightInset = leftInset
         
-        return UIEdgeInsetsMake(0, leftInset * sizeKoeff, 0, rightInset * sizeKoeff)
+        return UIEdgeInsetsMake(0, leftInset * constants.sizeKoeff, 0, rightInset * constants.sizeKoeff)
     }
     
     //MARK: - collectionView data source methods
@@ -242,11 +228,11 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (collectionView == self.homeTeamCollectionView) {
-            let cell = self.homeTeamCollectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath)
+            let cell = self.homeTeamCollectionView.dequeueReusableCell(withReuseIdentifier: constants.cellIdentifier, for: indexPath)
             
             return cell
         } else {
-            let cell = self.awayTeamCollectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath)
+            let cell = self.awayTeamCollectionView.dequeueReusableCell(withReuseIdentifier: constants.cellIdentifier, for: indexPath)
             
             return cell
         }
@@ -367,7 +353,7 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     //show team parameters
     private func showTeamSettings() {
         let storyboard = UIStoryboard.init(name: mainStoryboardName, bundle: nil)
-        let teamParametersVC = storyboard.instantiateViewController(withIdentifier: teamParametersVCIdentifier)
+        let teamParametersVC = storyboard.instantiateViewController(withIdentifier: constants.teamParametersVCIdentifier)
         
         self.navigationController?.pushViewController(teamParametersVC, animated: true)
     }
@@ -375,7 +361,7 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     //show player parameters
     private func showPlayerParameters() {
         let storyboard = UIStoryboard.init(name: mainStoryboardName, bundle: nil)
-        let playerParametersVC = storyboard.instantiateViewController(withIdentifier: playerParametersVCIdentifier)
+        let playerParametersVC = storyboard.instantiateViewController(withIdentifier: constants.playerParametersVCIdentifier)
         
         self.navigationController?.pushViewController(playerParametersVC, animated: true)
     }
@@ -383,7 +369,7 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     //show another championats and teams
     private func pushChooseChampionatVC() {
         let storyboard = UIStoryboard.init(name: mainStoryboardName, bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier: chooseChampionatVCIdentifier)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: constants.chooseChampionatVCIdentifier)
         
         self.navigationController?.pushViewController(destinationVC, animated: true)
     }
@@ -391,14 +377,14 @@ class FootballTeamSchemeViewController: UIViewController, UICollectionViewDataSo
     //push to substitutions list vc
     private func pushSubstitutionListVC() {
         let storyboard = UIStoryboard.init(name: mainStoryboardName, bundle: nil)
-        let substitutionsListVC = storyboard.instantiateViewController(withIdentifier: substitutionListVCIdentifier)
+        let substitutionsListVC = storyboard.instantiateViewController(withIdentifier: constants.substitutionListVCIdentifier)
         
         self.navigationController?.pushViewController(substitutionsListVC, animated: true)
     }
     
     private func pushForecastVC() {
         let storyboard = UIStoryboard.init(name: mainStoryboardName, bundle: nil)
-        let forecastVC = storyboard.instantiateViewController(withIdentifier: forecastVCIdentifier)
+        let forecastVC = storyboard.instantiateViewController(withIdentifier: constants.forecastVCIdentifier)
         
         self.navigationController?.pushViewController(forecastVC, animated: true)
     }

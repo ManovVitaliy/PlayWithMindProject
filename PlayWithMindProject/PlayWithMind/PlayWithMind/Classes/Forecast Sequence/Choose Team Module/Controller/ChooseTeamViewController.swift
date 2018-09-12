@@ -15,9 +15,7 @@ class ChooseTeamViewController: UIViewController, UITableViewDelegate, UITableVi
     
     //MARK: - properties
     var championatName = ""
-    
-    //MARK: - constants
-    private let cellIdentifier = "ChooseChampionatTableViewCell"
+    private let constants = ChooseTeamConstants()
 
     //MARK: - view controller's lifecycle
     override func viewDidLoad() {
@@ -29,7 +27,7 @@ class ChooseTeamViewController: UIViewController, UITableViewDelegate, UITableVi
     private func setupTableView() {
         self.teamsTableView.delegate = self
         self.teamsTableView.dataSource = self
-        self.teamsTableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        self.teamsTableView.register(UINib(nibName: constants.cellIdentifier, bundle: nil), forCellReuseIdentifier: constants.cellIdentifier)
     }
     
     private func setupPreviousSetting() {
@@ -43,7 +41,7 @@ class ChooseTeamViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.teamsTableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ChooseChampionatTableViewCell
+        let cell = self.teamsTableView.dequeueReusableCell(withIdentifier: constants.cellIdentifier, for: indexPath) as! ChooseChampionatTableViewCell
         
         return cell
     }

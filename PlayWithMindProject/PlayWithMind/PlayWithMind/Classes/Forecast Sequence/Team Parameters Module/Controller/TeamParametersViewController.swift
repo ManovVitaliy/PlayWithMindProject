@@ -15,9 +15,8 @@ class TeamParametersViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak var coachImageView: UIImageView!
     @IBOutlet weak var teamParametersCollectionView: UICollectionView!
     
-    //MARK: - constants
-    private let parameterCollectionViewCellIdentifier = "ParameterCollectionViewCell"
-    private let cellIdentifier = "ParameterCell"
+    //MARK: - properties
+    private let constants = TeamParametersConstants()
     
     //MARK: - view controller's lifecycle
     override func viewDidLoad() {
@@ -28,7 +27,7 @@ class TeamParametersViewController: UIViewController, UICollectionViewDataSource
     private func setupCollectionView() {
         self.teamParametersCollectionView.delegate = self
         self.teamParametersCollectionView.dataSource = self
-        self.teamParametersCollectionView.register(UINib.init(nibName: parameterCollectionViewCellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        self.teamParametersCollectionView.register(UINib.init(nibName: constants.parameterCollectionViewCellIdentifier, bundle: nil), forCellWithReuseIdentifier: constants.cellIdentifier)
     }
     
     //MARK: - collectionView flow layout delegate's methods
@@ -43,7 +42,7 @@ class TeamParametersViewController: UIViewController, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.teamParametersCollectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifier, for: indexPath)
+        let cell = self.teamParametersCollectionView.dequeueReusableCell(withReuseIdentifier: constants.cellIdentifier, for: indexPath)
         
         return cell
     }
